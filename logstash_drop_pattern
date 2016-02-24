@@ -1,0 +1,2 @@
+NEWSYSLOG_LOGFILE_TURNOVER logfile turned over
+SYSLOG_MESSAGE_REPEATED last message repeated %{POSINT} times

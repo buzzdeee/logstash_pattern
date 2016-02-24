@@ -1,0 +1,2 @@
+PKG_ADD_ADDED Added %{GREEDYDATA:package}
+PKG_DELETE_REMOVED Removed %{GREEDYDATA:package}

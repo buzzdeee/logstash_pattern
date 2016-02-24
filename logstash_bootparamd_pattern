@@ -1,0 +1,5 @@
+BOOTPARAMD_GETFILE_GOT_QUESTION getfile got question for "%{IPORHOST:shost}" and file "%{WORD:file}"
+BOOTPARAMD_RETURNING returning (server:%{IPORHOST:servername} path:%{UNIXPATH:serverpath} address: |%{IPORHOST:shost}%{SPACE})%{IPORHOST:serverip}
+BOOTPARAMD_THIS_IS_HOST This is host %{IPORHOST:shost}
+BOOTPARAMD_WHOAMI_FAILED whoami failed
+BOOTPARAMD_WHOAMI_GOT_QUESTION whoami got question for %{IPORHOST:shost}

@@ -1,0 +1,2 @@
+SYSLOGD_EXITING exiting on signal %{POSINT:signum}
+SYSLOGD_RESTART (re)?start

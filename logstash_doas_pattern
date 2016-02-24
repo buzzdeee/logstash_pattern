@@ -1,0 +1,2 @@
+DOAS_CMD_LOG %{USERNAME:suser} ran command %{GREEDYDATA:command} as %{USER:asuser} from %{UNIXPATH:pwd}
+DOAS_CMD_NOT_ALLOWED failed command for %{USER:asuser}: %{GREEDYDATA:command}

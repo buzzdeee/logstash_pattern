@@ -1,0 +1,3 @@
+SLAPD_AUXPROPFUNC_ERROR auxpropfunc error %{GREEDYDATA:error}
+SLAPD_SQL_ENGINE_NOT_SUPP SQL engine '%{WORD:engine}' not supported
+SLAPD_INVALID_PARAMETER %{WORD:failed_function}\(\) failed in %{WORD:parent_function}\(\): invalid parameter supplied

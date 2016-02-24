@@ -1,0 +1,3 @@
+TFTPD_CONN_REFUSED %{IPORHOST:shost}: %{WORD:operation}: Connection refused
+TFTPD_OPERATION_TIMEOUT %{IPORHOST:shost}: %{WORD:operation}: Operation timed out
+TFTPD_READ_REQ %{IPORHOST:shost}: read request for '%{GREEDYDATA:filename}'

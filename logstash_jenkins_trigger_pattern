@@ -1,0 +1,2 @@
+JENKINS_TRIGGER_KNOWN jenkins triggered %{GREEDYDATA}
+JENKINS_TRIGGER_UNKNOWN jenkins triggered unknown command: %{GREEDYDATA}

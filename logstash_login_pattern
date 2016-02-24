@@ -1,0 +1,2 @@
+LOGIN_ROOT ROOT LOGIN \(root\) ON %{WORD:terminal}
+LOGIN_FAILURE %{POSINT:count:int} LOGIN FAILURE ON %{GREEDYDATA:terminal}(, )?(%{GREEDYDATA:user})?

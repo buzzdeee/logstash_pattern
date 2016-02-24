@@ -1,0 +1,6 @@
+CTL_CYRUSDB_CHECKPOINTING (done )?checkpointing cyrus databases
+CTL_CYRUSDB_DEPRECATED_OPTION Option '%{WORD:oldoption}' is deprecated in favor of '%{WORD:oldoption}' since version %{GREEDYDATA:version}.
+CTL_CYRUSDB_RECOVERING (done )?recovering cyrus databases
+CTL_CYRUSDB_SKIPLIST skiplist: clean shutdown file missing, updating recovery stamp
+CYRUS_MASTER_CLOSING_DOWN All children have exited, closing down
+CYRUS_MASTER_SHUTDOWN attempting clean shutdown on signal

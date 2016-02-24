@@ -1,0 +1,1 @@
+RARPD_ASKED %{IPORHOST:shost} asked; %{COMMONMAC:ourmac} replied

@@ -1,0 +1,2 @@
+RTADVD_NO_CONFIG open\("%{UNIXPATH:configfile}"\): No such file or directory
+RTADVD_USING_DEFAULTS Could not parse configuration file for %{WORD:interface} or the configuration file doesn't exist. Treat it as default

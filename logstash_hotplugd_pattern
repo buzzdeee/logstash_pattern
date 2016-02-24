@@ -1,0 +1,2 @@
+HOTPLUGD_STARTED started
+HOTPLUGD_ATTACHED_DETACHED %{WORD:device} (attached|detached), class %{NUMBER:classid}

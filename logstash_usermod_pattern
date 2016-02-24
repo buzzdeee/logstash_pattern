@@ -1,0 +1,1 @@
+USERMOD_MODIFIED user information modified: name=%{USERNAME:user}, uid=%{INT:uid}, gid=%{INT:gid}, home=%{UNIXPATH:home}, shell=%{UNIXPATH:shell}

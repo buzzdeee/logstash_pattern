@@ -1,0 +1,23 @@
+PUPPETMASTER_COMPILED_CATALOG Compiled catalog for %{IPORHOST:shost} in environment %{WORD:environment} in %{NUMBER:seconds:float} seconds
+PUPPETMASTER_CONCAT_FRAGMENT_WARNING \(Scope\(Concat::Fragment%{GREEDYDATA}
+PUPPETMASTER_COULD_NOT_FIND_RESOURCE Could not find resource '%{GREEDYDATA:missingresource}' for relationship from '%{GREEDYDATA:relatedresource}' on node %{IPORHOST:shost}
+PUPPETMASTER_COULD_NOT_RESOLVE Could not resolve %{IPORHOST:shost}: no name for %{IPORHOST}
+PUPPETMASTER_COULD_NOT_RETRIEVE_FACTS Could not retrieve facts for %{IPORHOST:shost}: %{GREEDYDATA:errormessage}
+PUPPETMASTER_EVALUATION_ERROR Evaluation Error: %{GREEDYDATA:errormessage}
+PUPPETMASTER_FAILED_TO_SUBMIT Failed to submit '%{GREEDYDATA:action}' command for %{IPORHOST:shost} to PuppetDB at %{IPORHOST}:%{POSINT}: Connection refused - connect\(2\) for "%{IPORHOST}" port %{POSINT}
+PUPPETMASTER_FORBIDDEN_REQUEST Forbidden request: %{IPORHOST:shost}\(%{IPORHOST:sip}\) access to %{UNIXPATH} \[%{WORD:action}\] authenticated  at :%{POSINT:line:int}
+PUPPETMASTER_DENYING_ACCESS Denying access: %{PUPPETMASTER_FORBIDDEN_REQUEST}
+PUPPETMASTER_HIERA_LOOKUP_FAILURE_DATA_ITEM_WITHOUT_DEFAULT Evaluation Error: Error while evaluating a Function Call, Could not find data item %%{GREEDYDATA:dataitem} in any Hiera data file and no default supplied at %{UNIXPATH:path}:%{POSINT:line:int}:%{POSINT:row:int} on node %{IPORHOST:shost}
+PUPPETMASTER_HIERA_LOOKUP_FAILURE_QUALIFIED_VARIABLE \(Scope\(Class\[%{GREEDYDATA:class}\]\)\) Could not look up qualified variable '%{WORD:hiera_function}\('%{GREEDYDATA:variable}\)'; class %{WORD}\('%{GREEDYDATA} could not be found
+PUPPETMASTER_HOST_WITH_WAITING_CERT_REQ %{IPORHOST:shost} has a waiting certificate request
+PUPPETMASTER_IGNORE_INVALID_UTF8 Ignoring invalid UTF-8 byte sequences in data to be sent to PuppetDB
+PUPPETMASTER_ILLEGAL_EXPRESSION Illegal expression. A Variable is unacceptable as function name in a Function Call at %{UNIXPATH:file}:%{POSINT:line:int}:%{POSINT:row:int} on node %{IPORHOST:shost}
+PUPPETMASTER_INVALID_PARAM Invalid parameter %{WORD:parameter} on %{GREEDYDATA} on node %{IPORHOST:shost}
+PUPPETMASTER_INVALID_RELATIONSHIP Invalid relationship: %{GREEDYDATA} doesn't seem to be in the catalog
+PUPPETMASTER_LS_NOT_AVAILABLE Failed to write to %{IPORHOST:logstash_host} on port %{POSINT:logstash_port}: Connection refused - connect\(%{INT}\) for "%{IPORHOST}" port %{POSINT}
+PUPPETMASTER_NOT_SENDING_TAGMAIL Not sending tagmail report; no changes
+PUPPETMASTER_OTHER_WARNING \(Scope\(%{GREEDYDATA:class}\[%{GREEDYDATA:parameter}\]\)\) %{GREEDYDATA:errormessage}
+PUPPETMASTER_PARAM_DECLARED_MORE_THAN_ONCE The parameter '%{WORD:parameter}' is declared more than once in the parameter list at %{UNIXPATH:path}:%{POSINT:line:int}:%{POSINT:row:int} on node %{IPORHOST:shost}
+PUPPETMASTER_REPORT_PROCESSOR_FAILED Report processor failed: %{GREEDYDATA:errormessage}
+PUPPETMASTER_SYNTAX_ERROR Syntax error at '%{GREEDYDATA}' at %{UNIXPATH:path}:%{POSINT:line:int}:%{POSINT:row:int} on node %{IPORHOST:shost}
+PUPPETMASTER_STARTING Starting Puppet master version %{GREEDYDATA:version}

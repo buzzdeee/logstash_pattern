@@ -1,0 +1,1 @@
+SU_SETTING_RESOURCE_LIMITS %{WORD:loginclass}: setting resource limit %{WORD:resourcelimit}: Invalid argument

@@ -1,0 +1,6 @@
+NRPE_STARTUP Starting up daemon
+NRPE_SERVER_LISTENING Server listening on %{IPORHOST:shost} port %{NUMBER:port}.
+NRPE_LISTENING Listening for connections on port %{NUMBER:port}
+NRPE_ALLOWING_CONNECTIONS Allowing connections from: %{GREEDYDATA}
+NRPE_SIGTERM Caught %{WORD:signal} - shutting down...
+NRPE_SHUTDOWN Daemon shutdown

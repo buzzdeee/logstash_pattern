@@ -1,0 +1,6 @@
+IMAP_AUXPROPFUNC_ERROR auxpropfunc error %{GREEDYDATA:error}
+IMAP_SQL_ENGINE_NOT_SUPP SQL engine '%{WORD:engine}' not supported
+IMAP_INVALID_PARAMETER %{WORD:failed_function}\(\) failed in %{WORD:parent_function}\(\): invalid parameter supplied
+IMAP_USER_LOGIN login: %{IPORHOST:host} \[%{IPORHOST:host}\] %{USER:user} %{WORD:logontype} User logged in SESSIONID=<%{GREEDYDATA:sessionid}>
+IMAP_CLIENT_ID client id: "%{GREEDYDATA:header}" "%{IPORHOST:host}"
+IMAP_USAGE USAGE %{USER:user} user: %{NUMBER:userusage:float} sys: %{NUMBER:sysusage:float}

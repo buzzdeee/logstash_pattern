@@ -1,0 +1,1 @@
+HALT_HALTED halted( \(with %{WORD}\))? by %{USERNAME:suser}

@@ -1,0 +1,25 @@
+SSHD_ACCEPTED_PASSWORD Accepted %{WORD:authtype} for %{USERNAME:user} from %{IPORHOST:shost} port %{POSINT:port} %{WORD:protocol}
+SSHD_ACCEPTED_PUBKEY Accepted %{WORD:authtype} for %{USERNAME:user} from %{IPORHOST:shost} port %{POSINT:port} %{WORD:protocol}: %{WORD:keytype} %{WORD:digesttype}:%{GREEDYDATA:digesthash}
+SSHD_BAD_PACKET_LENGTH Bad packet length %{NUMBER:packetlength}.( \[%{WORD:authtype}\])?
+SSHD_BAD_PROTO_VERSION Bad protocol version identification '%{GREEDYDATA:protcolid}' from %{IPORHOST:shost} port %{POSINT:port}
+SSHD_CHANGE_USERNAME_NOT_ALLOWED Disconnecting: Change of username or service not allowed: \(%{WORD:fromuser},ssh-connection\) -> \(%{WORD:touser},ssh-connection\) \[%{WORD:authtype}\]
+SSHD_CONN_CLOSED Connection (closed|reset) by %{IPORHOST:shost} port %{POSINT:port} \[%{WORD:authtype}\]
+SSHD_CORRECT_KEY_BUT_WRONG_HOST Authentication tried for %{USERNAME:user} with correct key but not from a permitted host \(host=%{IPORHOST:shost}, ip=%{IPORHOST:sip}\).
+SSHD_DISCONNECTED Disconnected from %{IPORHOST:shost} port %{POSINT:port}
+SSHD_DISPATCH_RUN_FATAL fatal: ssh_dispatch_run_fatal: Connection from %{IPORHOST:shost} port %{POSINT:port}: %{GREEDYDATA:errormessage} \[%{WORD:authtype}\]
+SSHD_FAILED_PASSWORD Failed (none|password|publickey) for %{USERNAME:user} from %{IPORHOST:shost} port %{POSINT:port} %{WORD:protocol}(: %{GREEDYDATA})?
+SSHD_FAILED_PASSWORD_INVALID_USER Failed (none|password) for invalid user %{GREEDYDATA:user} from %{IPORHOST:shost} port %{POSINT:port} %{WORD:protocol}
+SSHD_INPUT_USERAUTH_REQ input_userauth_request: invalid user %{GREEDYDATA:user} \[%{WORD:authtype}\]
+SSHD_INVALID_USER Invalid user %{GREEDYDATA:user} from %{IPORHOST:shost}
+SSHD_LISTENING_ON Server listening on %{IPORHOST:shost} port %{POSINT:port}
+SSHD_MAX_AUTH_ATTEMPTS_EXCEEDED error: maximum authentication attempts exceeded for( invalid user)? %{GREEDYDATA:user} from %{IPORHOST:shost} port %{POSINT:port} %{WORD:protocol} \[%{WORD:authtype}\]
+SSHD_NO_IDENTITY_STRING Did not receive identification string from %{IPORHOST:shost}
+SSHD_POSTPONED Postponed publickey for %{USERNAME:user} from %{IPORHOST:shost} port %{POSINT:port} %{WORD:protocol} \[%{WORD:authtype}\]
+SSHD_RECV_DISCONNECT Received disconnect from %{IPORHOST:shost} port %{POSINT:port}:%{POSINT}: (com.jcraft.jsch.JSchException: Auth fail|disconnected by user|Bye Bye)?%{SPACE}(\[%{WORD:authtype}\])?
+SSHD_RESTARTING Received %{WORD:signal}; restarting.
+SSHD_ROOT_LOGIN_REFUSED ROOT LOGIN REFUSED FROM %{IPORHOST:shost}( \[preauth\])?
+SSHD_TERMINATING Received signal %{POSINT:signum}; terminating.
+SSHD_SETTING_RESOURCE_LIMITS %{WORD:loginclass}: setting resource limit %{WORD:resourcelimit}: Invalid argument
+SSHD_TIMEOUT_BEFORE_AUTH fatal: Timeout before authentication for %{IPORHOST:shost}
+SSHD_TOO_MANY_AUTH_FAILURES Disconnecting: Too many authentication failures \[%{WORD:authtype}\]
+SSHD_UNABLE_TO_NEGOTIATE fatal: Unable to negotiate with %{IPORHOST:shost} port %{INT:port}: %{GREEDYDATA}

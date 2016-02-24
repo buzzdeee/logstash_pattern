@@ -1,0 +1,6 @@
+PUPPETDB_TIMESTAMP %{YEAR}-%{MONTHNUM}-%{MONTHDAY} %{HOUR}:%{MINUTE}:%{SECOND},%{NUMBER:miliseconds}
+PUPPETDB_SEVERITY %{WORD:severity}%{SPACE}
+PUPPETDB_ACTION_MESSAGE \[%{GREEDYDATA:javaclass}\] \[%{UUID}\] \[%{GREEDYDATA:action}\]( puppet %{GREEDYDATA:version} -)? %{IPORHOST:shost}
+PUPPETDB_OTHER_ACTIONS \[%{GREEDYDATA:javaclass}\] %{GREEDYDATA:actionmessage}
+PUPPETDB_GARBAGE_COLLECTION \[%{GREEDYDATA:javaclass}\] (Finished|Starting) database garbage collection
+PUPPETDB_SWEEP_STALE \[%{GREEDYDATA:javaclass}\] (Finished|Starting) sweep of stale reports \(threshold: %{NUMBER:threshold} days\)

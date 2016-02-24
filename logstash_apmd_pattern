@@ -1,0 +1,2 @@
+APMD_SYSTEM_ACTION system %{GREEDYDATA:apmmessage}
+APMD_BATTERY_STATUS battery status: %{WORD:batterystatus}. external power status: %{GREEDYDATA:powerstatus}. estimated battery life %{INT:batterypercent}%

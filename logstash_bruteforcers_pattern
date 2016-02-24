@@ -1,0 +1,1 @@
+BRUTEFORCERS_BLOCKED_IPS number of blocked IPs: %{NUMBER:ipcount:int}

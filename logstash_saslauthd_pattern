@@ -1,0 +1,4 @@
+SASLAUTHD_IPC_INIT ipc_init%{SPACE}: listening on socket: %{UNIXPATH:socket}
+SASLAUTHD_DETACH_TTY detach_tty%{SPACE}: master pid is: %{POSINT:pid}
+SASLAUTHD_SERVER_EXIT server_exit%{SPACE}: master exited: %{POSINT:pid}
+SASLAUTHD_RETR_AUTH Retrying authentication

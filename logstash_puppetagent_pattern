@@ -1,0 +1,12 @@
+PUPPETAGENT_APPLYING_CONF_VERS Applying configuration version '%{NUMBER:version}'
+PUPPETAGENT_CACHING_CATALOG Caching catalog for %{IPORHOST:shost}
+PUPPETAGENT_CAUGHT_TERM Caught TERM; storing stop
+PUPPETAGENT_FILE \(/File\[%
+PUPPETAGENT_FINISHED_CATALOG_RUN Finished catalog run in %{NUMBER:seconds:float} seconds
+PUPPETAGENT_LOADING_FACTS Loading facts
+PUPPETAGENT_PROCESSING_STOP Processing stop
+PUPPETAGENT_REOPEN_LOG Reopening log files
+PUPPETAGENT_RETR_PLUGINFACTS Retrieving pluginfacts
+PUPPETAGENT_RETR_PLUGIN Retrieving plugin
+PUPPETAGENT_STAGE_MAIN (\()?/Stage\[main\]%
+PUPPETAGENT_STARTING Starting Puppet client version %{GREEDYDATA:version}

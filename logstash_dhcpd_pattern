@@ -1,0 +1,17 @@
+DHCPD_ACK_ON DHCPACK on %{IPORHOST:shost} to %{COMMONMAC:mac} via %{WORD:interface}
+DHCPD_ACK_TO DHCPACK to %{IPORHOST:shost} \(%{COMMONMAC:mac}\) via %{WORD:interface}
+DHCPD_ALREADY_ACKING already acking lease %{IPORHOST:shost}
+DHCPD_BAD_IP_CHECKSUMS %{POSINT:bad_packets} bad IP checksums seen in %{POSINT:all_packets} packets
+DHCPD_BOOTREPLY BOOTREPLY for %{IPORHOST:shost} to %{WORD:host} \(%{COMMONMAC:mac}\) via %{WORD:interface}
+DHCPD_BOOTREQUEST BOOTREQUEST from %{COMMONMAC:mac} via %{WORD:interface}( \(non-rfc1048\))?
+DHCPD_CANT_LISTEN Can't listen on %{WORD:interface} - it has no IP address
+DHCPD_DHCPINFORM_NOT_CONSISTENT DHCPINFORM from %{IPORHOST:shost} but ciaddr %{IPORHOST:rhost} is not consistent with actual address
+DHCPD_DHCPINFORM DHCPINFORM from %{IPORHOST:shost}
+DHCPD_DISCOVER DHCPDISCOVER from %{COMMONMAC:mac} via %{WORD:interface}
+DHCPD_LISTENING_ON Listening on %{WORD:interface} \(%{IPORHOST:shost}\).
+DHCPD_NAK DHCPNAK on %{IPORHOST:shost} to %{COMMONMAC:mac} via %{WORD:interface}
+DHCPD_OFFER DHCPOFFER on %{IPORHOST:shost} to %{COMMONMAC:mac} via %{WORD:interface}
+DHCPD_RELEASE DHCPRELEASE of %{IPORHOST:shost} from %{COMMONMAC:mac} via %{WORD:interface} \(found\)
+DHCPD_RELEASED Released lease for IP address %{IPORHOST:shost}
+DHCPD_REQUEST DHCPREQUEST for %{IPORHOST:shost} from %{COMMONMAC:mac} via %{WORD:interface}
+DHCPD_UNEXPECTED_ICMP unexpected ICMP Echo Reply from %{IPORHOST:shost}
