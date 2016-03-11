@@ -10,6 +10,7 @@ DHCPD_DHCPINFORM DHCPINFORM from %{IPORHOST:shost}
 DHCPD_DISCOVER DHCPDISCOVER from %{COMMONMAC:mac} via %{WORD:interface}
 DHCPD_LISTENING_ON Listening on %{WORD:interface} \(%{IPORHOST:shost}\).
 DHCPD_NAK DHCPNAK on %{IPORHOST:shost} to %{COMMONMAC:mac} via %{WORD:interface}
+DHCPD_NO_BUFFERSPACE send_packet: No buffer space available
 DHCPD_OFFER DHCPOFFER on %{IPORHOST:shost} to %{COMMONMAC:mac} via %{WORD:interface}
 DHCPD_RELEASE DHCPRELEASE of %{IPORHOST:shost} from %{COMMONMAC:mac} via %{WORD:interface} \(found\)
 DHCPD_RELEASED Released lease for IP address %{IPORHOST:shost}
