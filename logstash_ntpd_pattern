@@ -7,6 +7,7 @@ NTPD_ENGINE_READY ntp engine ready
 NTPD_LISTENING_ON listening on %{IPORHOST:shost}
 NTPD_NEGATIVE_DELAY reply from %{IPORHOST:shost}: negative delay %{NUMBER:delay}s, next query %{NUMBER:seconds:float}s
 NTPD_NEW_DRIFTFILE creating new %{UNIXPATH:driftfile}
+NTPD_NO_REPLY no reply received in time, skipping initial time setting
 NTPD_PEER_VALID peer %{IPORHOST:shost} now valid
 NTPD_PEER_INVALID peer %{IPORHOST:shost} now invalid
 NTPD_REPLY_NOT_SYNCED reply from %{IPORHOST:shost}: not synced \(alarm\), next query %{NUMBER:seconds:float}s
