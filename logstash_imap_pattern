@@ -1,8 +1,13 @@
 IMAP_AUXPROPFUNC_ERROR auxpropfunc error %{GREEDYDATA:error}
-IMAP_SQL_ENGINE_NOT_SUPP SQL engine '%{WORD:engine}' not supported
+IMAP_CLIENT_ID client id: "%{GREEDYDATA:header}" "%{IPORHOST:host}"
+IMAP_CYR_EXPIRE_DUPLICATE_PRUNE duplicate_prune: pruning back %{NUMBER:days} days
+IMAP_CYR_EXPIRE_EXPIRED Expired %{INT:expired:int} and expunged %{INT:expunged:int} out of %{INT:nummessages:int} messages from %{INT:nummailboxes:int} mailboxes
+IMAP_CYR_EXPIRE_REPACKING Repacking %{GREEDYDATA:mailbox} version %{INT:version}
+IMAP_DELIVERED Delivered: <%{GREEDYDATA:messageid}> to mailbox: %{GREEDYDATA:mailbox}
 IMAP_INVALID_PARAMETER %{WORD:failed_function}\(\) failed in %{WORD:parent_function}\(\): invalid parameter supplied
 IMAP_USER_LOGIN login: %{IPORHOST:host} \[%{IPORHOST:host}\] %{USER:user} %{WORD:logontype} User logged in SESSIONID=<%{GREEDYDATA:sessionid}>
-IMAP_CLIENT_ID client id: "%{GREEDYDATA:header}" "%{IPORHOST:host}"
+IMAP_PURGED (duplicate_prune|tls_prune): purged %{INT:purged:int} out of %{INT:entries:int} entries
+IMAP_SQL_ENGINE_NOT_SUPP SQL engine '%{WORD:engine}' not supported
 IMAP_USAGE USAGE %{USER:user} user: %{NUMBER:userusage:float} sys: %{NUMBER:sysusage:float}
 IMAP_INITTLS inittls: %{GREEDYDATA:tlsmessage}
 IMAP_TLS_NEGOTIATION_FAILED imaps TLS negotiation failed: %{IPORHOST:shost} \[%{IPORHOST:ipaddress}\]
