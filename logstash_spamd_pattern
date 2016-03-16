@@ -1,2 +1,2 @@
-SPAMD_CONNECTED %{IPORHOST:shost}: connected (1/0)
+SPAMD_CONNECTED %{IPORHOST:shost}: connected \(1/0\)
 SPAMD_DISCONNECTED %{IPORHOST:shost}: disconnected after %{INT:seconds:int} seconds.
