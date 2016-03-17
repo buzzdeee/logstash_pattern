@@ -5,8 +5,10 @@ IMAP_CYR_EXPIRE_DUPLICATE_PRUNE duplicate_prune: pruning back %{NUMBER:days} day
 IMAP_CYR_EXPIRE_EXPIRED Expired %{INT:expired:int} and expunged %{INT:expunged:int} out of %{INT:nummessages:int} messages from %{INT:nummailboxes:int} mailboxes
 IMAP_CYR_EXPIRE_REPACKING Repacking %{GREEDYDATA:mailbox} version %{INT:version}
 IMAP_DELIVERED Delivered: <%{GREEDYDATA:messageid}> to mailbox: %{GREEDYDATA:mailbox}
+IMAP_GRACEFUL_SHUTDOWN graceful shutdown
 IMAP_INVALID_PARAMETER %{WORD:failed_function}\(\) failed in %{WORD:parent_function}\(\): invalid parameter supplied
 IMAP_USER_LOGIN login: %{IPORHOST:host} \[%{IPORHOST:host}\] %{USER:user} %{GREEDYDATA:logontype} User logged in SESSIONID=<%{GREEDYDATA:sessionid}>
+IMAP_PROCESS_EXIT process type:%{WORD:processtype} name:%{WORD:service} path:%{UNIXPATH:binary} age:%{NUMBER:age:float}s pid:%{INT:pid:int} exited, status %{INT:exitstatus:int}
 IMAP_PURGED (duplicate_prune|tls_prune): purged %{INT:purged:int} out of %{INT:entries:int} entries
 IMAP_SQL_ENGINE_NOT_SUPP SQL engine '%{WORD:engine}' not supported
 IMAP_USAGE USAGE %{USER:user} user: %{NUMBER:userusage:float} sys: %{NUMBER:sysusage:float}
