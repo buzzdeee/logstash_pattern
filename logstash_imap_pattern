@@ -1,5 +1,6 @@
 IMAP_AUXPROPFUNC_ERROR auxpropfunc error %{GREEDYDATA:error}
 IMAP_CLIENT_ID client id: "%{GREEDYDATA:header}" "%{IPORHOST:host}"
+IMAP_CONNECTION_RESET Connection reset by peer, closing connection
 IMAP_CYR_EXPIRE_DUPLICATE_PRUNE duplicate_prune: pruning back %{NUMBER:days} days
 IMAP_CYR_EXPIRE_EXPIRED Expired %{INT:expired:int} and expunged %{INT:expunged:int} out of %{INT:nummessages:int} messages from %{INT:nummailboxes:int} mailboxes
 IMAP_CYR_EXPIRE_REPACKING Repacking %{GREEDYDATA:mailbox} version %{INT:version}
