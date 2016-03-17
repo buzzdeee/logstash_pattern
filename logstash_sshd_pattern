@@ -19,7 +19,7 @@ SSHD_POSTPONED Postponed publickey for %{USERNAME:user} from %{IPORHOST:shost} p
 SSHD_RECV_DISCONNECT Received disconnect from %{IPORHOST:shost} port %{POSINT:port}:%{POSINT}: (com.jcraft.jsch.JSchException: Auth fail|disconnected by user|Bye Bye)?%{SPACE}(\[%{WORD:authtype}\])?
 SSHD_RESTARTING Received %{WORD:signal}; restarting.
 SSHD_ROOT_LOGIN_REFUSED ROOT LOGIN REFUSED FROM %{IPORHOST:shost}( \[preauth\])?
-SSHD_TERMINATING Received signal %{POSINT:signum}; terminating.
+SSHD_TERMINATING Received signal %{POSINT:signum:int}; terminating.
 SSHD_SETTING_RESOURCE_LIMITS %{WORD:loginclass}: setting resource limit %{WORD:resourcelimit}: Invalid argument
 SSHD_TIMEOUT_BEFORE_AUTH fatal: Timeout before authentication for %{IPORHOST:shost}
 SSHD_TOO_MANY_AUTH_FAILURES Disconnecting: Too many authentication failures \[%{WORD:authtype}\]

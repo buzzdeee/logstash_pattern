@@ -1,0 +1,2 @@
+POSTFIX_STOPPING stopping the Postfix mail system
+POSTFIX_TERMINATING terminating on signal ${INT:signum:int}
