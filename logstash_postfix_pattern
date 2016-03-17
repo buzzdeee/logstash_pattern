@@ -1,2 +1,3 @@
-POSTFIX_STOPPING stopping the Postfix mail system
+POSTFIX_STARTSTOP (starting|stopping) the Postfix mail system
 POSTFIX_TERMINATING terminating on signal ${INT:signum:int}
+POSTFIX_MASTER_STARTED daemon started -- version %{GREEDYDATA:version}, configuration %{UNIXPATH}

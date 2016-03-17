@@ -15,3 +15,8 @@ IMAP_USAGE USAGE %{USER:user} user: %{NUMBER:userusage:float} sys: %{NUMBER:sysu
 IMAP_INITTLS inittls: %{GREEDYDATA:tlsmessage}
 IMAP_TLS_NEGOTIATION_FAILED imaps TLS negotiation failed: %{IPORHOST:shost} \[%{IPORHOST:ipaddress}\]
 IMAP_STARTTLS starttls: %{GREEDYDATA:tlsversion} with cipher %{GREEDYDATA:cipher} \(128/128 bits new\) no authentication
+RECONSTRUCT_RECONSTRUCTING reconstructing %{GREEDYDATA:mailbox}
+RECONSTRUCT_UPDATING %{GREEDYDATA:mailbox}: updating sync_crc %{INT} => %{INT}
+RECONSTRUCT_ERR run reconstruct with -R to fix or -U to remove
+RECONSTRUCT_DBERR_INIT DBERROR: init() on berkeley
+RECONSTRUCT_DBERR_NO_DB DBERROR: dbenv->open '%{UNIXPATH}' failed: No such file or directory

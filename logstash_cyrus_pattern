@@ -1,6 +1,9 @@
 CTL_CYRUSDB_CHECKPOINTING (done )?checkpointing cyrus databases
+CTL_CYRUSDB_CONVERTING_MAILBOX converting %{UNIXPATH:mailbox} from %{WORD} to %{WORD}
+CTL_CYRUSDB_DBERROR DBERROR db4: %{UNIXPATH:db}: unable to find environment
 CTL_CYRUSDB_DEPRECATED_OPTION Option '%{WORD:oldoption}' is deprecated in favor of '%{WORD:oldoption}' since version %{GREEDYDATA:version}.
 CTL_CYRUSDB_RECOVERING (done )?recovering cyrus databases
 CTL_CYRUSDB_SKIPLIST skiplist: clean shutdown file missing, updating recovery stamp
+CTL_CYRUSDB_SKIP_ACTION (skiplist|twoskip): (checkpointed|recovered) %{UNIXPATH} \(%{INT:numrecords:int} records, (%{INT})?( => )?%{INT:numbytes:int} bytes\) in %{NUMBER:seconds:float} seconds
 CYRUS_MASTER_CLOSING_DOWN All children have exited, closing down
 CYRUS_MASTER_SHUTDOWN attempting clean shutdown on signal

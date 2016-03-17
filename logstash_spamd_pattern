@@ -1,3 +1,4 @@
 SPAMD_CONNECTED %{IPORHOST:shost}: connected \(1/0\)
 SPAMD_DISCONNECTED %{IPORHOST:shost}: disconnected after %{INT:seconds:int} seconds.
+SPAMD_LISTENING listening for incoming connections.
 SPAMDB_STATS spamtraps: %{INT:spamtraps:int} trapped: %{INT:trapped:int} grey: %{INT:grey:int} white: %{INT:white:int}
