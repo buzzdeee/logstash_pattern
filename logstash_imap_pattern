@@ -11,4 +11,4 @@ IMAP_SQL_ENGINE_NOT_SUPP SQL engine '%{WORD:engine}' not supported
 IMAP_USAGE USAGE %{USER:user} user: %{NUMBER:userusage:float} sys: %{NUMBER:sysusage:float}
 IMAP_INITTLS inittls: %{GREEDYDATA:tlsmessage}
 IMAP_TLS_NEGOTIATION_FAILED imaps TLS negotiation failed: %{IPORHOST:shost} \[%{IPORHOST:ipaddress}\]
-IMAP_STARTTLS starttls: %{GREEDYDATA:tlsversion} with cipher %{GREEDYDATA:cypher} \(128/128 bits new\) no authentication
+IMAP_STARTTLS starttls: %{GREEDYDATA:tlsversion} with cipher %{GREEDYDATA:cipher} \(128/128 bits new\) no authentication
