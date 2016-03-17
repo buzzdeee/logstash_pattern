@@ -9,6 +9,7 @@ SSHD_DISCONNECTED Disconnected from %{IPORHOST:shost} port %{POSINT:port}
 SSHD_DISPATCH_RUN_FATAL fatal: ssh_dispatch_run_fatal: Connection from %{IPORHOST:shost} port %{POSINT:port}: %{GREEDYDATA:errormessage} \[%{WORD:authtype}\]
 SSHD_FAILED_PASSWORD Failed (none|password|publickey) for %{USERNAME:user} from %{IPORHOST:shost} port %{POSINT:port} %{WORD:protocol}(: %{GREEDYDATA})?
 SSHD_FAILED_PASSWORD_INVALID_USER Failed (none|password) for invalid user %{GREEDYDATA:user} from %{IPORHOST:shost} port %{POSINT:port} %{WORD:protocol}
+SSHD_GETSOCKNAME_FAILED error: getsockname failed: Connection reset by peer
 SSHD_INPUT_USERAUTH_REQ input_userauth_request: invalid user %{GREEDYDATA:user} \[%{WORD:authtype}\]
 SSHD_INVALID_USER Invalid user %{GREEDYDATA:user} from %{IPORHOST:shost}
 SSHD_LISTENING_ON Server listening on %{IPORHOST:shost} port %{POSINT:port}
