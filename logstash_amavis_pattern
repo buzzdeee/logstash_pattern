@@ -2,9 +2,10 @@ AMAVIS_STARTING starting. %{UNIXPATH} at %{IPORHOST} %{GREEDYDATA}
 AMAVIS_GROUP_NOT_DEFINED Net::Server: Group Not Defined.  Defaulting to EGID '%{INT} %{INT}'
 AMAVIS_USER_NOT_DEFINED Net::Server: User Not Defined.  Defaulting to EUID '%{INT}'
 AMAVIS_MODULE Module %{GREEDYDATA:module}%{SPACE}%{GREEDYDATA:version}
-AMAVIS_CODE %{GREEDYDATA:module} code%{SPACE}(NOT )?loaded
+AMAVIS_CODE %{GREEDYDATA:module}( code)?%{SPACE}(NOT )?loaded
 AMAVIS_FOUND Found %{GREEDYDATA} (for%{SPACE}%{GREEDYDATA})?%{SPACE}at %{UNIXPATH}(%{GREEDYDATA})?
 AMAVIS_NOT_FOUND No %{GREEDYDATA},%{SPACE}not using it
+AMAVIS_NO_DECODER No decoder for%{SPACE}%{GREEDYDATA}
 AMAVIS_NO_EXT_PROG No ext program for%{SPACE}%{GREEDYDATA}, tried: %{GREEDYDATA}
 AMAVIS_INTERNAL_DECODER Internal decoder for %{GREEDYDATA}
 AMAVIS_USING_PRIMARY_SCANNER Using primary internal av scanner code for %{GREEDYDATA:avscanner}

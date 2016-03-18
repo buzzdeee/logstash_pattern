@@ -18,5 +18,11 @@ IMAP_STARTTLS starttls: %{GREEDYDATA:tlsversion} with cipher %{GREEDYDATA:cipher
 RECONSTRUCT_RECONSTRUCTING reconstructing %{GREEDYDATA:mailbox}
 RECONSTRUCT_UPDATING %{GREEDYDATA:mailbox}: updating sync_crc %{INT} => %{INT}
 RECONSTRUCT_ERR run reconstruct with -R to fix or -U to remove
-RECONSTRUCT_DBERR_INIT DBERROR: init() on berkeley
+RECONSTRUCT_DBERR_INIT DBERROR: init\(\) on berkeley
 RECONSTRUCT_DBERR_NO_DB DBERROR: dbenv->open '%{UNIXPATH}' failed: No such file or directory
+RECONSTRUCT_INVALID_HEADER twoskip: invalid magic header: %{UNIXPATH}
+RECONSTRUCT_OPENING cyrusdb: opening %{UNIXPATH} with backend skiplist \(requested twoskip\)
+RECONSTRUCT_CONVERTED cyrusdb: converted %{UNIXPATH} from skiplist to twoskip
+RECONSTRUCT_UNABLE_DLOPEN unable to dlopen %{UNIXPATH}: Cannot load specified object
+RECONSTRUCT_LONGLOCK mailbox: longlock %{GREEDYDATA:mailbox} for %{NUMBER:seconds:float} seconds
+RECONSTRUCT_GUID_MISMATCH: %{GREEDYDATA:mailbox} uid %{INT:uid:int} guid mismatch
