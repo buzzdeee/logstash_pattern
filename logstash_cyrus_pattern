@@ -4,6 +4,6 @@ CTL_CYRUSDB_DBERROR DBERROR db4: %{UNIXPATH:db}: unable to find environment
 CTL_CYRUSDB_DEPRECATED_OPTION Option '%{WORD:oldoption}' is deprecated in favor of '%{WORD:oldoption}' since version %{GREEDYDATA:version}.
 CTL_CYRUSDB_RECOVERING (done )?recovering cyrus databases
 CTL_CYRUSDB_SKIPLIST skiplist: clean shutdown file missing, updating recovery stamp
-CTL_CYRUSDB_SKIP_ACTION (skiplist|twoskip): (checkpointed|recovered) %{UNIXPATH} \(%{INT:numrecords:int} records, (%{INT})?( => )?%{INT:numbytes:int} bytes\) in %{NUMBER:seconds:float} sec(onds)
+CTL_CYRUSDB_SKIP_ACTION (skiplist|twoskip): (checkpointed|recovered) %{UNIXPATH} \(%{INT:numrecords:int} records, (%{INT})?( => )?%{INT:numbytes:int} bytes\) in %{NUMBER:seconds:float} sec(onds)?
 CYRUS_MASTER_CLOSING_DOWN All children have exited, closing down
 CYRUS_MASTER_SHUTDOWN attempting clean shutdown on signal
