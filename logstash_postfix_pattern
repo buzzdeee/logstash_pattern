@@ -7,7 +7,7 @@ POSTFIX_MASTER_STARTED daemon started -- version %{GREEDYDATA:version}, configur
 POSTFIX_CONNECT_FROM connect from %{IPORHOST:shost}\[%{IPORHOST:ipaddress}\]
 POSTFIX_DISCONNECT_FROM disconnect from %{IPORHOST}[%{IPORHOST}] unknown=%{INT}/%{INT} commands=%{INT}/%{INT}
 POSTFIX_LOST_CONNECTION lost connection after %{WORD} from %{IPORHOST:shost}\[%{IPORHOST:ipaddress}\]
-POSTFIX_PICKUP %{GREEDYDATA:messageid}: uid=%{INT:uid:int} from=<%{GREEDYDATA>
+POSTFIX_PICKUP %{GREEDYDATA:messageid}: uid=%{INT:uid:int} from=<%{GREEDYDATA}>
 POSTFIX_REMOVED %{GREEDYDATA:messageid}: removed
 POSTFIX_STATISTICS_CONN_COUNT statistics: max connection count %{INT:count:int} for \(submission:%{IPORHOST:shost}\) at %{GREEDYDATA}
 POSTFIX_STATISTICS_CONN_RATE statistics: max connection rate %{INT:count:int}/%{INT:seconds:float}s for \(submission:%{IPORHOST:shost}\) at %{GREEDYDATA}
