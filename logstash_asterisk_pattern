@@ -1,2 +1,2 @@
-ASTERISK_ENDED Asterisk ended with exit status ${INT:status}
+ASTERISK_ENDED Asterisk ended with exit status ${INT:statusnum:int}
 ASTERISK_SHUTDOWN Asterisk shutdown normally.
