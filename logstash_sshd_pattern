@@ -6,6 +6,7 @@ SSHD_CHANGE_USERNAME_NOT_ALLOWED Disconnecting: Change of username or service no
 SSHD_CONN_CLOSED Connection (closed|reset) by %{IPORHOST:shost} port %{POSINT:port} \[%{WORD:authtype}\]
 SSHD_CORRECT_KEY_BUT_WRONG_HOST Authentication tried for %{USERNAME:user} with correct key but not from a permitted host \(host=%{IPORHOST:shost}, ip=%{IPORHOST:sip}\).
 SSHD_DISCONNECTED Disconnected from %{IPORHOST:shost} port %{POSINT:port}
+SSHD_DISPATCH_PROTOCOL_ERROR dispatch_protocol_error: type %{INT} seq %{INT} \[preauth\]
 SSHD_DISPATCH_RUN_FATAL fatal: ssh_dispatch_run_fatal: Connection from %{IPORHOST:shost} port %{POSINT:port}: %{GREEDYDATA:errormessage} \[%{WORD:authtype}\]
 SSHD_FAILED_PASSWORD Failed (none|password|publickey) for %{USERNAME:user} from %{IPORHOST:shost} port %{POSINT:port} %{WORD:protocol}(: %{GREEDYDATA})?
 SSHD_FAILED_PASSWORD_INVALID_USER Failed (none|password) for invalid user %{GREEDYDATA:user} from %{IPORHOST:shost} port %{POSINT:port} %{WORD:protocol}
