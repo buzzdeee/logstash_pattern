@@ -5,6 +5,7 @@ IMAP_CYR_EXPIRE_DUPLICATE_PRUNE duplicate_prune: pruning back %{NUMBER:days} day
 IMAP_CYR_EXPIRE_EXPIRED Expired %{INT:expired:int} and expunged %{INT:expunged:int} out of %{INT:nummessages:int} messages from %{INT:nummailboxes:int} mailboxes
 IMAP_CYR_EXPIRE_REPACKING Repacking %{GREEDYDATA:mailbox} version %{INT:version}
 IMAP_DELIVERED Delivered: <%{GREEDYDATA:messageid}> to mailbox: %{GREEDYDATA:mailbox}
+IMAP_EXPUNGED Expunged %{INT:nummessages:int} messages from %{GREEDYDATA:mailbox}
 IMAP_GRACEFUL_SHUTDOWN graceful shutdown
 IMAP_INVALID_PARAMETER %{WORD:failed_function}\(\) failed in %{WORD:parent_function}\(\): invalid parameter supplied
 IMAP_USER_LOGIN login: %{IPORHOST:host} \[%{IPORHOST:host}\] %{USER:user} %{GREEDYDATA:logontype} User logged in SESSIONID=<%{GREEDYDATA:sessionid}>
@@ -14,7 +15,7 @@ IMAP_SQL_ENGINE_NOT_SUPP SQL engine '%{WORD:engine}' not supported
 IMAP_USAGE USAGE %{USER:user} user: %{NUMBER:userusage:float} sys: %{NUMBER:sysusage:float}
 IMAP_INITTLS inittls: %{GREEDYDATA:tlsmessage}
 IMAP_TLS_NEGOTIATION_FAILED imaps TLS negotiation failed: %{IPORHOST:shost} \[%{IPORHOST:ipaddress}\]
-IMAP_STARTTLS starttls: %{GREEDYDATA:tlsversion} with cipher %{GREEDYDATA:cipher} \(128/128 bits new\) no authentication
+IMAP_STARTTLS starttls: %{GREEDYDATA:tlsversion} with cipher %{GREEDYDATA:cipher} \(%{INT}/%{INT} bits new\) no authentication
 RECONSTRUCT_RECONSTRUCTING reconstructing %{GREEDYDATA:mailbox}
 RECONSTRUCT_UPDATING %{GREEDYDATA:mailbox}: updating sync_crc %{INT} => %{INT}
 RECONSTRUCT_ERR run reconstruct with -R to fix or -U to remove
