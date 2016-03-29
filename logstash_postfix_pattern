@@ -1,5 +1,5 @@
 POSTFIX_CLEANUP %{GREEDYDATA:messageid}: message-id=<%{GREEDYDATA}>
-POSTFIX_LMTP %{GREEDYDATA:messageid}: to=<%{GREEDYDATA:recipient}>, (orig_to=<%{GREEDYDATA:orig_to}>, )?relay=%{IPORHOST:relay}\[%{UNIXPATH}\], delay=%{NUMBER:delay:float}, delays=%{NUMBER}/%{NUMBER}/%{NUMBER}/%{NUMBER}, dsn=%{GREEDYDATA}, status=%{WORD:status} \(%{INT:statusnum:int} %{GREEDYDATA} Ok SESSIONID=<%{GREEDYDATA}>\)
+POSTFIX_MESSAGE_RELAY %{GREEDYDATA:messageid}: to=<%{GREEDYDATA:recipient}>, (orig_to=<%{GREEDYDATA:orig_to}>, )?relay=%{IPORHOST:relay}\[(%{UNIXPATH}|%{IPORHOST:sourceip})\](:%{INT:port:int})?, delay=%{NUMBER:delay:float}, delays=%{NUMBER}/%{NUMBER}/%{NUMBER}/%{NUMBER}, dsn=%{GREEDYDATA}, status=%{WORD:status} \(%{INT:statusnum:int} %{GREEDYDATA}\)
 POSTFIX_STARTSTOP (starting|stopping) the Postfix mail system
 POSTFIX_QUEUE_ACTIVE %{GREEDYDATA:messageid}: from=<%{GREEDYDATA:sender}>, size=%{INT:size:int}, nrcpt=%{INT:nrcpt:int} \(queue active\)
 POSTFIX_TERMINATING terminating on signal ${INT:signum:int}
