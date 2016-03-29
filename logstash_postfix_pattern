@@ -1,5 +1,5 @@
 POSTFIX_CLEANUP %{GREEDYDATA:messageid}: message-id=<%{GREEDYDATA}>
-POSTFIX_MESSAGE_RELAY %{GREEDYDATA:messageid}: to=<%{GREEDYDATA:recipient}>, (orig_to=<%{GREEDYDATA:orig_to}>, )?relay=%{IPORHOST:relay}\[(%{UNIXPATH}|%{IPORHOST:sourceip})\](:%{INT:port:int})?, delay=%{NUMBER:delay:float}, delays=%{NUMBER}/%{NUMBER}/%{NUMBER}/%{NUMBER}, dsn=%{GREEDYDATA}, status=%{WORD:status} \(%{INT:statusnum:int} %{GREEDYDATA}\)
+POSTFIX_MESSAGE_RELAY %{GREEDYDATA:messageid}: to=<%{GREEDYDATA:recipient}>, (orig_to=<%{GREEDYDATA:orig_to}>, )?relay=(none|%{IPORHOST:relay}\[(%{UNIXPATH}|%{IPORHOST:sourceip})\](:%{INT:port:int})?), (conn_use=%{INT}, )?delay=%{NUMBER:delay:float}, delays=%{NUMBER}/%{NUMBER}/%{NUMBER}/%{NUMBER}, dsn=%{GREEDYDATA}, status=%{WORD:status} \(%{INT:statusnum:int} %{GREEDYDATA}\)
 POSTFIX_STARTSTOP (starting|stopping) the Postfix mail system
 POSTFIX_QUEUE_ACTIVE %{GREEDYDATA:messageid}: from=<%{GREEDYDATA:sender}>, size=%{INT:size:int}, nrcpt=%{INT:nrcpt:int} \(queue active\)
 POSTFIX_TERMINATING terminating on signal ${INT:signum:int}
@@ -11,6 +11,7 @@ POSTFIX_NON_SMTP warning: non-SMTP command from %{IPORHOST:shost}\[%{IPORHOST:ip
 POSTFIX_PICKUP %{GREEDYDATA:messageid}: uid=%{INT:uid:int} from=<%{GREEDYDATA}>
 POSTFIX_REMOVED %{GREEDYDATA:messageid}: removed
 POSTFIX_SMTPD_CLIENT %{GREEDYDATA:messageid}: client=%{IPORHOST:shost}\[%{IPORHOST}\]
+POSTFIX_TIMED_OUT %{GREEDYDATA:messageid}: conversation with %{IPORHOST:shost}\[%{IPORHOST}\] timed out while receiving the initial server greeting
 POSTFIX_STATISTICS_CONN_COUNT statistics: max connection count %{INT:count:int} for \(%{WORD:component}:%{IPORHOST:shost}\) at %{GREEDYDATA}
 POSTFIX_STATISTICS_CONN_RATE statistics: max connection rate %{INT:count:int}/%{INT:seconds:float}s for \(%{WORD:component}:%{IPORHOST:shost}\) at %{GREEDYDATA}
 POSTFIX_STATISTICS_MAX_CACHE statistics: max cache size %{INT:size:int} at %{GREEDYDATA}
