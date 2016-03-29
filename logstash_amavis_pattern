@@ -12,3 +12,7 @@ AMAVIS_USING_PRIMARY_SCANNER Using primary internal av scanner code for %{GREEDY
 AMAVIS_FOUND_SECONDARY_SCANNER Found secondary av scanner %{GREEDYDATA:avscanner} at ${UNIXPATH}
 AMAVIS_CREATING_DB Creating db in %{UNIXPATH};%{GREEDYDATA}
 AMAVIS_DELETING_DB_FILES Deleting db files  in %{UNIXPATH}
+AMAVIS_RUN_AV_FAILED \(%{NUMBER}-%{NUMBER}\) \(!\)run_av \(%{GREEDYDATA:scanner}\) FAILED - unexpected , output="%{UNIXPATH}: %{GREEDYDATA:errormessage}"
+AMAVIS_AV_SCANNER_FAILED \(!\)%{GREEDYDATA} av-scanner FAILED: CODE\(%{GREEDYDATA}\) unexpected , output="%{UNIXPATH}: %{GREEDYDATA:errormessage}" at \(%{GREEDYDATA} %{INT}\) line %{INT:line:int}
+AMAVIS_PASSED_CLEAN \(%{GREEDYDATA}\) Passed CLEAN {RelayedOpenRelay}, \[%{IPORHOST}\] \[%{IPORHOST:shost}\] <%{GREEDYDATA:sender}> -> <%{GREEDYDATA:recipient}>, Message-ID: <%{GREEDYDATA}>, mail_id: %{GREEDYDATA:mail_id}, Hits: %{FLOAT:hits:float}, size: %{INT:size:int}, queued_as: %{GREEDYDATA:messageid}, %{INT:miliseconds} ms
+AMAVIS_CONSIDERING_BACKUP_SCANNERS \(!\)WARN: all primary virus scanners failed, considering backups
