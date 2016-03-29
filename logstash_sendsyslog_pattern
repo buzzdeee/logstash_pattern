@@ -1,1 +1,1 @@
-SENDSYSLOG_DROPPED dropped %{POSINT:dropped:int} message(s)?, error %{POSINT:errornr}
+SENDSYSLOG_DROPPED dropped %{POSINT:dropped:int} message(s)?, error %{POSINT:errornr:int}

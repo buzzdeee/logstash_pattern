@@ -1,4 +1,6 @@
 SPAMD_CONNECTED %{IPORHOST:shost}: connected \(%{INT}/%{INT}\)(, lists: %{GREEDYDATA:blacklist})?
+SPAMD_DBOPEN_FAILED dbopen failed \(Error %{INT:errornr:int}\)
 SPAMD_DISCONNECTED %{IPORHOST:shost}: disconnected after %{INT:seconds:int} seconds.
 SPAMD_LISTENING listening for incoming connections.
+SPAMD_SCAN_FAILED scan of %{UNIXPATH} failed
 SPAMDB_STATS spamtraps: %{INT:spamtraps:int} trapped: %{INT:trapped:int} grey: %{INT:grey:int} white: %{INT:white:int}
