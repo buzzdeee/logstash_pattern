@@ -4,3 +4,4 @@ SPAMD_DISCONNECTED %{IPORHOST:shost}: disconnected after %{INT:seconds:int} seco
 SPAMD_LISTENING listening for incoming connections.
 SPAMD_SCAN_FAILED scan of %{UNIXPATH} failed
 SPAMDB_STATS spamtraps: %{INT:spamtraps:int} trapped: %{INT:trapped:int} grey: %{INT:grey:int} white: %{INT:white:int}
+SPAMLOGD_EXITING exiting
