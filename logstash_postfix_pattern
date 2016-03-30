@@ -18,6 +18,7 @@ POSTFIX_LOST_CONNECTION_AFTER lost connection after %{WORD} from %{IPORHOST:shos
 POSTFIX_NON_SMTP warning: non-SMTP command from %{IPORHOST:shost}\[%{IPORHOST:ipaddress}\]: %{GREEDYDATA:command}
 POSTFIX_PICKUP %{GREEDYDATA:messageid}: uid=%{INT:uid:int} from=<%{GREEDYDATA}>
 POSTFIX_REMOVED %{GREEDYDATA:messageid}: removed
+POSTFIX_OPEN_ACTIVE warning: open active %{GREEDYDATA:messageid}: %{GREEDYDATA:errormessage}
 POSTFIX_POSTSUPER Deleted: %{INT:count:int} message
 POSTFIX_SMTPD_CLIENT %{GREEDYDATA:messageid}: client=%{IPORHOST:shost}\[%{IPORHOST}\]
 POSTFIX_TIMED_OUT %{GREEDYDATA:messageid}: conversation with %{IPORHOST:shost}\[%{IPORHOST}\] timed out while receiving the initial server greeting
