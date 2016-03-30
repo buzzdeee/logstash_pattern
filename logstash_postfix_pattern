@@ -10,6 +10,7 @@ POSTFIX_STARTSTOP (starting|stopping) the Postfix mail system
 POSTFIX_QUEUE_ACTIVE %{GREEDYDATA:messageid}: from=<%{GREEDYDATA:sender}>, size=%{INT:size:int}, nrcpt=%{INT:nrcpt:int} \(queue active\)
 POSTFIX_TERMINATING terminating on signal ${INT:signum:int}
 POSTFIX_MASTER_STARTED daemon started -- version %{GREEDYDATA:version}, configuration %{UNIXPATH}
+POSTFIX_CLOSING_CHANNEL %{GREEDYDATA:messageid}: host %{IPORHOST:shost}\[%{IPORHOST:ipaddress}\] said: %{INT:statusnum} %{GREEDYDATA}
 POSTFIX_CONNECT_FROM connect from %{IPORHOST:shost}\[%{IPORHOST:ipaddress}\]
 POSTFIX_DISCONNECT_FROM disconnect from %{IPORHOST}\[%{IPORHOST}\] unknown=%{INT}/%{INT} commands=%{INT}/%{INT}
 POSTFIX_LOST_CONNECTION_WITH lost connection with %{IPORHOST:relay}\[%{IPORHOST:ipaddress}\] %{GREEDYDATA}
@@ -22,3 +23,6 @@ POSTFIX_TIMED_OUT %{GREEDYDATA:messageid}: conversation with %{IPORHOST:shost}\[
 POSTFIX_STATISTICS_CONN_COUNT statistics: max connection count %{INT:count:int} for \(%{WORD:component}:%{IPORHOST:shost}\) at %{GREEDYDATA}
 POSTFIX_STATISTICS_CONN_RATE statistics: max connection rate %{INT:count:int}/%{INT:seconds:float}s for \(%{WORD:component}:%{IPORHOST:shost}\) at %{GREEDYDATA}
 POSTFIX_STATISTICS_MAX_CACHE statistics: max cache size %{INT:size:int} at %{GREEDYDATA}
+POSTFIX_STATISTICS_DOMAIN_LOOKUPS statistics: domain lookup hits=%{INT:hits:int} miss=%{INT:miss:int} success=%{INT:success}%
+POSTFIX_STATISTICS_MAX_SIMULTAN_DOMAINS statistics: max simultaneous domains=%{INT} addresses=%{INT} connection=%{INT}
+POSTFIX_STATISTICS_START_INTERVAL statistics: start interval %{GREEDYDATA}
