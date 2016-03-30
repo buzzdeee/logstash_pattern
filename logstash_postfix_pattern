@@ -20,6 +20,7 @@ POSTFIX_PICKUP %{GREEDYDATA:messageid}: uid=%{INT:uid:int} from=<%{GREEDYDATA}>
 POSTFIX_REMOVED %{GREEDYDATA:messageid}: removed
 POSTFIX_SMTPD_CLIENT %{GREEDYDATA:messageid}: client=%{IPORHOST:shost}\[%{IPORHOST}\]
 POSTFIX_TIMED_OUT %{GREEDYDATA:messageid}: conversation with %{IPORHOST:shost}\[%{IPORHOST}\] timed out while receiving the initial server greeting
+POSTFIX_TIMEOUT_AFTER_EOM timeout after END-OF-MESSAGE from %{IPORHOST:shost}\[%{IPORHOST}\]
 POSTFIX_STATISTICS_CONN_COUNT statistics: max connection count %{INT:count:int} for \(%{WORD:component}:%{IPORHOST:shost}\) at %{GREEDYDATA}
 POSTFIX_STATISTICS_CONN_RATE statistics: max connection rate %{INT:count:int}/%{INT:seconds:float}s for \(%{WORD:component}:%{IPORHOST:shost}\) at %{GREEDYDATA}
 POSTFIX_STATISTICS_MAX_CACHE statistics: max cache size %{INT:size:int} at %{GREEDYDATA}
