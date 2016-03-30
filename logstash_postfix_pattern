@@ -1,12 +1,19 @@
+POSTFIX_MAYBE_PORT (:%{INT:port:int})?
+POSTFIX_MAYBE_STATUSNUM (%{INT:statusnum})?
+POSTFIX_PATH_OR_IPORHOST (%{UNIXPATH}|%{IPORHOST:sourceip})
+
 POSTFIX_CLEANUP %{GREEDYDATA:messageid}: message-id=<%{GREEDYDATA}>
-POSTFIX_MESSAGE_RELAY %{GREEDYDATA:messageid}: to=<%{GREEDYDATA:recipient}>, (orig_to=<%{GREEDYDATA:orig_to}>, )?relay=(none|%{IPORHOST:relay}\[(%{UNIXPATH}|%{IPORHOST:sourceip})\](:%{INT:port:int})?), (conn_use=%{INT}, )?delay=%{NUMBER:delay:float}, delays=%{NUMBER}/%{NUMBER}/%{NUMBER}/%{NUMBER}, dsn=%{GREEDYDATA}, status=%{WORD:status} \(%{INT:statusnum:int} %{GREEDYDATA}\)
+POSTFIX_CONVERSATION_TIMEOUT %{GREEDYDATA:messageid}: conversation with %{IPORHOST:relay}\[%{IPORHOST}\] timed out %{GREEDYDATA}
+POSTFIX_CONNECTION_REFUSED connect to %{IPORHOST:relay}\[%{POSTFIX_PATH_OR_IPORHOST}\]%{POSTFIX_MAYBE_PORT}: Connection refused
+POSTFIX_MESSAGE_RELAY %{GREEDYDATA:messageid}: to=<%{GREEDYDATA:recipient}>, (orig_to=<%{GREEDYDATA:orig_to}>, )?relay=(none|%{IPORHOST:relay}\[%{POSTFIX_PATH_OR_IPORHOST}\]%{POSTFIX_MAYBE_PORT}), (conn_use=%{INT}, )?delay=%{NUMBER:delay:float}, delays=%{NUMBER}/%{NUMBER}/%{NUMBER}/%{NUMBER}, dsn=%{GREEDYDATA}, status=%{WORD:status} \(%{POSTFIX_MAYBE_STATUSNUM}%{GREEDYDATA}\)
 POSTFIX_STARTSTOP (starting|stopping) the Postfix mail system
 POSTFIX_QUEUE_ACTIVE %{GREEDYDATA:messageid}: from=<%{GREEDYDATA:sender}>, size=%{INT:size:int}, nrcpt=%{INT:nrcpt:int} \(queue active\)
 POSTFIX_TERMINATING terminating on signal ${INT:signum:int}
 POSTFIX_MASTER_STARTED daemon started -- version %{GREEDYDATA:version}, configuration %{UNIXPATH}
 POSTFIX_CONNECT_FROM connect from %{IPORHOST:shost}\[%{IPORHOST:ipaddress}\]
 POSTFIX_DISCONNECT_FROM disconnect from %{IPORHOST}\[%{IPORHOST}\] unknown=%{INT}/%{INT} commands=%{INT}/%{INT}
-POSTFIX_LOST_CONNECTION lost connection after %{WORD} from %{IPORHOST:shost}\[%{IPORHOST:ipaddress}\]
+POSTFIX_LOST_CONNECTION_WITH lost connection with %{IPORHOST:relay}\[%{IPORHOST:ipaddress}\] %{GREEDYDATA}
+POSTFIX_LOST_CONNECTION_AFTER lost connection after %{WORD} from %{IPORHOST:shost}\[%{IPORHOST:ipaddress}\]
 POSTFIX_NON_SMTP warning: non-SMTP command from %{IPORHOST:shost}\[%{IPORHOST:ipaddress}\]: %{GREEDYDATA:command}
 POSTFIX_PICKUP %{GREEDYDATA:messageid}: uid=%{INT:uid:int} from=<%{GREEDYDATA}>
 POSTFIX_REMOVED %{GREEDYDATA:messageid}: removed
