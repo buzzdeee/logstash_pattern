@@ -4,7 +4,7 @@ IMAP_CONNECTION_RESET Connection reset by peer, closing connection
 IMAP_CYR_EXPIRE_DUPLICATE_PRUNE duplicate_prune: pruning back %{NUMBER:days} days
 IMAP_CYR_EXPIRE_EXPIRED Expired %{INT:expired:int} and expunged %{INT:expunged:int} out of %{INT:nummessages:int} messages from %{INT:nummailboxes:int} mailboxes
 IMAP_CYR_EXPIRE_REPACKING Repacking %{GREEDYDATA:mailbox} version %{INT:version}
-IMAP_DELIVERED Delivered: <%{GREEDYDATA:messageid}> to mailbox: %{GREEDYDATA:mailbox}
+IMAP_DELIVERED Delivered:%{SPACE}<%{GREEDYDATA:messageid}> to mailbox: %{GREEDYDATA:mailbox}
 IMAP_EXPUNGED Expunged %{INT:nummessages:int} messages from %{GREEDYDATA:mailbox}
 IMAP_GRACEFUL_SHUTDOWN graceful shutdown
 IMAP_INVALID_PARAMETER %{WORD:failed_function}\(\) failed in %{WORD:parent_function}\(\): invalid parameter supplied
@@ -14,6 +14,7 @@ IMAP_PURGED (duplicate_prune|tls_prune): purged %{INT:purged:int} out of %{INT:e
 IMAP_SQL_ENGINE_NOT_SUPP SQL engine '%{WORD:engine}' not supported
 IMAP_USAGE USAGE %{USER:user} user: %{NUMBER:userusage:float} sys: %{NUMBER:sysusage:float}
 IMAP_USER_LOGIN login: (%{IPORHOST:shost} )?\[%{IPORHOST:sourceip}\] %{USER:user} %{GREEDYDATA:logontype} User logged in SESSIONID=<%{GREEDYDATA:sessionid}>
+IMAP_IDLE idle for too long, closing connection
 IMAP_INITTLS inittls: %{GREEDYDATA:tlsmessage}
 IMAP_RENAME Rename: %{GREEDYDATA} -> %{GREEDYDATA}
 IMAP_DELETED Deleted mailbox %{GREEDYDATA}
