@@ -1,3 +1,4 @@
+SASLAUTHD_DO_AUTH do_auth%{SPACE}: auth failure: \[user=%{GREEDYDATA:user}\] \[service=%{WORD:service}\] \[realm=(%{WORD:realm})?\] \[mech=%{WORD:mech}\] \[reason=%{GREEDYDATA:reason}\]
 SASLAUTHD_IPC_INIT ipc_init%{SPACE}: listening on socket: %{UNIXPATH:socket}
 SASLAUTHD_DETACH_TTY detach_tty%{SPACE}: master pid is: %{POSINT:pid}
 SASLAUTHD_SERVER_EXIT server_exit%{SPACE}: master exited: %{POSINT:pid}

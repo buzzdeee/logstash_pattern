@@ -2,7 +2,7 @@ BSD_VERSION %{WORD:osfamily} %{NUMBER:version}(-%{WORD:relinfo})? \(%{GREEDYDATA
 BSD_BUILDER %{USERNAME:builder}@%{IPORHOST:buildhost}:%{UNIXPATH:kernel}
 BSD_BOGUS_LINE %{SPACE}port %{NUMBER} configuration %{NUMBER}%{GREEDYDATA}
 BSD_FATAL_FIRMWARE_ERROR %{WORD:device}: fatal firmware error
-BSD_MEM (avail|real) mem%{SPACE}= %{NUMBER:bytes} \(%{NUMBER:megabytes}MB\)
+BSD_MEM (avail|real) mem%{SPACE}= %{NUMBER:bytes:int} \(%{NUMBER:megabytes}MB\)
 BSD_DEVICE_DETACHED %{WORD:device} detached
 BSD_DEVICE_TIMEOUT %{WORD:device}: (device|watchdog) timeout
 BSD_DEVICE_INFO %{WORD:device}: %{GREEDYDATA}

@@ -18,6 +18,7 @@ POSTFIX_LOST_CONNECTION_AFTER lost connection after %{WORD} from %{IPORHOST:shos
 POSTFIX_NON_SMTP warning: non-SMTP command from %{IPORHOST:shost}\[%{IPORHOST:ipaddress}\]: %{GREEDYDATA:command}
 POSTFIX_PICKUP %{GREEDYDATA:messageid}: uid=%{INT:uid:int} from=<%{GREEDYDATA}>
 POSTFIX_REMOVED %{GREEDYDATA:messageid}: removed
+POSTFIX_REMOVE_FROM_ACTIVE warning: qmgr_active_done_3_generic: remove %{GREEDYDATA:messageid} from active: %{GREEDYDATA:errormessage}
 POSTFIX_OPEN_ACTIVE warning: open active %{GREEDYDATA:messageid}: %{GREEDYDATA:errormessage}
 POSTFIX_POSTSUPER Deleted: %{INT:count:int} message
 POSTFIX_SMTPD_CLIENT %{GREEDYDATA:messageid}: client=%{IPORHOST:shost}\[%{IPORHOST}\]
