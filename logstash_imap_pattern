@@ -5,6 +5,7 @@ IMAP_CYR_EXPIRE_DUPLICATE_PRUNE duplicate_prune: pruning back %{NUMBER:days} day
 IMAP_CYR_EXPIRE_EXPIRED Expired %{INT:expired:int} and expunged %{INT:expunged:int} out of %{INT:nummessages:int} messages from %{INT:nummailboxes:int} mailboxes
 IMAP_CYR_EXPIRE_REPACKING Repacking %{GREEDYDATA:mailbox} version %{INT:version}
 IMAP_DELIVERED Delivered:%{SPACE}<%{GREEDYDATA:messageid}> to mailbox: %{GREEDYDATA:mailbox}
+IMAP_DUPELIM dupelim: eliminated duplicate message to %{GREEDYDATA}
 IMAP_EXPUNGED Expunged %{INT:nummessages:int} messages from %{GREEDYDATA:mailbox}
 IMAP_GRACEFUL_SHUTDOWN graceful shutdown
 IMAP_INVALID_PARAMETER %{WORD:failed_function}\(\) failed in %{WORD:parent_function}\(\): invalid parameter supplied
