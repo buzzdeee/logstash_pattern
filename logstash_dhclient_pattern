@@ -8,3 +8,4 @@ DHCLIENT_INTERFACE_DOWN %{WORD:interface} down; exiting
 DHCLIENT_NO_ACCEPTABLE_DHCPOFFERS No acceptable DHCPOFFERS received.
 DHCLIENT_NO_WORKING_LEASES No working leases in persistent database - sleeping.
 DHCLIENT_SEND_PACKET send_packet: (Host is down|No route to host)
+DHCLIENT_WARNING warning: %{GREEDYDATA:warningmessage}

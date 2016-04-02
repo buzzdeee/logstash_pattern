@@ -1,2 +1,4 @@
-ASTERISK_ENDED Asterisk ended with exit status ${INT:statusnum:int}
+ASTERISK_DIED Asterisk died with code %{INT:statusnum:int}.
+ASTERISK_ENDED Asterisk ended with exit status %{INT:statusnum:int}
+ASTERISK_RESTART Automatically restarting Asterisk.
 ASTERISK_SHUTDOWN Asterisk shutdown normally.
