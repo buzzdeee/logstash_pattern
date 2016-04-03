@@ -17,6 +17,7 @@ POSTFIX_DISCONNECT_FROM disconnect from %{IPORHOST}\[%{IPORHOST}\] unknown=%{INT
 POSTFIX_LOST_CONNECTION_WITH lost connection with %{IPORHOST:relay}\[%{IPORHOST:ipaddress}\] %{GREEDYDATA}
 POSTFIX_LOST_CONNECTION_AFTER lost connection after %{WORD} from %{IPORHOST:shost}\[%{IPORHOST:ipaddress}\]
 POSTFIX_NON_SMTP warning: non-SMTP command from %{IPORHOST:shost}\[%{IPORHOST:ipaddress}\]: %{GREEDYDATA:command}
+POSTFIX_BOGUS_REVERSE_DNS warning: hostname %{IPORHOST:shost} does not resolve to address %{IPORHOST:ipaddress}
 POSTFIX_NOQUEUE NOQUEUE: reject: RCPT from %{IPORHOST:shost}\[%{IPORHOST:ipaddress}\]: %{GREEDYDATA:errormessage}
 POSTFIX_PICKUP %{GREEDYDATA:messageid}: uid=%{INT:uid:int} from=<%{GREEDYDATA}>
 POSTFIX_REMOVED %{GREEDYDATA:messageid}: removed
