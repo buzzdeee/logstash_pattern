@@ -21,7 +21,7 @@ IMAP_RENAME Rename: %{GREEDYDATA} -> %{GREEDYDATA}
 IMAP_DELETED Deleted mailbox %{GREEDYDATA}
 IMAP_TLS_NEGOTIATION_FAILED imaps TLS negotiation failed: %{IPORHOST:shost} \[%{IPORHOST:ipaddress}\]
 IMAP_STARTTLS starttls: %{GREEDYDATA:tlsversion} with cipher %{GREEDYDATA:cipher} \(%{INT}/%{INT} bits (new|reused)\) no authentication
-IMAP_BADLOGIN badlogin: (%{IPORHOST:shost} )?\[%{IPORHOST:shost}\] %{GREEDYDATA} \[SASL\(%{INT}\): generic failure: %{GREEDYDATA}\]
+IMAP_BADLOGIN badlogin: (%{IPORHOST:shost} )?\[%{IPORHOST:sourceip}\] %{GREEDYDATA} \[SASL\(%{INT}\): generic failure: %{GREEDYDATA}\]
 IMAP_UNABLE_TO_CANONIFY SASL unable to canonify user and get auxprops
 IMAP_SASL_COULD_NOT_OPEN_DB SASL Could not open db
 RECONSTRUCT_RECONSTRUCTING reconstructing %{GREEDYDATA:mailbox}
