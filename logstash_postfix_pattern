@@ -9,7 +9,7 @@ POSTFIX_CONNECTION_REFUSED connect to %{IPORHOST:relay}\[%{POSTFIX_PATH_OR_IPORH
 POSTFIX_MESSAGE_RELAY %{GREEDYDATA:messageid}: to=<%{GREEDYDATA:recipient}>, (orig_to=<%{GREEDYDATA:orig_to}>, )?relay=(none|%{IPORHOST:relay}\[%{POSTFIX_PATH_OR_IPORHOST}\]%{POSTFIX_MAYBE_PORT}), (conn_use=%{INT}, )?delay=%{NUMBER:delay:float}, delays=%{NUMBER}/%{NUMBER}/%{NUMBER}/%{NUMBER}, dsn=%{GREEDYDATA}, status=%{WORD:status} \(%{POSTFIX_MAYBE_STATUSNUM}%{GREEDYDATA}\)
 POSTFIX_STARTSTOP (starting|stopping) the Postfix mail system
 POSTFIX_QUEUE_ACTIVE %{GREEDYDATA:messageid}: from=<%{GREEDYDATA:sender}>, size=%{INT:size:int}, nrcpt=%{INT:nrcpt:int} \(queue active\)
-POSTFIX_TERMINATING terminating on signal ${INT:signum:int}
+POSTFIX_TERMINATING terminating on signal %{INT:signum:int}
 POSTFIX_MASTER_STARTED daemon started -- version %{GREEDYDATA:version}, configuration %{UNIXPATH}
 POSTFIX_CLOSING_CHANNEL %{GREEDYDATA:messageid}: host %{IPORHOST:shost}\[%{IPORHOST:ipaddress}\] said: %{INT:statusnum} %{GREEDYDATA}
 POSTFIX_CONNECT_FROM connect from %{IPORHOST:shost}\[%{IPORHOST:ipaddress}\]
@@ -25,6 +25,9 @@ POSTFIX_REMOVE_FROM_ACTIVE warning: qmgr_active_done_3_generic: remove %{GREEDYD
 POSTFIX_OPEN_ACTIVE warning: open active %{GREEDYDATA:messageid}: %{GREEDYDATA:errormessage}
 POSTFIX_POSTSUPER Deleted: %{INT:count:int} message
 POSTFIX_SMTPD_CLIENT %{GREEDYDATA:messageid}: client=%{IPORHOST:shost}\[%{IPORHOST}\]
+POSTFIX_SENDER_DELIVERY_NOTIFICATION %{GREEDYDATA:messageid}: sender (non-)?delivery (status )?notification: %{GREEDYDATA}
+POSTFIX_STILL_DELIVERED %{GREEDYDATA:messageid}: skipped, still being delivered
+POSTFIX_TABLE_CHANGED table %{WORD}:%{UNIXPATH}\(%{GREEDYDATA}\) has changed -- restarting
 POSTFIX_TIMED_OUT %{GREEDYDATA:messageid}: conversation with %{IPORHOST:shost}\[%{IPORHOST}\] timed out while receiving the initial server greeting
 POSTFIX_TIMEOUT_AFTER_EOM timeout after END-OF-MESSAGE from %{IPORHOST:shost}\[%{IPORHOST}\]
 POSTFIX_STATISTICS_CONN_COUNT statistics: max connection count %{INT:count:int} for \(%{WORD:subcomponent}:%{IPORHOST:shost}\) at %{GREEDYDATA}
