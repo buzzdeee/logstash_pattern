@@ -6,7 +6,7 @@ POSTFIX_AUTH_FAILURE warning: %{IPORHOST:shost}\[%{IPORHOST:ipaddress}\]: SASL L
 POSTFIX_CLEANUP %{GREEDYDATA:messageid}: message-id=(<)?%{GREEDYDATA}(>)?
 POSTFIX_CONVERSATION_TIMEOUT %{GREEDYDATA:messageid}: conversation with %{IPORHOST:relay}\[%{IPORHOST}\] timed out %{GREEDYDATA}
 POSTFIX_CONNECTION_REFUSED connect to %{IPORHOST:relay}\[%{POSTFIX_PATH_OR_IPORHOST}\]%{POSTFIX_MAYBE_PORT}: Connection refused
-POSTFIX_MESSAGE_RELAY %{GREEDYDATA:messageid}: to=<%{GREEDYDATA:recipient}>, (orig_to=<%{GREEDYDATA:orig_to}>, )?relay=(none|%{IPORHOST:relay}\[%{POSTFIX_PATH_OR_IPORHOST}\]%{POSTFIX_MAYBE_PORT}), (conn_use=%{INT}, )?delay=%{NUMBER:delay:float}, delays=%{NUMBER}/%{NUMBER}/%{NUMBER}/%{NUMBER}, dsn=%{GREEDYDATA}, status=%{WORD:status} \(%{POSTFIX_MAYBE_STATUSNUM}%{GREEDYDATA}\)
+POSTFIX_MESSAGE_RELAY %{GREEDYDATA:messageid}: to=<%{GREEDYDATA:recipient}>, (orig_to=<%{GREEDYDATA:orig_to}>, )?relay=(local|none|%{IPORHOST:relay}\[%{POSTFIX_PATH_OR_IPORHOST}\]%{POSTFIX_MAYBE_PORT}), (conn_use=%{INT}, )?delay=%{NUMBER:delay:float}, delays=%{NUMBER}/%{NUMBER}/%{NUMBER}/%{NUMBER}, dsn=%{GREEDYDATA}, status=%{WORD:status} \(%{POSTFIX_MAYBE_STATUSNUM}%{GREEDYDATA}\)
 POSTFIX_STARTSTOP (starting|stopping) the Postfix mail system
 POSTFIX_QUEUE_ACTIVE %{GREEDYDATA:messageid}: from=<%{GREEDYDATA:sender}>, size=%{INT:size:int}, nrcpt=%{INT:nrcpt:int} \(queue active\)
 POSTFIX_TERMINATING terminating on signal %{INT:signum:int}
