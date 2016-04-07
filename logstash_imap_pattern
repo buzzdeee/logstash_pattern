@@ -12,6 +12,7 @@ IMAP_INVALID_PARAMETER %{WORD:failed_function}\(\) failed in %{WORD:parent_funct
 IMAP_OP_TIMEOUT Operation timed out, closing connection
 IMAP_PROCESS_EXIT process type:%{WORD:processtype} name:%{WORD:service} path:%{UNIXPATH:binary} age:%{NUMBER:age:float}s pid:%{INT:pid:int} exited, status %{INT:exitstatus:int}
 IMAP_PURGED (duplicate_prune|tls_prune): purged %{INT:purged:int} out of %{INT:entries:int} entries
+IMAP_REMOVE_STALE_TOMBSTONE Removing stale tombstone for %{GREEDYDATA:mailbox}
 IMAP_SQL_ENGINE_NOT_SUPP SQL engine '%{WORD:engine}' not supported
 IMAP_USAGE USAGE %{USER:user} user: %{NUMBER:userusage:float} sys: %{NUMBER:sysusage:float}
 IMAP_USER_LOGIN login: (%{IPORHOST:shost} )?\[%{IPORHOST:sourceip}\] %{USER:user} %{GREEDYDATA:logontype} User logged in SESSIONID=<%{GREEDYDATA:sessionid}>
