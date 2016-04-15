@@ -1,3 +1,3 @@
 MOUNTD_BAD_EXPORTS_LIST_ENTRY Bad exports list entry \(%{IPORHOST:shost}\) in line %{UNIXPATH:directory}%{GREEDYDATA}
 MOUNTD_CANT_CHANGE_ATTRIBUTES Can't change attributes for %{UNIXPATH:directory} \(%{IPORHOST:shost}\).
-MOUNTD_OP_NOT_SUPPORTED mount: Operation not supported
+MOUNTD_OP_NOT_SUPPORTED mount: Operation not (permitted|supported)
