@@ -11,6 +11,7 @@ FILEBEAT_MAX_BULK %{FILEBEAT_FILE_LINE} Max Bulk Size set to: %{INT}
 FILEBEAT_MAX_RETRIES %{FILEBEAT_FILE_LINE} Max Retries set to: %{INT}
 FILEBEAT_PUBLISHER %{FILEBEAT_FILE_LINE} Publisher name: %{GREEDYDATA}
 FILEBEAT_PROSPECTORS_INITIALIZED %{FILEBEAT_FILE_LINE} All prospectors initialised with %{INT:numstates:int} states to persist
+FILEBEAT_READ_LINE_ERROR %{FILEBEAT_FILE_LINE} Read line error: file inactive
 FILEBEAT_REGISTRY_FILE %{FILEBEAT_FILE_LINE} Registry file set to: %{UNIXPATH}
 FILEBEAT_SET_BACKOFF %{FILEBEAT_FILE_LINE} Set (max_)?backoff duration to %{INT:seconds:float}s
 FILEBEAT_SET_CLOSE_OLDER %{FILEBEAT_FILE_LINE} Set close_older duration to %{GREEDYDATA}
