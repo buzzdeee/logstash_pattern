@@ -1,0 +1,24 @@
+FILEBEAT_FILE_LINE %{GREEDYDATA:sourcefile}:%{INT:line:int}:
+FILEBEAT_ACTIVATED_OUTPUT_PLUGIN %{FILEBEAT_FILE_LINE} Activated %{WORD} as output plugin.
+FILEBEAT_GEOIP_DISABLED %{FILEBEAT_FILE_LINE} GeoIP disabled: No paths were set under output.geoip.paths
+FILEBEAT_HARVESTER_STARTED %{FILEBEAT_FILE_LINE} Harvester started for file: %{UNIXPATH:logfile}
+FILEBEAT_FLUSH_INTERVAL %{FILEBEAT_FILE_LINE} Flush Interval set to: %{INT:seconds:float}s
+FILEBEAT_FORCE_CLOSE_FILE %{FILEBEAT_FILE_LINE} force_close_file is disabled
+FILEBEAT_INIT %{FILEBEAT_FILE_LINE} Init Beat: filebeat; Version: %{GREEDYDATA:version}
+FILEBEAT_INPUT_TYPE %{FILEBEAT_FILE_LINE} Input type set to: %{WORD}
+FILEBEAT_LOADING_REGISTRAR %{FILEBEAT_FILE_LINE} Loading registrar data from %{UNIXPATH}
+FILEBEAT_MAX_BULK %{FILEBEAT_FILE_LINE} Max Bulk Size set to: %{INT}
+FILEBEAT_MAX_RETRIES %{FILEBEAT_FILE_LINE} Max Retries set to: %{INT}
+FILEBEAT_PUBLISHER %{FILEBEAT_FILE_LINE} Publisher name: %{GREEDYDATA}
+FILEBEAT_PROSPECTORS_INITIALIZED %{FILEBEAT_FILE_LINE} All prospectors initialised with %{INT:numstates:int} states to persist
+FILEBEAT_REGISTRY_FILE %{FILEBEAT_FILE_LINE} Registry file set to: %{UNIXPATH}
+FILEBEAT_SET_BACKOFF %{FILEBEAT_FILE_LINE} Set (max_)?backoff duration to %{INT:seconds:float}s
+FILEBEAT_SET_CLOSE_OLDER %{FILEBEAT_FILE_LINE} Set close_older duration to %{GREEDYDATA}
+FILEBEAT_SET_IGNORE_OLDER %{FILEBEAT_FILE_LINE} Set ignore_older duration to %{INT}
+FILEBEAT_SET_SCAN %{FILEBEAT_FILE_LINE} Set scan_frequency duration to %{INT:seconds:float}s
+FILEBEAT_SSL_CLIENT_FAILED_CONNECT %{FILEBEAT_FILE_LINE} SSL client failed to connect with: x509: certificate is valid for %{GREEDYDATA}
+FILEBEAT_START_PROSPECTOR %{FILEBEAT_FILE_LINE} Starting prospector of type: %{WORD:prospectortype}
+FILEBEAT_START_REGISTRAR %{FILEBEAT_FILE_LINE} Starting Registrar
+FILEBEAT_START_RUNNING %{FILEBEAT_FILE_LINE} filebeat sucessfully setup. Start running.
+FILEBEAT_START_SENDING_EVENTS %{FILEBEAT_FILE_LINE} Start sending events to output
+FILEBEAT_START_SPOOLER %{FILEBEAT_FILE_LINE} Starting spooler: spool_size: %{INT}; idle_timeout: %{INT:seconds:float}s
