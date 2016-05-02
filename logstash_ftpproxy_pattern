@@ -1,1 +1,1 @@
-FTPPROXY_LISTENING listening on %{IPORHOST:host} port %{POSINT:port}
+FTPPROXY_LISTENING listening on %{IPORHOST:host} port %{POSINT:port:int}

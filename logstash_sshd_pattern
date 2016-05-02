@@ -18,7 +18,7 @@ SSHD_MAX_AUTH_ATTEMPTS_EXCEEDED error: maximum authentication attempts exceeded 
 SSHD_NO_IDENTITY_STRING Did not receive identification string from %{IPORHOST:shost}
 SSHD_POSTPONED Postponed publickey for %{USERNAME:user} from %{IPORHOST:shost} port %{POSINT:port:int} %{WORD:protocol} \[%{WORD:authtype}\]
 SSHD_PROTOCOL_VERSION_DIFFERS Protocol major versions differ for %{IPORHOST:shost}( port %{POSINT:port:int})?: %{GREEDYDATA:myversion} vs. %{GREEDYDATA:theirversion}
-SSHD_RECV_DISCONNECT Received disconnect from %{IPORHOST:shost} port %{POSINT:port}:%{POSINT:int}: (com.jcraft.jsch.JSchException: Auth fail|disconnected by user|Bye Bye)?%{SPACE}(\[%{WORD:authtype}\])?
+SSHD_RECV_DISCONNECT Received disconnect from %{IPORHOST:shost} port %{POSINT:port:int}:%{POSINT:int}: (com.jcraft.jsch.JSchException: Auth fail|disconnected by user|Bye Bye)?%{SPACE}(\[%{WORD:authtype}\])?
 SSHD_RESTARTING Received %{WORD:signal}; restarting.
 SSHD_ROOT_LOGIN_REFUSED ROOT LOGIN REFUSED FROM %{IPORHOST:shost}( \[preauth\])?
 SSHD_TERMINATING Received signal %{POSINT:signum:int}; terminating.
