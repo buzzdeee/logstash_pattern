@@ -1,1 +1,0 @@
-USERADD_NEW_USER new user added: name=%{USERNAME:user}, uid=%{POSINT:uid}, gid=%{POSINT:gid}, home=%{UNIXPATH:home}, shell=%{UNIXPATH:shell}

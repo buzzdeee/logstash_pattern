@@ -1,1 +1,0 @@
-GROUPADD_GROUP_ADDED new group added: name=%{GREEDYDATA:group}, gid=%{POSINT:gid}
