@@ -24,6 +24,7 @@ IMAP_TLS_NEGOTIATION_FAILED imaps TLS negotiation failed: (%{IPORHOST:shost} )?\
 IMAP_STARTTLS starttls: %{GREEDYDATA:tlsversion} with cipher %{GREEDYDATA:cipher} \(%{INT}/%{INT} bits (new|reused)\) no authentication
 IMAP_BADLOGIN badlogin: (%{IPORHOST:shost} )?\[%{IPORHOST:sourceip}\] %{GREEDYDATA} \[SASL\(%{INT}\): generic failure: %{GREEDYDATA}\]
 IMAP_UNABLE_TO_CANONIFY SASL unable to canonify user and get auxprops
+IMAP_UNDEFINED_ERROR Undefined error: %{INT:errornr:int}, closing connection
 IMAP_SASL_COULD_NOT_OPEN_DB SASL Could not open db
 RECONSTRUCT_RECONSTRUCTING reconstructing %{GREEDYDATA:mailbox}
 RECONSTRUCT_UPDATING %{GREEDYDATA:mailbox}: updating sync_crc %{INT} => %{INT}
