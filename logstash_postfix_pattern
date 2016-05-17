@@ -8,8 +8,11 @@ POSTFIX_CONVERSATION_TIMEOUT %{GREEDYDATA:messageid}: conversation with %{IPORHO
 POSTFIX_CONNECTION_REFUSED connect to %{IPORHOST:relay}\[%{POSTFIX_PATH_OR_IPORHOST}\]%{POSTFIX_MAYBE_PORT}: (Connection refused|Operation timed out)
 POSTFIX_DB_OLDER_THAN_SOURCE warning: database %{UNIXPATH} is older than source file %{UNIXPATH}
 POSTFIX_EXPIRED %{GREEDYDATA:messageid}: from=<%{GREEDYDATA:sender}>, status=expired, returned to sender
+POSTFIX_INCREASE_CONCURRENCY_LIMIT warning: you may need to increase the main.cf smtp_destination_concurrency_limit from %{INT}
+POSTFIX_AVOID_FLUSHING warning: (please avoid flushing the whole queue when you have|lots of deferred mail, that is bad for performance|to turn off these warnings specify: qmgr_clog_warn_time = %{INT})
 POSTFIX_MESSAGE_RELAY %{GREEDYDATA:messageid}: to=<%{GREEDYDATA:recipient}>, (orig_to=<%{GREEDYDATA:orig_to}>, )?relay=(local|none|%{IPORHOST:relay}\[%{POSTFIX_PATH_OR_IPORHOST}\]%{POSTFIX_MAYBE_PORT}), (conn_use=%{INT}, )?delay=%{NUMBER:delay:float}, delays=%{NUMBER}/%{NUMBER}/%{NUMBER}/%{NUMBER}, dsn=%{GREEDYDATA}, status=%{WORD:status} \(%{POSTFIX_MAYBE_STATUSNUM}%{GREEDYDATA}\)
 POSTFIX_STARTSTOP (starting|stopping) the Postfix mail system
+POSTFIX_ACTIVE_QUEUE_ENTRIES warning: mail for %{GREEDYDATA} is using up %{INT} of %{INT} active queue entries
 POSTFIX_QUEUE_ACTIVE %{GREEDYDATA:messageid}: from=<%{GREEDYDATA:sender}>, size=%{INT:size:int}, nrcpt=%{INT:nrcpt:int} \(queue active\)
 POSTFIX_TERMINATING terminating on signal %{INT:signum:int}
 POSTFIX_MASTER_STARTED daemon started -- version %{GREEDYDATA:version}, configuration %{UNIXPATH}
