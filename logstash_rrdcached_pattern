@@ -1,5 +1,7 @@
 RRDCACHED_CAUGHT_SIGNAL caught %{GREEDYDATA:signal}
 RRDCACHED_EXPEDITED_SHUTDOWN expedited shutdown; journals will be used at next startup
+RRDCACHED_JOURNALING_DISABLED JOURNALING DISABLED: (Error while trying to create %{UNIXPATH} : %{GREEDYDATA:reason}|All values will be flushed at shutdown)
+RRDCACHED_JOURNAL_REPLAY_ERROR journal_replay: %{UNIXPATH} : %{GREEDYDATA:reason}
 RRDCACHED_JOURNAL_PROCESS_COMPLETE journal processing complete
 RRDCACHED_REPLAYED_ENTRIES Replayed %{INT} entries \(%{INT} failures\)
 RRDCACHED_REPLAYING_JOURNAL replaying from journal: %{UNIXPATH}
