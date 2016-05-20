@@ -2,6 +2,7 @@ NPCD_CAUGHT_TERM Caught Termination Signal - Astalavista... baby
 NPCD_COMMAND_LINE_WAS ERROR: Command line was '%{GREEDYDATA:command}'
 NPCD_DAEMON_STARTED npcd Daemon \(%{GREEDYDATA:version}\) started with PID=%{INT:pid:int}
 NPCD_EXECUTED_COMMAND_EXITS ERROR: Executed command exits with return code '%{INT}'
+NPCD_FILE_ALREADY_PROCESSING File '%{GREEDYDATA}' is an already in process PNP file. Leaving it untouched.
 NPCD_FOUND_FILES Found %{INT} files in %{UNIXPATH:directory}
 NPCD_HAVE_TO_WAIT Have to wait: Filecounter = %{INT} - thread_counter = %{INT}
 NPCD_LICENSE_INFO Please have a look at 'npcd -V' to get license information

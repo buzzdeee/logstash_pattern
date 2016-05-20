@@ -1,5 +1,6 @@
 RRDCACHED_CAUGHT_SIGNAL caught %{GREEDYDATA:signal}
 RRDCACHED_EXPEDITED_SHUTDOWN expedited shutdown; journals will be used at next startup
+RRDCACHED_ILLEGAL_UPDATE_ATTEMPT queue_thread_main: rrd_update_r \(%{UNIXPATH}\) failed with status %{INT}. \(%{UNIXPATH}: illegal attempt to update using time %{INT} when last update time is %{INT} \(minimum one second step\)\)
 RRDCACHED_JOURNALING_DISABLED JOURNALING DISABLED: (Error while trying to create %{UNIXPATH} : %{GREEDYDATA:reason}|All values will be flushed at shutdown)
 RRDCACHED_JOURNAL_REPLAY_ERROR journal_replay: %{UNIXPATH} : %{GREEDYDATA:reason}
 RRDCACHED_JOURNAL_PROCESS_COMPLETE journal processing complete
