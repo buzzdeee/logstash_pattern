@@ -5,3 +5,5 @@ PHP_FPM_RUNNING %{PHP_FPM_TIMESTAMP} NOTICE: fpm is running, pid %{POSINT:pid}
 PHP_FPM_READY %{PHP_FPM_TIMESTAMP} NOTICE: ready to handle connections
 PHP_FPM_TERMINATING %{PHP_FPM_TIMESTAMP} NOTICE: Terminating ...
 PHP_FPM_EXITING %{PHP_FPM_TIMESTAMP} NOTICE: exiting, bye-bye!
+PHP_FPM_POOL_START %{PHP_FPM_TIMESTAMP} NOTICE: \[pool %{GREEDYDATA}\] child %{POSINT:pid} started
+PHP_FPM_POOL_STOPPED %{PHP_FPM_TIMESTAMP} WARNING: \[pool %{GREEDYDATA}\] child %{POSINT:pid} exited on signal %{INT:signum:int} \(%{GREEDYDATA:signal}\) after %{NUMBER:seconds:float} seconds from start
