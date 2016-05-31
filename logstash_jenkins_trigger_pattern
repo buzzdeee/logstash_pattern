@@ -1,2 +1,2 @@
-JENKINS_TRIGGER_KNOWN jenkins triggered (command)?: %{GREEDYDATA}
+JENKINS_TRIGGER_KNOWN jenkins triggered( command)?: %{GREEDYDATA}
 JENKINS_TRIGGER_BAD jenkins triggered (illegal|unknown) command: %{GREEDYDATA}
