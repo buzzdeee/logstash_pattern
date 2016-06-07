@@ -21,3 +21,5 @@ PUPPETMASTER_PARAM_DECLARED_MORE_THAN_ONCE The parameter '%{WORD:parameter}' is 
 PUPPETMASTER_REPORT_PROCESSOR_FAILED Report processor failed: %{GREEDYDATA:errormessage}
 PUPPETMASTER_SYNTAX_ERROR Syntax error at '%{GREEDYDATA}' at %{UNIXPATH:path}:%{POSINT:line:int}:%{POSINT:row:int} on node %{IPORHOST:shost}
 PUPPETMASTER_STARTING Starting Puppet master version %{GREEDYDATA:version}
+
+PUPPETMASTER_AUTOSIGN signing certificate for %{IPORHOST}
