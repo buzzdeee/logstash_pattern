@@ -17,7 +17,7 @@ FILEBEAT_SET_BACKOFF %{FILEBEAT_FILE_LINE} Set (max_)?backoff duration to %{INT:
 FILEBEAT_SET_CLOSE_OLDER %{FILEBEAT_FILE_LINE} Set close_older duration to %{GREEDYDATA}
 FILEBEAT_SET_IGNORE_OLDER %{FILEBEAT_FILE_LINE} Set ignore_older duration to %{INT}
 FILEBEAT_SET_SCAN %{FILEBEAT_FILE_LINE} Set scan_frequency duration to %{INT:seconds:float}s
-FILEBEAT_SSL_CLIENT_FAILED_CONNECT %{FILEBEAT_FILE_LINE} SSL client failed to connect with: (x509: certificate is valid for %{GREEDYDATA}|dial tcp %{IPORHOST}:%{POSINT:port:int}: %{WORD}: connection refused)
+FILEBEAT_SSL_CLIENT_FAILED_CONNECT %{FILEBEAT_FILE_LINE} SSL client failed to connect with: (x509: certificate is valid for %{GREEDYDATA}|dial tcp %{IPORHOST}:%{POSINT:port:int}: %{WORD}: %{GREEDYDATA:reason})
 FILEBEAT_START_PROSPECTOR %{FILEBEAT_FILE_LINE} Starting prospector of type: %{WORD:prospectortype}
 FILEBEAT_START_REGISTRAR %{FILEBEAT_FILE_LINE} Starting Registrar
 FILEBEAT_START_RUNNING %{FILEBEAT_FILE_LINE} filebeat sucessfully setup. Start running.
