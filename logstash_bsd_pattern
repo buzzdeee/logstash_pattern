@@ -1,17 +1,19 @@
-BSD_VERSION %{WORD:osfamily} %{NUMBER:version}(-%{WORD:relinfo})? \(%{GREEDYDATA:kernel}\) #%{POSINT:buildid}: %{DAY} %{SYSLOGTIMESTAMP}
+BSD_ACPI_DEVICE "%{GREEDYDATA}" at acpi%{INT} not configured
 BSD_BUILDER %{USERNAME:builder}@%{IPORHOST:buildhost}:%{UNIXPATH:kernel}
 BSD_BOGUS_LINE %{SPACE}port %{NUMBER} configuration %{NUMBER}%{GREEDYDATA}
-BSD_FATAL_FIRMWARE_ERROR %{WORD:device}: fatal firmware error
-BSD_MEM (avail|real) mem%{SPACE}= %{NUMBER:bytes:int} \(%{NUMBER:megabytes}MB\)
+BSD_CRASHED_PROGRAM crash of %{GREEDYDATA:program}\(%{POSINT:pid:int}\) signal %{INT:signum:int}
 BSD_DEVICE_DETACHED %{WORD:device} detached
 BSD_DEVICE_TIMEOUT %{WORD:device}: (device|watchdog) timeout
 BSD_DEVICE_INFO %{WORD:device}: %{GREEDYDATA}
 BSD_DEVICE_ATTACHED %{WORD:device} at %{WORD:parent}(: %{GREEDYDATA})?
 BSD_DISK %{WORD:device}\(%{GREEDYDATA}\): %{GREEDYDATA}
+BSD_FATAL_FIRMWARE_ERROR %{WORD:device}: fatal firmware error
+BSD_MEM (avail|real) mem%{SPACE}= %{NUMBER:bytes:int} \(%{NUMBER:megabytes}MB\)
+BSD_NDP_INFO_OVERWRITTEN ndp info overwritten for %{IPORHOST:shost} by %{COMMONMAC:mac} on %{WORD:interface}
 BSD_PARTITION_FULL uid %{POSINT:uid} on %{UNIXPATH:mountpoint}: file system full
 BSD_PXE_BOOT_MAC PXE boot MAC address %{COMMONMAC:mac}, interface %{GREEDYDATA}
 BSD_REBOOTING rebooting..(.)?
 BSD_ROOT_ON root on %{WORD:rootpart}( \(%{GREEDYDATA:diskuidpart}\))? swap on %{WORD:swappart} dump on %{WORD:dumppart}
 BSD_SYNC_DISKS syncing disks...( done)?
-BSD_ACPI_DEVICE "%{GREEDYDATA}" at acpi%{INT} not configured
-BSD_NDP_INFO_OVERWRITTEN ndp info overwritten for %{IPORHOST:shost} by %{COMMONMAC:mac} on %{WORD:interface}
+BSD_VERSION %{WORD:osfamily} %{NUMBER:version}(-%{WORD:relinfo})? \(%{GREEDYDATA:kernel}\) #%{POSINT:buildid}: %{DAY} %{SYSLOGTIMESTAMP}
+BSD_WX_VIOLATION %{GREEDYDATA}\(%{POSINT:pid:int}\): mprotect W^X violation
