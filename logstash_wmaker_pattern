@@ -1,1 +1,1 @@
-WMAKER_WARNING \({GREEDYDATA:function}\(%{UNIXPATH:file}:%{INT:line:int}\)\): warning: %{GREEDYDATA:warningmessage}
+WMAKER_WARNING \(%{GREEDYDATA:function}\(%{GREEDYDATA:file}:%{INT:line:int}\)\): warning: %{GREEDYDATA:warningmessage}
