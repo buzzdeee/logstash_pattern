@@ -1,1 +1,3 @@
 SU_SETTING_RESOURCE_LIMITS %{WORD:loginclass}: setting resource limit %{WORD:resourcelimit}: Invalid argument
+SU_BAD_SU BAD SU %{GREEDYDATA:fromuser} to %{GREEDYDATA:touser} on %{UNIXPATH:tty}
+SU_GOOD_SU %{GREEDYDATA:fromuser} to %{GREEDYDATA:touser} on %{UNIXPATH:tty}
