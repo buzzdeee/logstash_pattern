@@ -23,5 +23,6 @@ PUPPETMASTER_SYNTAX_ERROR Syntax error at '%{GREEDYDATA}' at %{UNIXPATH:path}:%{
 PUPPETMASTER_STARTING Starting Puppet master version %{GREEDYDATA:version}
 PUPPETMASTER_REMOVE_CERTREQUEST Removing file Puppet::SSL::CertificateRequest %{IPORHOST:shost} at '%{UNIXPATH}'
 PUPPETMASTER_SIGNED_CERT Signed certificate request for %{IPORHOST:shost}
+PUPPETMASTER_DUPLICATE_EXPORTED_RESOURCE A duplicate resource was found while collecting exported resources, with the type and title %{GREEDYDATA:resource} on node %{IPORHOST:shost}
 
 PUPPETMASTER_AUTOSIGN signing certificate for %{IPORHOST}
