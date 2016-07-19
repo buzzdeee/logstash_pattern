@@ -12,6 +12,7 @@ SSHD_FAILED_PASSWORD Failed (none|password|publickey) for %{USERNAME:user} from 
 SSHD_FAILED_PASSWORD_INVALID_USER Failed (none|password) for invalid user %{GREEDYDATA:user} from %{IPORHOST:shost} port %{POSINT:port:int} %{WORD:protocol}
 SSHD_GETSOCKNAME_FAILED error: getsockname failed: Connection reset by peer
 SSHD_INPUT_USERAUTH_REQ input_userauth_request: invalid user %{GREEDYDATA:user} \[%{WORD:authtype}\]
+SSHD_INVALID_DH invalid public DH value: <= 1 \[%{WORD:authtype}\]
 SSHD_INVALID_USER Invalid user %{GREEDYDATA:user} from %{IPORHOST:shost}
 SSHD_LISTENING_ON Server listening on %{IPORHOST:shost} port %{POSINT:port:int}
 SSHD_MAX_AUTH_ATTEMPTS_EXCEEDED error: maximum authentication attempts exceeded for( invalid user)? %{GREEDYDATA:user} from %{IPORHOST:shost} port %{POSINT:port:int} %{WORD:protocol} \[%{WORD:authtype}\]
