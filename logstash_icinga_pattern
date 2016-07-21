@@ -7,5 +7,5 @@ ICINGA_DB_ERROR Error "ERROR:  relation %{GREEDYDATA}
 ICINGA_IGNORE_CONFIG_UPDATE Ignoring config update. 'api' does not accept config.
 ICINGA_REMOVE_API_CLIENT Removing API client for endpoint '%{IPORHOST:shost}'. %{INT} API clients left.
 ICINGA_API_CLIENT_DISCONNECTED API client disconnected for identity '%{IPORHOST:shost}'
-ICINGA_INVALID_SOCKET Invalid socket: (Connection refused|Interrupted system call)
+ICINGA_INVALID_SOCKET Invalid socket: (Connection refused|Host is down|Interrupted system call)
 ICINGA_TLS_STREAM_DISCONNECTED TLS stream was disconnected.
