@@ -9,3 +9,4 @@ ICINGA_REMOVE_API_CLIENT Removing API client for endpoint '%{IPORHOST:shost}'. %
 ICINGA_API_CLIENT_DISCONNECTED API client disconnected for identity '%{IPORHOST:shost}'
 ICINGA_INVALID_SOCKET Invalid socket: %{GREEDYDATA:reason}
 ICINGA_TLS_STREAM_DISCONNECTED TLS stream was disconnected.
+ICINGA_CLOSING_CONNECTION Client for endpoint '%{IPORHOST:shost}' has requested heartbeat message but hasn't responded in time. Closing connection.
