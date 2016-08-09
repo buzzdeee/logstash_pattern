@@ -5,7 +5,18 @@ ICINGA_CANNOT_CONNECT Cannot connect to host '%{IPORHOST:shost}' on port '%{POSI
 ICINGA_DB_EXCEPTION Exception during database operation: Verify that your database is operational!
 ICINGA_DB_ERROR Error "ERROR:  relation %{GREEDYDATA}
 ICINGA_IGNORE_CONFIG_UPDATE Ignoring config update. 'api' does not accept config.
+ICINGA_SENDING_CONFIG_UPDATES Sending config updates for endpoint '%{IPORHOST:shost}'.
 ICINGA_REMOVE_API_CLIENT Removing API client for endpoint '%{IPORHOST:shost}'. %{INT} API clients left.
+ICINGA_SENDING_REPLAY_LOG Sending replay log for endpoint '%{IPORHOST:shost}'.
+ICINGA_REPLAYING_LOG Replaying log: %{UNIXPATH:logfile}
+ICINGA_REPLAYED_MESSAGES Replayed %{INT} messages.
+ICINGA_FINISHED_SENDING_REPLAY_LOG Finished sending replay log for endpoint '%{IPORHOST:shost}'.
+ICINGA_SYNCING_RUNTIME_OBJECTS Syncing runtime objects to endpoint '%{IPORHOST:shost}'.
+ICINGA_NEW_JSON_RPC_CLIENT New JSON-RPC client
+ICINGA_PGSQL_IDO_INSTANCE pgSQL IDO instance id: %{INT} \(schema version: '%{GREEDYDATA:schemaversion}'\)
+ICINGA_RESUMING_IDO_CONNECTION Resuming IDO connection: %{GREEDYDATA}
+ICINGA_ACTIVATED_ALL_OBJECTS Activated all objects.
+ICINGA_UPDATING_PROGRAM_STATUS Updating programstatus table.
 ICINGA_API_CLIENT_DISCONNECTED API client disconnected for identity '%{IPORHOST:shost}'
 ICINGA_INVALID_SOCKET Invalid socket: %{GREEDYDATA:reason}
 ICINGA_TLS_STREAM_DISCONNECTED TLS stream was disconnected.
