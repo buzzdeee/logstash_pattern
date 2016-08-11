@@ -13,6 +13,7 @@ ICINGA_REPLAYED_MESSAGES Replayed %{INT} messages.
 ICINGA_FINISHED_SENDING_REPLAY_LOG Finished sending replay log for endpoint '%{IPORHOST:shost}'.
 ICINGA_SYNCING_RUNTIME_OBJECTS Syncing runtime objects to endpoint '%{IPORHOST:shost}'.
 ICINGA_NEW_JSON_RPC_CLIENT New JSON-RPC client
+ICINGA_JSON_RPC_ERROR Error while sending JSON-RPC message for identity '%{IPORHOST:shost}' Error: Tried to read/write from a closed socket. \(not available\)
 ICINGA_PGSQL_IDO_INSTANCE pgSQL IDO instance id: %{INT} \(schema version: '%{GREEDYDATA:schemaversion}'\)
 ICINGA_RESUMING_IDO_CONNECTION Resuming IDO connection: %{GREEDYDATA}
 ICINGA_ACTIVATED_ALL_OBJECTS Activated all objects.
