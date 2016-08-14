@@ -1,3 +1,3 @@
 AUTHPF_ALLOWING allowing %{IPORHOST:shost}, user %{USERNAME:suser}
-AUTHPF_REMOVING removed %{IPORHOST:shost}, user %{USERNAME:suser} - duration %{POSINT:duration} seconds
+AUTHPF_REMOVING removed %{IPORHOST:shost}, user %{USERNAME:suser} - duration %{POSINT:seconds:float} seconds
 AUTHPF_KILLING killing prior auth \(pid %{POSINT:pid}\) of %{IPORHOST:shost} by user %{USERNAME:suser}
