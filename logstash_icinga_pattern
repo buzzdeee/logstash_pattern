@@ -22,6 +22,6 @@ ICINGA_API_CLIENT_DISCONNECTED API client disconnected for identity '%{IPORHOST:
 ICINGA_INVALID_SOCKET Invalid socket: %{GREEDYDATA:reason}
 ICINGA_TLS_STREAM_DISCONNECTED TLS stream was disconnected.
 ICINGA_CLOSING_CONNECTION Client for endpoint '%{IPORHOST:shost}' has requested heartbeat message but hasn't responded in time. Closing connection.
-ICINGA_KILLING_PROCESS_GROUP Killing process group %{POSINT:pid:int} \(%{GREEDYDATA:command}\) after timeout of ${INT:seconds:float} seconds
+ICINGA_KILLING_PROCESS_GROUP Killing process group %{POSINT:pid:int} \(%{GREEDYDATA:command}\) after timeout of %{INT:seconds:float} seconds
 ICINGA_TERMINATED_PID PID %{POSINT:pid} was terminated by signal %{INT:signum:int} \(%{WORD}\)
 ICINGA_CHECK_COMMAND_EXITED Check command for object '%{GREEDYDATA}' \(PID: %{POSINT:pid}, arguments: %{GREEDYDATA:command}\) terminated with exit code %{INT}, output: %{GREEDYDATA}
