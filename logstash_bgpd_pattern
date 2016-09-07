@@ -4,3 +4,5 @@ BGPD_RDE RDE reconfigured
 BGPD_STARTUP startup
 BGPD_TERMINATING Terminating
 BGPD_PFTABLE_CLEAR pftable_clear ioctl: No such process
+BGPD_NEIGHBOR_STATE_CHANGE neighbor %{IPORHOST:shost}: state change %{GREEDYDATA:fromstate} -> %{GREEDYDATA:tostate}, reason: %{GREEDYDATA:reason}
+BGPD_NEIGHBOR_SEND_NOTIFICATION neighbor %{IPORHOST:shost}: sending notification: %{GREEDYDATA:notification}
