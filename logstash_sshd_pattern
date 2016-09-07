@@ -27,4 +27,4 @@ SSHD_SETTING_RESOURCE_LIMITS %{WORD:loginclass}: setting resource limit %{WORD:r
 SSHD_TIMEOUT_BEFORE_AUTH fatal: Timeout before authentication for %{IPORHOST:shost}
 SSHD_TOO_MANY_AUTH_FAILURES Disconnecting: Too many authentication failures \[%{WORD:authtype}\]
 SSHD_UNABLE_TO_NEGOTIATE_NOT_WORKING??? (fatal: )?Unable to negotiate with %{IPORHOST:shost} port %{POSINT:port:int}: %{GREEDYDATA}
-SSHD_UNABLE_TO_NEGOTIATE Unable to negotiate with %{IPORHOST:shost} port %{POSINT:port:int}: %{GREEDYDATA}
+SSHD_UNABLE_TO_NEGOTIATE Unable to negotiate with %{IPORHOST:shost} port %{INT:port:int}: %{GREEDYDATA}
