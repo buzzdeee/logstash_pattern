@@ -27,6 +27,7 @@ IMAP_UNABLE_TO_CANONIFY SASL unable to canonify user and get auxprops
 IMAP_UNDEFINED_ERROR Undefined error: %{INT:errornr:int}, closing connection
 IMAP_SASL_COULD_NOT_OPEN_DB SASL Could not open db
 IMAP_MESSAGE_TWICE %{GREEDYDATA}: same message appears twice %{GREEDYDATA}
+IMAP_DBERROR DBERROR: opening %{UNIXPATH}: cyrusdb error
 RECONSTRUCT_RECONSTRUCTING reconstructing %{GREEDYDATA:mailbox}
 RECONSTRUCT_UPDATING %{GREEDYDATA:mailbox}: updating sync_crc %{INT} => %{INT}
 RECONSTRUCT_ERR run reconstruct with -R to fix or -U to remove
