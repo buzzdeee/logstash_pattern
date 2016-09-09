@@ -1,6 +1,7 @@
 BGPD_REREADING rereading config
-BGPD_ROUTE route decision engine (ready|exiting)
-BGPD_RDE RDE reconfigured
+BGPD_ENGINE (route decision|session) engine (ready|exiting)
+BGPD_RECONFIGURED (RDE|SE) reconfigured
+BGPD_LISTENING listening on %{IPORHOST}
 BGPD_STARTUP startup
 BGPD_TERMINATING Terminating
 BGPD_PFTABLE_CLEAR pftable_clear ioctl: No such process
