@@ -24,5 +24,10 @@ PUPPETMASTER_STARTING Starting Puppet master version %{GREEDYDATA:version}
 PUPPETMASTER_REMOVE_CERTREQUEST Removing file Puppet::SSL::CertificateRequest %{IPORHOST:shost} at '%{UNIXPATH}'
 PUPPETMASTER_SIGNED_CERT Signed certificate request for %{IPORHOST:shost}
 PUPPETMASTER_DUPLICATE_EXPORTED_RESOURCE A duplicate resource was found while collecting exported resources, with the type and title %{GREEDYDATA:resource} on node %{IPORHOST:shost}
+PUPPETMASTER_UNKNOWN_VARIABLE Unknown variable: '%{GREEDYDATA:variable}'. at %{UNIXPATH:path}:%{POSINT:line:int}:%{POSINT:row:int}
+PUPPETMASTER_UNRESOLVED_MODULE_DEPENDENCIES ModuleLoader: module '%{GREEDYDATA:module}' has unresolved dependencies - it will only see those that are resolved. Use 'puppet module list --tree' to see information about modules
+PUPPETMASTER_FILE_LINE_UNAVAILABLE %{SPACE}\(file & line not available\)
+PUPPETMASTER_UNDEFINED_VARIABLE Undefined variable '%{GREEDYDATA:variable}';
+PUPPETMASTER_COULD_NOT_AUTOLOAD Could not autoload %{GREEDYDATA}: cannot load such file -- %{GREEDYDATA}
 
 PUPPETMASTER_AUTOSIGN signing certificate for %{IPORHOST}
