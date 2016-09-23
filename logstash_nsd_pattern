@@ -2,5 +2,6 @@ NSD_STARTUP nsd start(ed|ing) \(NSD %{GREEDYDATA:version}\)(, pid %{INT:pid})?
 NSD_STALE_PID ...stale pid file from process %{INT:pid:int}
 NSD_DB_NOT_CLEANLY_CLOSED %{UNIXPATH:nsddb}: not cleanly closed %{INT}
 NSD_SHUTDOWN signal received, shutting down...
+NSD_SIGHUP SIGHUP received, reloading...
 NSD_SYNTAX_ERROR %{UNIXPATH:zonefile}:{POSINT:line:int}: syntax error
 NSD_ZONE_WITH_ERRORS zone %{GREEDYDATA:zone} file %{UNIXPATH:zonefile} read with %{POSINT} errors

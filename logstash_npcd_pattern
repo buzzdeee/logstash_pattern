@@ -15,3 +15,5 @@ NPCD_THREAD_COUNTER ThreadCounter %{INT}/%{INT} File is %{GREEDYDATA:filename}
 NPCD_THREAD_STARTED A thread was started on thread_counter = %{INT}
 NPCD_WAIT_FOR_TH DEBUG: Will wait for th\['%{INT}'\]
 NPCD_CAUGHT_SIGINT Caught SIGINT - Good bye
+NPCD_CAUGHT_SIGHUP Caught SIGINT - reloading configuration
+NPCD_RELOAD_CONFIG Configuration reload succesfull.
