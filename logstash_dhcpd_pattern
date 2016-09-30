@@ -16,3 +16,5 @@ DHCPD_RELEASE DHCPRELEASE of %{IPORHOST:shost} from %{COMMONMAC:mac} via %{WORD:
 DHCPD_RELEASED Released lease for IP address %{IPORHOST:shost}
 DHCPD_REQUEST DHCPREQUEST for %{IPORHOST:shost} from %{COMMONMAC:mac} via %{WORD:interface}
 DHCPD_UNEXPECTED_ICMP unexpected ICMP Echo Reply from %{IPORHOST:shost}
+DHCPD_EXITING exiting.
+DHCPD_NO_INTERFACE No interfaces to listen on.
