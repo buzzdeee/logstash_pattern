@@ -25,3 +25,12 @@ ICINGA_CLOSING_CONNECTION Client for endpoint '%{IPORHOST:shost}' has requested 
 ICINGA_KILLING_PROCESS_GROUP Killing process group %{POSINT:pid:int} \(%{GREEDYDATA:command}\) after timeout of %{INT:seconds:float} seconds
 ICINGA_TERMINATED_PID PID %{POSINT:pid} was terminated by signal %{INT:signum:int} \(%{WORD}\)
 ICINGA_CHECK_COMMAND_EXITED Check command for object '%{GREEDYDATA}' \(PID: %{POSINT:pid}, arguments: %{GREEDYDATA:command}\) terminated with exit code %{INT}, output: %{GREEDYDATA}
+ICINGA_PID_EXITED PID %{POSINT:pid} \(%{GREEDYDATA:command}\) terminated with exit code %{INT}
+ICINGA_TASKS #%{INT} tasks: %{INT}
+ICINGA_RELAYING_MESSAGE Relaying '%{GREEDYDATA:message}' message
+ICINGA_DEPENDENCY Dependency '%{GREEDYDATA:dependency}' passed: Parent host '%{IPORHOST:shost}' matches state filter.
+ICINGA_RUNNING_COMMAND Running command %{GREEDYDATA:command}: PID %{POSINT:pid}
+ICINGA_RECEIVED_MESSAGE Received '%{GREEDYDATA:message}' message from '%{IPORHOST:shost}'
+ICINGA_CONNECTED_ENDPOINTS Connected endpoints: %{GREEDYDATA}
+ICINGA_SETTING_LOG_POSITION Setting log position for identity '%{IPORHOST:shost}': %{GREEDYDATA}
+ICINGA_CHECK_STATS Pending checkables: %{INT:pending:int}; Idle checkables: %{INT:idle:int}; Checks/s: %{NUMBER:ratio:float}
