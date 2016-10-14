@@ -1,5 +1,6 @@
 DHCLIENT_BOUND bound to %{IPORHOST:dhost} -- renewal in %{POSINT:seconds:float} seconds.
 DHCLIENT_DHCPACK DHCPACK from %{IPORHOST:shost} \(%{COMMONMAC:mac}\)
+DHCLIENT_DHCPNACK DHCPNACK from %{IPORHOST:shost} \(%{COMMONMAC:mac}\)
 DHCLIENT_DHCPDISCOVER DHCPDISCOVER on %{WORD:interface} - interval %{POSINT:interval}
 DHCLIENT_DHCPOFFER DHCPOFFER from %{IPORHOST:shost} \(%{COMMONMAC:mac}\)
 DHCLIENT_DHCPREQUEST DHCPREQUEST on %{WORD:interface} to %{IPORHOST:dhost}
