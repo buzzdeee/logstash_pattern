@@ -1,5 +1,5 @@
 PHP_FPM_DATETIME %{MONTHDAY}-%{MONTH}-%{YEAR} %{TIME}
-PHP_FPM_TIMESTAMP \[%{PHP_FPM_DATETIME:timestamp}\]
+PHP_FPM_TIMESTAMP \[%{PHP_FPM_DATETIME:timestamp:string}\]
 PHP_FPM_POOL_BUSY WARNING: [pool %{GREEDYDATA}] seems busy \(you may need to increase pm.start_servers, or pm.min/max_spare_servers\), spawning %{INT} children, there are %{INT} idle, and %{INT} total children
 PHP_FPM_RUNNING %{PHP_FPM_TIMESTAMP} NOTICE: fpm is running, pid %{POSINT:pid}
 PHP_FPM_READY %{PHP_FPM_TIMESTAMP} NOTICE: ready to handle connections

@@ -1,4 +1,4 @@
 OGO_TIME1 %{MONTH} %{MONTHDAY} %{TIME}
 OGO_TIME2 %{DATE} %{TIME}
 OGO_TIME (%{OGO_TIME1}|%{OGO_TIME2})
-OGO_SYSLOG %{OGO_TIME:timestamp} (?<program>ogo-%{WORD})(%{SPACE})?\[%{POSINT:pid}(:%{NUMBER:threadid})?\](:)?
+OGO_SYSLOG %{OGO_TIME:timestamp:string} (?<program>ogo-%{WORD})(%{SPACE})?\[%{POSINT:pid}(:%{NUMBER:threadid})?\](:)?
