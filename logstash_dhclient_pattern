@@ -1,3 +1,4 @@
+DHCLIENT_ACTIVE_ADDRESS_DELETED Active address \(%{IPORHOST:shost}\) deleted; exiting
 DHCLIENT_BOUND bound to %{IPORHOST:dhost} -- renewal in %{POSINT:seconds:float} seconds.
 DHCLIENT_DHCPACK DHCPACK from %{IPORHOST:shost} \(%{COMMONMAC:mac}\)
 DHCLIENT_DHCPNACK DHCPNACK from %{IPORHOST:shost} \(%{COMMONMAC:mac}\)
