@@ -1,4 +1,4 @@
-PUPPETAGENT_APPLYING_CONF_VERS Applying configuration version '%{NUMBER:version}'
+PUPPETAGENT_APPLYING_CONF_VERS Applying configuration version '%{NUMBER:version:string}'
 PUPPETAGENT_CACHING_CATALOG Caching catalog for %{IPORHOST:shost}
 PUPPETAGENT_CAUGHT_TERM Caught TERM; storing stop
 PUPPETAGENT_FILE \(/File\[%

@@ -15,5 +15,5 @@ BSD_PXE_BOOT_MAC PXE boot MAC address %{COMMONMAC:mac}, interface %{GREEDYDATA}
 BSD_REBOOTING rebooting..(.)?
 BSD_ROOT_ON root on %{WORD:rootpart}( \(%{GREEDYDATA:diskuidpart}\))? swap on %{WORD:swappart} dump on %{WORD:dumppart}
 BSD_SYNC_DISKS syncing disks...( done)?
-BSD_VERSION %{WORD:osfamily} %{NUMBER:version}(-%{WORD:relinfo})? \(%{GREEDYDATA:kernel}\) #%{POSINT:buildid}: %{DAY} %{SYSLOGTIMESTAMP}
+BSD_VERSION %{WORD:osfamily} %{NUMBER:version:string}(-%{WORD:relinfo})? \(%{GREEDYDATA:kernel}\) #%{POSINT:buildid}: %{DAY} %{SYSLOGTIMESTAMP}
 BSD_WX_VIOLATION %{GREEDYDATA}\(%{POSINT:pid:int}\): mprotect W^X violation
