@@ -34,3 +34,4 @@ ICINGA_RECEIVED_MESSAGE Received '%{GREEDYDATA:message}' message from '%{IPORHOS
 ICINGA_CONNECTED_ENDPOINTS Connected endpoints: %{GREEDYDATA}
 ICINGA_SETTING_LOG_POSITION Setting log position for identity '%{IPORHOST:shost}': %{GREEDYDATA}
 ICINGA_CHECK_STATS Pending checkables: %{INT:pending:int}; Idle checkables: %{INT:idle:int}; Checks/s: %{NUMBER:ratio:float}
+ICINGA_PEER_CERTIFICATE_NOT_SIGNED Peer certificate for endpoint '%{IPORHOST:shost}' is not signed by the certificate authority. Context:%{SPACE}\(%{INT}\) Handling new API client connection
