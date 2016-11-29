@@ -33,6 +33,7 @@ POSTFIX_REMOVE_FROM_ACTIVE warning: qmgr_active_done_3_generic: remove %{GREEDYD
 POSTFIX_OPEN_ACTIVE warning: open active %{GREEDYDATA:messageid}: %{GREEDYDATA:errormessage}
 POSTFIX_POSTSUPER Deleted: %{INT:count:int} message
 POSTFIX_SMTPD_CLIENT %{GREEDYDATA:messageid}: client=%{IPORHOST:shost}\[%{IPORHOST}\]
+POSTFIX_SMTPD_TOO_MANY_ERRORS too many errors after %{GREEDYDATA} from %{IPORHOST}\[%{IPORHOST}\]
 POSTFIX_SENDER_DELIVERY_NOTIFICATION %{GREEDYDATA:messageid}: sender (non-)?delivery (status )?notification: %{GREEDYDATA}
 POSTFIX_SSL_ACCEPT_ERROR SSL_accept error from %{GREEDYDATA}\[%{IPORHOST:shost}\]: %{GREEDYDATA}
 POSTFIX_STILL_DELIVERED %{GREEDYDATA:messageid}: skipped, still being delivered
