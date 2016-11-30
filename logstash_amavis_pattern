@@ -16,7 +16,7 @@ AMAVIS_MAIL_VIA_SMTP \(%{GREEDYDATA}\) \(!\)mail_via_smtp: NOTICE: %{GREEDYDATA:
 AMAVIS_RUN_AV_FAILED \(%{GREEDYDATA}\) \(!\)run_av \(%{GREEDYDATA:scanner}\) FAILED %{GREEDYDATA:errormessage}"
 AMAVIS_TEMPDIR_REMOVAL \(%{GREEDYDATA}\) \(!\)TempDir removal: tempdir is to be PRESERVED: %{UNIXPATH}
 AMAVIS_AV_SCANNER_FAILED \(!\)%{GREEDYDATA} av-scanner FAILED: CODE\(%{GREEDYDATA}\) unexpected , output="%{UNIXPATH}: %{GREEDYDATA:errormessage}" at \(%{GREEDYDATA} %{INT}\) line %{INT:line:int}
-AMAVIS_PASSED \(%{GREEDYDATA}\) Passed (CLEAN|SPAM) %{GREEDYDATA}, \[%{IPORHOST}\] \[%{IPORHOST:shost}\] <%{GREEDYDATA:sender}> -> <%{GREEDYDATA:recipient}>, Message-ID: %{GREEDYDATA}, %{INT:miliseconds} ms
+AMAVIS_PASSED \(%{GREEDYDATA}\) Passed (CLEAN|SPAM) %{GREEDYDATA}, \[%{IPORHOST}\] \[%{IPORHOST:shost}\] <%{GREEDYDATA:sender}> -> <%{GREEDYDATA:recipient}>, (quarantine: %{GREEDYDATA},)?Message-ID: %{GREEDYDATA}, %{INT:miliseconds} ms
 AMAVIS_BLOCKED \(%{GREEDYDATA}\) Blocked INFECTED \(%{GREEDYDATA:virusname}\) %{GREEDYDATA}, \[%{IPORHOST}\] \[%{IPORHOST:shost}\] <%{GREEDYDATA:sender}> -> <%{GREEDYDATA:recipient}>, %{GREEDYDATA}, %{INT:miliseconds} ms
 AMAVIS_CONSIDERING_BACKUP_SCANNERS \(!\)WARN: all primary virus scanners failed, considering backups
 AMAVIS_GENERIC \(%{GREEDYDATA}\) %{GREEDYDATA}
