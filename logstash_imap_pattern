@@ -31,6 +31,7 @@ IMAP_DBERROR DBERROR: opening %{UNIXPATH}: cyrusdb error
 IMAP_ACCEPT_FAILED accept failed: Software caused connection abort
 IMAP_MASTER_TOO_MANY_FAILURES too many failures for service %{GREEDYDATA}, disabling until next SIGHUP
 IMAP_MASTER_SERVICE_TERMINATED service %{GREEDYDATA} pid %{POSINT} in READY state: terminated abnormally
+IMAP_FATAL_ERROR Fatal error: %{GREEDYDATA:errormessage}
 RECONSTRUCT_RECONSTRUCTING reconstructing %{GREEDYDATA:mailbox}
 RECONSTRUCT_UPDATING %{GREEDYDATA:mailbox}: updating sync_crc %{INT} => %{INT}
 RECONSTRUCT_ERR run reconstruct with -R to fix or -U to remove
