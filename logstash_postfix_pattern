@@ -3,7 +3,7 @@ POSTFIX_MAYBE_STATUSNUM (%{INT:statusnum})?
 POSTFIX_PATH_OR_IPORHOST (%{UNIXPATH}|%{IPORHOST:sourceip})
 
 POSTFIX_AUTH_FAILURE warning: %{IPORHOST:shost}\[%{IPORHOST:ipaddress}\]: SASL %{WORD} authentication failed: %{GREEDYDATA:errormessage}
-POSTFIX_SASL_AUTH_FAILURE warning: SASL authentication failure: Couldn't find mech %{WORD}
+POSTFIX_SASL_AUTH_FAILURE warning: SASL authentication failure: %{GREEDYDATA:errormessage}
 POSTFIX_BACKWARD_TIME_JUMP warning: backward time jump (detected|recovered) -- (slewing clock|back to normality)
 POSTFIX_CLEANUP %{GREEDYDATA:messageid}: (resent-)?message-id=(<)?%{GREEDYDATA}(>)?
 POSTFIX_CONVERSATION_TIMEOUT %{GREEDYDATA:messageid}: conversation with %{IPORHOST:relay}\[%{IPORHOST}\] timed out %{GREEDYDATA}
