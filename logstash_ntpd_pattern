@@ -1,7 +1,7 @@
-NTPD_ADJUSTING_CLOCK adjusting local clock by %{NUMBER:offset:long}s
-NTPD_ADJUSTING_CLOCK_FREQUENCY adjusting clock frequency by %{NUMBER:offset:long} to %{NUMBER:ppm}ppm
+NTPD_ADJUSTING_CLOCK adjusting local clock by %{NUMBER:timeoffset:long}s
+NTPD_ADJUSTING_CLOCK_FREQUENCY adjusting clock frequency by %{NUMBER:timeoffset:long} to %{NUMBER:ppm}ppm
 NTPD_CLOCK_SYNCED clock is now (un)?synced
-NTPD_CONSTRAINT_REPLY constraint reply from %{IPORHOST:shost}: offset %{NUMBER:offset:long}
+NTPD_CONSTRAINT_REPLY constraint reply from %{IPORHOST:shost}: offset %{NUMBER:timeoffset:long}
 NTPD_CONN_PROBLEM recvmsg %{IPORHOST:shost}: (Connection refused|No route to host)
 NTPD_ENGINE_READY ntp engine ready
 NTPD_LISTENING_ON listening on %{IPORHOST:shost}
@@ -11,5 +11,5 @@ NTPD_NO_REPLY no reply received in time, skipping initial time setting
 NTPD_PEER_VALID peer %{IPORHOST:shost} now valid
 NTPD_PEER_INVALID peer %{IPORHOST:shost} now invalid
 NTPD_REPLY_NOT_SYNCED reply from %{IPORHOST:shost}: not synced \(alarm\), next query %{NUMBER:seconds:float}s
-NTPD_SET_CLOCK set local clock to %{DAY} %{SYSLOGTIMESTAMP} %{WORD:TZ} %{YEAR} \(offset %{NUMBER:offset:long}s\)
+NTPD_SET_CLOCK set local clock to %{DAY} %{SYSLOGTIMESTAMP} %{WORD:TZ} %{YEAR} \(offset %{NUMBER:timeoffset:long}s\)
 NTPD_TERMINATING (Terminating|ntp engine exiting|dispatch_imsg in main: pipe closed)
