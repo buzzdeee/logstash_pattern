@@ -1,5 +1,5 @@
-USERADD_NEW_USER new user added: name=%{USERNAME:user}, uid=%{POSINT:uid}, gid=%{POSINT:gid}, home=%{UNIXPATH:home}, shell=%{UNIXPATH:shell}
-USERMOD_MODIFIED user information modified: name=%{USERNAME:user}, uid=%{INT:uid}, gid=%{INT:gid}, home=%{UNIXPATH:home}, shell=%{UNIXPATH:shell}
-GROUPADD_GROUP_ADDED new group added: name=%{GREEDYDATA:group}, gid=%{POSINT:gid}
+USERADD_NEW_USER new user added: name=%{USERNAME:user}, uid=%{POSINT:uid:int}, gid=%{POSINT:gid:int}, home=%{UNIXPATH:home}, shell=%{UNIXPATH:shell}
+USERMOD_MODIFIED user information modified: name=%{USERNAME:user}, uid=%{INT:uid:int}, gid=%{INT:gid:int}, home=%{UNIXPATH:home}, shell=%{UNIXPATH:shell}
+GROUPADD_GROUP_ADDED new group added: name=%{GREEDYDATA:group}, gid=%{POSINT:gid:int}
 GROUPDEL_GROUP_DELETED group deleted: name=%{USERNAME:group}
 USERDEL_USER_DELETED user removed: name=%{USERNAME:user}
