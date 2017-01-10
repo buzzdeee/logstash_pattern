@@ -4,3 +4,4 @@ HP_ERROR_OPEN_DEVICE %{HP_FILE_LINE} ERROR: open device failed stat=%{INT}: hp:/
 HP_ERROR_NULL_PRINT_JOB %{HP_FILE_LINE} ERROR: null print job total=%{INT}
 HP_TIMEOUT_WRITE_CHANNEL %{HP_FILE_LINE} timeout write_channel hp:/net/%{GREEDYDATA:printer}\?ip=%{IPORHOST:shost}
 HP_UNABLE_TO_READ_DEVICE_ID %{HP_FILE_LINE} unable to read device-id
+HPSETUP_NO_DEVICE hp-setup\[%{POSINT:pid:int}\]: error: %{GREEDYDATA:errormessage}
