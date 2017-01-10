@@ -1,0 +1,1 @@
+HPSETUP_NO_DEVICE hp-setup\[%{POSINT:pid:int}\]: error: %{GREEDYDATA:errormessage}
