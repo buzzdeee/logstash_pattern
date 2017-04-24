@@ -9,6 +9,6 @@ ASTERISK_DIED Asterisk died with code %{INT:statusnum:int}.
 ASTERISK_ENDED Asterisk ended with exit status %{INT:statusnum:int}
 ASTERISK_RESTART Automatically restarting Asterisk.
 ASTERISK_SHUTDOWN Asterisk shutdown normally.
-ASTERISK_CHAN_SIP_REGISTRATION_FAILED %{ASTERISK_LOG_HEADER} Registration from '"1393"<sip:%{ASTREGISTRATION}>' failed for '%{ASTREGISTRATION}:%{INT:port:int}' - %{GREEDYDATA:reason}
-ASTERISK_CHAN_SIP_CALL_REJECTED %{ASTERISK_LOG_HEADER} Call from '(%GREEDYDATA:srcextension)' \(%{IPORHOST}:%{INT:port:int}\) to extension '%{GREEDYDATA:dstextension}' %{GREEDYDATA:reason}
-ASTERISK_CHAN_SIP_PEER_REACHABLE %{ASTERISK_LOG_HEADER} Peer '%{GREEDYDATA:sippeer}' is now Reachable. (%{INT:miliseconds}ms / %{INT:maxmiliseconds}ms)
+ASTERISK_CHAN_SIP_REGISTRATION_FAILED Registration from '%{GREEDYDATA}<sip:%{ASTREGISTRATION}>' failed for '%{ASTREGISTRATION}:%{INT:port:int}' - %{GREEDYDATA:reason}
+ASTERISK_CHAN_SIP_CALL_REJECTED Call from '(%GREEDYDATA:srcextension)' \(%{IPORHOST}:%{INT:port:int}\) to extension '%{GREEDYDATA:dstextension}' %{GREEDYDATA:reason}
+ASTERISK_CHAN_SIP_PEER_REACHABLE Peer '%{GREEDYDATA:sippeer}' is now Reachable. (%{INT:miliseconds}ms / %{INT:maxmiliseconds}ms)
