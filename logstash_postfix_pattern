@@ -50,3 +50,4 @@ POSTFIX_STATISTICS_MAX_CACHE statistics: max cache size %{INT:size:int} at %{GRE
 POSTFIX_STATISTICS_DOMAIN_LOOKUPS statistics: domain lookup hits=%{INT:hits:int} miss=%{INT:miss:int} success=%{INT:success}%
 POSTFIX_STATISTICS_MAX_SIMULTAN_DOMAINS statistics: max simultaneous domains=%{INT:domains:int} addresses=%{INT:addresses:int} connection=%{INT:connections:int}
 POSTFIX_STATISTICS_START_INTERVAL statistics: start interval %{GREEDYDATA}
+POSTFIX_MESSAGE_TOO_BIG fatal: %{USERNAME}\(%{INT:uid}\): message file too big
