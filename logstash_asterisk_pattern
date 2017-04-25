@@ -3,12 +3,15 @@ ASTSRC [-a-z._0-9/]+
 ASTLEVEL (?:VERBOSE|ERROR|NOTICE|INFO|DEBUG|DTMF|WARNING)
 ASTCONTEXTNAME [-a-z0-9]+
 
-ASTERISK_LOG_HEADER \[%{TIMESTAMP_ISO8601:timestamp}\] %{ASTLEVEL:severity}\[\d+\](\[C-\d+\])? %{ASTSRC:asterisk_src_file}:
+# Registration info
+ASTREGISTRATION %{USERNAME}@%{IPORHOST}
+
+ASTERISK_LOG_HEADER \[%{TIMESTAMP_ISO8601:timestamp}\] %{ASTLEVEL:severity}\[%{INT}\](\[C-%{BASE16NUM}\])? %{ASTSRC:asterisk_src_file}: %{GREEDYDATA:message}
 
 ASTERISK_DIED Asterisk died with code %{INT:statusnum:int}.
 ASTERISK_ENDED Asterisk ended with exit status %{INT:statusnum:int}
 ASTERISK_RESTART Automatically restarting Asterisk.
 ASTERISK_SHUTDOWN Asterisk shutdown normally.
-ASTERISK_CHAN_SIP_REGISTRATION_FAILED Registration from '%{GREEDYDATA}<sip:%{ASTREGISTRATION}>' failed for '%{ASTREGISTRATION}:%{INT:port:int}' - %{GREEDYDATA:reason}
+ASTERISK_CHAN_SIP_REGISTRATION_FAILED Registration from '%{GREEDYDATA}<sip:%{ASTREGISTRATION}>' failed for '%{IPORHOST}:%{INT:port:int}' - %{GREEDYDATA:reason}
 ASTERISK_CHAN_SIP_CALL_REJECTED Call from '(%GREEDYDATA:srcextension)?' \(%{IPORHOST}:%{INT:port:int}\) to extension '%{GREEDYDATA:dstextension}' %{GREEDYDATA:reason}
 ASTERISK_CHAN_SIP_PEER_REACHABLE Peer '%{GREEDYDATA:sippeer}' is now Reachable. \(%{INT:miliseconds}ms / %{INT:maxmiliseconds}ms\)
