@@ -15,3 +15,6 @@ ASTERISK_SHUTDOWN Asterisk shutdown normally.
 ASTERISK_CHAN_SIP_REGISTRATION_FAILED Registration from '%{GREEDYDATA}<sip:%{ASTREGISTRATION}>' failed for '%{IPORHOST}:%{INT:port:int}' - %{GREEDYDATA:reason}
 ASTERISK_CHAN_SIP_CALL_REJECTED Call from '(%GREEDYDATA:srcextension)?' \(%{IPORHOST}:%{INT:port:int}\) to extension '%{GREEDYDATA:dstextension}' %{GREEDYDATA:reason}
 ASTERISK_CHAN_SIP_PEER_REACHABLE Peer '%{GREEDYDATA:sippeer}' is now Reachable. \(%{INT:miliseconds}ms / %{INT:maxmiliseconds}ms\)
+ASTERISK_PURELY_NUMERIC_HOSTNAME Purely numeric hostname \(%{NUMBER}\), and not a peer--rejecting!
+ASTERISK_NO_ENTRY_IN_VOICEMAIL_CONFIG No entry in voicemail config file for '%{GREEDYDATA:extension}'
+ASTERISK_UNABLE_TO_CREATE_CHANNEL Unable to create channel of type '%{GREEDYDATA:channeltype}' %{GREEDYDATA:reason}
