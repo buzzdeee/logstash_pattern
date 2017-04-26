@@ -1,0 +1,1 @@
+COMMON_LIBS_SETTING_RESOURCE_LIMIT %{USERNAME}: setting resource limit %{WORD:reslimit}: %{GREEDYDATA:reason}
