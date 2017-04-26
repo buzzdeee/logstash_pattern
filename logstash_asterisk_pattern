@@ -6,7 +6,7 @@ ASTCONTEXTNAME [-a-z0-9]+
 # Registration info
 ASTREGISTRATION %{USERNAME}@%{IPORHOST}
 
-ASTERISK_LOG_HEADER \[%{TIMESTAMP_ISO8601:timestamp}\] %{ASTLEVEL:severity}\[%{INT}\](\[C-%{BASE16NUM}\])? %{ASTSRC:asterisk_src_file}: %{GREEDYDATA:message}
+ASTERISK_LOG_HEADER \[%{TIMESTAMP_ISO8601:timestamp}\] %{ASTLEVEL:severity}\[%{INT}\](\[C-%{BASE16NUM}\])? %{ASTSRC:file}: %{GREEDYDATA:message}
 
 ASTERISK_DIED Asterisk died with code %{INT:statusnum:int}.
 ASTERISK_ENDED Asterisk ended with exit status %{INT:statusnum:int}
