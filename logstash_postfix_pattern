@@ -51,3 +51,4 @@ POSTFIX_STATISTICS_DOMAIN_LOOKUPS statistics: domain lookup hits=%{INT:hits:int}
 POSTFIX_STATISTICS_MAX_SIMULTAN_DOMAINS statistics: max simultaneous domains=%{INT:domains:int} addresses=%{INT:addresses:int} connection=%{INT:connections:int}
 POSTFIX_STATISTICS_START_INTERVAL statistics: start interval %{GREEDYDATA}
 POSTFIX_MESSAGE_TOO_BIG fatal: %{USERNAME}\(%{INT:uid}\): message file too big
+POSTFIX_FILE_TOO_LARGE warning: uid=%{INT:uid}: File too large
