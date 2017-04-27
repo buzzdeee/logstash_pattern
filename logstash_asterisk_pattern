@@ -6,7 +6,12 @@ ASTCONTEXTNAME [-a-z0-9]+
 # Registration info
 ASTREGISTRATION %{USERNAME}@%{IPORHOST}
 
+# The normal messages
 ASTERISK_LOG_HEADER \[%{TIMESTAMP_ISO8601:timestamp}\] %{ASTLEVEL:severity}\[%{INT}\](\[C-%{BASE16NUM}\])? %{ASTSRC:file}: %{GREEDYDATA:message}
+# Startup of Asterisk
+ASTERISK_LOG_HEADER2 \[%{TIMESTAMP_ISO8601:timestamp}\] %{GREEDYDATA:message}
+# CDR Logs don't have a header at all
+ASTERISK_LOG_HEADER3 %{GREEDYDATA:message}
 
 ASTERISK_DIED Asterisk died with code %{INT:statusnum:int}.
 ASTERISK_ENDED Asterisk ended with exit status %{INT:statusnum:int}
