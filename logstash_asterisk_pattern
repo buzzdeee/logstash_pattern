@@ -23,6 +23,6 @@ ASTERISK_CHAN_SIP_PEER_REACHABLE Peer '%{GREEDYDATA:sippeer}' is now Reachable. 
 ASTERISK_PURELY_NUMERIC_HOSTNAME Purely numeric hostname \(%{NUMBER}\), and not a peer--rejecting!
 ASTERISK_NO_ENTRY_IN_VOICEMAIL_CONFIG No entry in voicemail config file for '%{GREEDYDATA:extension}'
 ASTERISK_UNABLE_TO_CREATE_CHANNEL Unable to create channel of type '%{GREEDYDATA:channeltype}' %{GREEDYDATA:reason}
-ASTERISK_PACKET_TIMEOUT Packet timed out after %{POSINT}ms with no response
+ASTERISK_PACKET_TIMEOUT Packet timed out after %{INT}ms with no response
 ASTERISK_RETRANS_TIMEOUT_REACHED Retransmission timeout reached on transmission %{GREEDYDATA}
-ASTERISK_PEER_LAGGED Peer '%{GREEDYDATA:sippeer}' is now Lagged. \(%{POSINT}ms / %{POSINT}ms\)
+ASTERISK_PEER_LAGGED Peer '%{GREEDYDATA:sippeer}' is now Lagged. \(%{INT}ms / %{INT}ms\)
