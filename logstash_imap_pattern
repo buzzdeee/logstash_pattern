@@ -23,7 +23,7 @@ IMAP_DELETED Deleted mailbox %{GREEDYDATA}
 IMAP_TLS_NEGOTIATION_FAILED imaps TLS negotiation failed: (%{IPORHOST:shost} )?\[(%{IPORHOST:ipaddress}|unix socket)\]
 IMAP_STARTTLS starttls: %{GREEDYDATA:tlsversion} with cipher %{GREEDYDATA:cipher} \(%{INT}/%{INT} bits (new|reused)\) no authentication
 IMAP_BADLOGIN badlogin: (%{IPORHOST:shost} )?\[%{IPORHOST:sourceip}\] %{GREEDYDATA} (\[)?SASL\(%{INT}\): (authentication|generic) failure: %{GREEDYDATA}(\])?
-IMPA_PASSWORD_VERIFICATION_FAILED SASL Password verification failed
+IMAP_PASSWORD_VERIFICATION_FAILED SASL Password verification failed
 IMAP_UNABLE_TO_CANONIFY SASL unable to canonify user and get auxprops
 IMAP_UNDEFINED_ERROR Undefined error: %{INT:errornr:int}, closing connection
 IMAP_SASL_COULD_NOT_OPEN_DB SASL Could not open db
