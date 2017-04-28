@@ -1,3 +1,4 @@
 VMD_START_STOP (startup|parent terminating)
 VMD_EXITING (control|priv|vmm) exiting, pid %{INT:pid:int}
 VMD_FAILED_TO_OPEN failed to open %{UNIXPATH:path}: %{GREEDYDATA:reason}
+VMD_GENERAL_MESSAGE %{GREEDYDATA:component}: %{GREEDYDATA}
