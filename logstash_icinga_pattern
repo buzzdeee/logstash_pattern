@@ -36,3 +36,4 @@ ICINGA_SETTING_LOG_POSITION Setting log position for identity '%{IPORHOST:shost}
 ICINGA_CHECK_STATS Pending checkables: %{INT:pending:int}; Idle checkables: %{INT:idle:int}; Checks/s: %{NUMBER:ratio:float}
 ICINGA_PEER_CERTIFICATE_NOT_SIGNED Peer certificate for endpoint '%{IPORHOST:shost}' is not signed by the certificate authority. Context:%{SPACE}\(%{INT}\) Handling new API client connection
 ICINGA_UNAUTHORIZED_REQUEST Unauthorized request: %{WORD:request} %{GREEDYDATA:path}
+ICINGA_NOTIFICATION_COMMAND_TERMINATED Notification command for object '%{GREEDYDATA}' \(PID: %{INT:pid:int}, arguments: '%{GREEDYDATA}'\) terminated with exit code %{INT}, output: %{GREEDYDATA}
