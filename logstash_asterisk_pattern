@@ -26,16 +26,21 @@ ASTERISK_UNABLE_TO_CREATE_CHANNEL Unable to create channel of type '%{GREEDYDATA
 ASTERISK_PACKET_TIMEOUT Packet timed out after %{INT}ms with no response
 ASTERISK_RETRANS_TIMEOUT_REACHED Retransmission timeout reached on transmission %{GREEDYDATA}
 ASTERISK_PEER_LAGGED Peer '%{GREEDYDATA:sippeer}' is now Lagged. \(%{INT}ms / %{INT}ms\)
-ASTERISK_PEER_UNREACHABLE Peer '%{GREEDYDATA:sippeer}' is now UNREACHABLE! Last qualify: %{INT}
+ASTERISK_PEER_UNREACHABLE Peer '%{GREEDYDATA:sippeer}' is now UNREACHABLE!%{SPACE}Last qualify: %{INT}
 ASTERISK_UNABLE_TO_REGISTER Unable to register extension '%{GREEDYDATA:sippeer}' priority %{INT} in '%{GREEDYDATA:context}', %{GREEDYDATA:reason}
 ASTERISK_FAILED_CONFIG_LOAD (Failed|Unable) to load config(uration file)?. %{GREEDYDATA}
 ASTERISK_NO_QUEUERULES No queuerules.conf file found, queues will not follow penalty rules
 ASTERISK_UNABLE_LOAD_CONFIG Unable to load config %{GREEDYDATA}
-ASTERISK_NO_CALL_QUEUS_CONFIG No call queueing config file (queues.conf), so no call queues
+ASTERISK_NO_CALL_QUEUS_CONFIG No call queueing config file \(queues.conf\), so no call queues
 ASTERISK_NO_FESTIVAL_CONFIG No such configuration file festival.conf
 ASTERISK_NO_AMD_CONFIG Configuration file amd.conf missing.
-ASTERISK_NO_FOLLOW_ME_CONFIG No follow me config file (followme.conf), so no follow me
+ASTERISK_NO_FOLLOW_ME_CONFIG No follow me config file \(followme.conf\), so no follow me
 ASTERISK_NO_CONFBRIDGE_CONFIG Unable to load config file 'confbridge.conf'
 ASTERISK_NO_CDRCUSTOM_CONF Unable to load cdr_custom.conf. Not logging custom CSV CDRs.
 ASTERISK_NO_CDRSYSLOG_CONF Unable to load cdr_syslog.conf. Not logging custom CSV CDRs to syslog.
 ASTERISK_NO_CELCUSTOM_CONF Unable to load cel_custom.conf. Not logging CEL to custom CSVs.
+ASTERISK_NO_IAX_PROVISIONING No IAX provisioning configuration found, IAX provisioning disabled.
+ASTERISK_CONFIG_SKINNY Configuring skinny from skinny.conf
+ASTERISK_NO_PJSIP Unable to register pjsip phoneprov provider.
+ASTERISK_PLEASE_NOTE !!! %{GREEDYDATA}
+ASTERISK_CANNOT_CREATE_SOCKET Cannot create socket
