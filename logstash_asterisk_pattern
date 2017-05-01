@@ -12,7 +12,7 @@ ASTERISK_LOG_HEADER \[%{TIMESTAMP_ISO8601:timestamp}\] %{ASTLEVEL:severity}\[%{I
 ASTERISK_LOG_HEADER2 \[%{TIMESTAMP_ISO8601:timestamp}\] %{GREEDYDATA:message}
 # Startup log message doesn't have a header at all
 ASTERISK_LOG_HEADER3 %{GREEDYDATA:message}
-# ASTERISK_QUEUE_LOG_HEADER %{NUMBER:timestamp}|%{GREEDYDATA:message}
+ASTERISK_QUEUE_LOG_HEADER %{NUMBER:timestamp}|%{GREEDYDATA:message}
 
 ASTERISK_QUEUE_LOG %{GREEDYDATA:callid:string}|%{GREEDYDATA:queuename}|%{GREEDYDATA:channel}|%{GREEDYDATA:event}|
 ASTERISK_DIED Asterisk died with code %{INT:statusnum:int}.
@@ -47,3 +47,4 @@ ASTERISK_NO_PJSIP Unable to register pjsip phoneprov provider.
 ASTERISK_PLEASE_NOTE !!! %{GREEDYDATA}
 ASTERISK_CANNOT_CREATE_SOCKET Cannot create socket
 ASTERISK_STARTUP Asterisk %{GREEDYDATA:version:string} built by %{GREEDYDATA}
+ASTERISK_SDP_SYNTAX_ERROR SDP syntax error in o= line version
