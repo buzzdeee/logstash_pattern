@@ -10,9 +10,11 @@ ASTREGISTRATION %{USERNAME}@%{IPORHOST}
 ASTERISK_LOG_HEADER \[%{TIMESTAMP_ISO8601:timestamp}\] %{ASTLEVEL:severity}\[%{INT}\](\[C-%{BASE16NUM}\])? %{ASTSRC:file}: %{GREEDYDATA:message}
 # Startup of Asterisk
 ASTERISK_LOG_HEADER2 \[%{TIMESTAMP_ISO8601:timestamp}\] %{GREEDYDATA:message}
-# CDR Logs don't have a header at all
+# Startup log message doesn't have a header at all
 ASTERISK_LOG_HEADER3 %{GREEDYDATA:message}
+# ASTERISK_QUEUE_LOG_HEADER %{NUMBER:timestamp}|%{GREEDYDATA:message}
 
+ASTERISK_QUEUE_LOG %{GREEDYDATA:callid:string}|%{GREEDYDATA:queuename}|%{GREEDYDATA:channel}|%{GREEDYDATA:event}|
 ASTERISK_DIED Asterisk died with code %{INT:statusnum:int}.
 ASTERISK_ENDED Asterisk ended with exit status %{INT:statusnum:int}
 ASTERISK_RESTART Automatically restarting Asterisk.
@@ -44,3 +46,4 @@ ASTERISK_CONFIG_SKINNY Configuring skinny from skinny.conf
 ASTERISK_NO_PJSIP Unable to register pjsip phoneprov provider.
 ASTERISK_PLEASE_NOTE !!! %{GREEDYDATA}
 ASTERISK_CANNOT_CREATE_SOCKET Cannot create socket
+ASTERISK_STARTUP Asterisk %{GREEDYDATA:version:string} built by %{GREEDYDATA}
