@@ -31,6 +31,7 @@ PUPPETMASTER_UNDEFINED_VARIABLE Undefined variable '%{GREEDYDATA:variable}';
 PUPPETMASTER_COULD_NOT_AUTOLOAD Could not autoload %{GREEDYDATA}: cannot load such file -- %{GREEDYDATA}
 PUPPETMASTER_ERROR_ENCODING_UTF8 Error encoding a '%{GREEDYDATA:words}' command for host '%{IPORHOST:shost}' ignoring invalid UTF-8 byte sequences in data to be sent to PuppetDB, see debug logging for more info
 PUPPETMASTER_DEPRECATION_WARNING This method is deprecated, %{GREEDYDATA}
+PUPPETMASTER_DEPRECATION_WHERE %{SPACE}\(at %{UNIXPATH}:%{POSINT}:in `deprecation'\)
 
 PUPPETMASTER_AUTOSIGN signing certificate for %{IPORHOST}
 PUPPETMASTER_CONVERT_TO_STRING Resource '%{GREEDYDATA}' contains a %{WORD} value. It will be converted to the String '%{GREEDYDATA}'
