@@ -6,7 +6,7 @@ SSHD_CHANGE_USERNAME_NOT_ALLOWED Disconnecting: Change of username or service no
 SSHD_CONN_CLOSED Connection (closed|reset) by (authenticating user %{USERNAME:user} )?%{IPORHOST:shost} port %{POSINT:port:int} \[%{WORD:authtype}\]
 SSHD_CORRECT_KEY_BUT_WRONG_HOST Authentication tried for %{USERNAME:user} with correct key but not from a permitted host \(host=%{IPORHOST:shost}, ip=%{IPORHOST:sip}\).
 SSHD_DISCONNECTED Disconnected from (authenticating )?(user %{USERNAME:user} )?%{IPORHOST:shost} port %{POSINT:port:int}( \[%{WORD:authtype}\])?
-SSHD_DISCONNECTING_USER Disconnecting (authenticating|invalid) user(%SPACE)?%{USERNAME:user} %{IPORHOST:shost} port %{POSINT:port:int}: %{GREEDYDATA:reason} \[%{WORD:authtype}\]
+SSHD_DISCONNECTING_USER Disconnecting (authenticating|invalid) user(%{SPACE})?%{USERNAME:user} %{IPORHOST:shost} port %{POSINT:port:int}: %{GREEDYDATA:reason} \[%{WORD:authtype}\]
 
 SSHD_DISPATCH_PROTOCOL_ERROR dispatch_protocol_error: type %{INT} seq %{INT} \[preauth\]
 SSHD_DISPATCH_RUN_FATAL (fatal: )?ssh_dispatch_run_fatal: Connection from %{IPORHOST:shost} port %{POSINT:port:int}: %{GREEDYDATA:errormessage} \[%{WORD:authtype}\]
