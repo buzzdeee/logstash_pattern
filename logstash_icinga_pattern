@@ -1,7 +1,7 @@
 ICINGA_DATESTAMP %{YEAR}-%{MONTHNUM}-%{MONTHDAY} %{HOUR}:%{MINUTE}:%{SECOND} %{ISO8601_TIMEZONE}
 ICINGA_TIMESTAMP \[%{ICINGA_DATESTAMP:timestamp:string}\]
 ICINGA_INVALID_SOCKET Invalid socket: Host is down
-ICINGA_CANNOT_CONNECT Cannot connect to host '%{IPORHOST:shost}' on port '%{POSINT:port:int}'
+ICINGA_CANNOT_CONNECT Cannot connect to host '%{IPORHOST:shost}' on port '%{POSINT:port:integer}'
 ICINGA_DB_EXCEPTION Exception during database operation: Verify that your database is operational!
 ICINGA_DB_ERROR Error "ERROR:  relation %{GREEDYDATA}
 ICINGA_IGNORE_CONFIG_UPDATE Ignoring config update. 'api' does not accept config.
@@ -22,8 +22,8 @@ ICINGA_API_CLIENT_DISCONNECTED API client disconnected for identity '%{IPORHOST:
 ICINGA_INVALID_SOCKET Invalid socket: %{GREEDYDATA:reason}
 ICINGA_TLS_STREAM_DISCONNECTED TLS stream was disconnected.
 ICINGA_CLOSING_CONNECTION Client for endpoint '%{IPORHOST:shost}' has requested heartbeat message but hasn't responded in time. Closing connection.
-ICINGA_KILLING_PROCESS_GROUP Killing process group %{POSINT:pid:int} \(%{GREEDYDATA:command}\) after timeout of %{INT:seconds:float} seconds
-ICINGA_TERMINATED_PID PID %{POSINT:pid} was terminated by signal %{INT:signum:int} \(%{GREEDYDATA}\)
+ICINGA_KILLING_PROCESS_GROUP Killing process group %{POSINT:pid:integer} \(%{GREEDYDATA:command}\) after timeout of %{INT:seconds:float} seconds
+ICINGA_TERMINATED_PID PID %{POSINT:pid} was terminated by signal %{INT:signum:integer} \(%{GREEDYDATA}\)
 ICINGA_CHECK_COMMAND_EXITED Check command for object '%{GREEDYDATA}' \(PID: %{POSINT:pid}, arguments: %{GREEDYDATA:command}\) terminated with exit code %{INT}, output: %{GREEDYDATA}
 ICINGA_PID_EXITED PID %{POSINT:pid} \(%{GREEDYDATA:command}\) terminated with exit code %{INT}
 ICINGA_TASKS #%{INT} tasks: %{INT}
@@ -33,7 +33,7 @@ ICINGA_RUNNING_COMMAND Running command %{GREEDYDATA:command}: PID %{POSINT:pid}
 ICINGA_RECEIVED_MESSAGE Received '%{GREEDYDATA:message}' message from '%{IPORHOST:shost}'
 ICINGA_CONNECTED_ENDPOINTS Connected endpoints: %{GREEDYDATA}
 ICINGA_SETTING_LOG_POSITION Setting log position for identity '%{IPORHOST:shost}': %{GREEDYDATA}
-ICINGA_CHECK_STATS Pending checkables: %{INT:pending:int}; Idle checkables: %{INT:idle:int}; Checks/s: %{NUMBER:ratio:float}
+ICINGA_CHECK_STATS Pending checkables: %{INT:pending:integer}; Idle checkables: %{INT:idle:integer}; Checks/s: %{NUMBER:ratio:float}
 ICINGA_PEER_CERTIFICATE_NOT_SIGNED Peer certificate for endpoint '%{IPORHOST:shost}' is not signed by the certificate authority. Context:%{SPACE}\(%{INT}\) Handling new API client connection
 ICINGA_UNAUTHORIZED_REQUEST Unauthorized request: %{WORD:request} %{GREEDYDATA:path}
-ICINGA_NOTIFICATION_COMMAND_TERMINATED Notification command for object '%{GREEDYDATA}' \(PID: %{INT:pid:int}, arguments: '%{GREEDYDATA}'\) terminated with exit code %{INT}, output: %{GREEDYDATA}
+ICINGA_NOTIFICATION_COMMAND_TERMINATED Notification command for object '%{GREEDYDATA}' \(PID: %{INT:pid:integer}, arguments: '%{GREEDYDATA}'\) terminated with exit code %{INT}, output: %{GREEDYDATA}
