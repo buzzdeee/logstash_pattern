@@ -35,7 +35,7 @@ PUPPETMASTER_DEPRECATED_FUNCTION The function '%{GREEDYDATA:function}' is deprec
 PUPPETMASTER_DEPRECATION_WHERE %{SPACE}\((at %{UNIXPATH}:%{POSINT}:in `deprecation'|in %{UNIXPATH})\)
 PUPPETMASTER_HIERA_YAML_V3_FOUND hiera.yaml version 3 found at the environment root was ignored
 PUPPETMASTER_HIERA_YAML_V3_DEPRECATED %{UNIXPATH}: Use of 'hiera.yaml' version 3 is deprecated. It should be converted to version 5
-
+PUPPETMASTER_DEPRECATED_METADATA_JSON_ENTRY Defining "%{WORD}": "%{WORD}" in metadata.json is deprecated
 PUPPETMASTER_AUTOSIGN signing certificate for %{IPORHOST}
 PUPPETMASTER_CONVERT_TO_STRING Resource '%{GREEDYDATA}' contains a %{WORD} value. It will be converted to the String '%{GREEDYDATA}'
 
