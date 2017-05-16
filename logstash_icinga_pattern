@@ -25,7 +25,7 @@ ICINGA_CLOSING_CONNECTION Client for endpoint '%{IPORHOST:shost}' has requested 
 ICINGA_KILLING_PROCESS_GROUP Killing process group %{POSINT:pid:integer} \(%{GREEDYDATA:command}\) after timeout of %{INT:seconds:float} seconds
 ICINGA_TERMINATED_PID PID %{POSINT:pid} was terminated by signal %{INT:signum:integer} \(%{GREEDYDATA}\)
 ICINGA_CHECK_COMMAND_EXITED Check command for object '%{GREEDYDATA}' \(PID: %{POSINT:pid}, arguments: %{GREEDYDATA:command}\) terminated with exit code %{INT}, output: %{GREEDYDATA}
-ICINGA_PID_EXITED PID %{POSINT:pid} \(%{GREEDYDATA:command}\) terminated with exit code %{INT}
+ICINGA_PID_EXITED PID %{POSINT:pid} \(%{GREEDYDATA:command}\) (terminated with exit code %{INT}|died mysteriously: %{GREEDYDATA:reason})
 ICINGA_TASKS #%{INT} tasks: %{INT}
 ICINGA_RELAYING_MESSAGE Relaying '%{GREEDYDATA:message}' message
 ICINGA_DEPENDENCY Dependency '%{GREEDYDATA:dependency}' passed: Parent host '%{IPORHOST:shost}' matches state filter.
