@@ -13,3 +13,4 @@ NTPD_PEER_INVALID peer %{IPORHOST:shost} now invalid
 NTPD_REPLY_NOT_SYNCED reply from %{IPORHOST:shost}: not synced \(alarm\), next query %{NUMBER:seconds:float}s
 NTPD_SET_CLOCK set local clock to %{DAY} %{SYSLOGTIMESTAMP} %{WORD:TZ} %{YEAR} \(offset %{NUMBER:timeoffset:long}s\)
 NTPD_TERMINATING (Terminating|ntp engine exiting|dispatch_imsg in main: pipe closed)
+NTPD_PIPE_WRITE_ERROR pipe write error \(from main\): %{GREEDYDATA:errormessage}: %{INT:errornr:int}

@@ -1,0 +1,9 @@
+REDIS_USER_SHUTDOWN User requested shutdown...
+REDIS_SERVER_STARTED Server started, Redis version %{GREEDYDATA:version}
+REDIS_READY_TO_START Redis %{GREEDYDATA:version} %{GREEDYDATA}
+REDIS_READY_TO_EXIT Redis is now ready to exit, bye bye...
+REDIS_REMOVE_FILE Removing the (pid|unix socket) file.
+REDIS_ULIMIT_WARNING Current maximum open files is %{INT}. maxclients has been reduced to %{INT} to compensate for low ulimit. If you need higher maxclients increase 'ulimit -n'.
+REDIS_CANNOT_SET_MAX_OPEN_FILES Server can't set maximum open files to %{INT} because of OS error: %{GREEDYDATA:errormessage}
+REDIS_REQUESTED_MAXCLIENTS You requested maxclients of %{INT} requiring at least %{INT} max file descriptors.
+REDIS_SERVER_READY_TO_ACCEPT_CONNECTIONS The server is now ready to accept connections at %{UNIXPATH:socket}
