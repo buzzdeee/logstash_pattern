@@ -1,0 +1,2 @@
+PFLOGD_LOGFILE_MOVED \[priv\]: log file %{UNIXPATH} moved to %{UNIXPATH}
+PFLOGD_CORRUPTED_LOGFILE Corrupted log file.
