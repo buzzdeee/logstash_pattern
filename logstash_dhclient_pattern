@@ -1,12 +1,12 @@
 DHCLIENT_ACTIVE_ADDRESS_DELETED Active address \(%{IPORHOST:shost}\) deleted; exiting
-DHCLIENT_BOUND bound to %{IPORHOST:dhost} -- renewal in %{POSINT:seconds:float} seconds.
+DHCLIENT_BOUND (%{WORD:interface}: )?bound to %{IPORHOST:dhost} -- renewal in %{POSINT:seconds:float} seconds.
 DHCLIENT_DHCPACK DHCPACK from %{IPORHOST:shost} \(%{COMMONMAC:mac}\)
 DHCLIENT_DHCPNACK DHCPNACK from %{IPORHOST:shost} \(%{COMMONMAC:mac}\)
 DHCLIENT_DHCPDISCOVER DHCPDISCOVER on %{WORD:interface} - interval %{POSINT:interval}
 DHCLIENT_DHCPOFFER DHCPOFFER from %{IPORHOST:shost} \(%{COMMONMAC:mac}\)
-DHCLIENT_DHCPREQUEST DHCPREQUEST on %{WORD:interface} to %{IPORHOST:dhost}
+DHCLIENT_DHCPREQUEST (DHCPREQUEST on %{WORD:interface} to %{IPORHOST:dhost}|%{WORD:interface}: DHCPREQUEST to %{IPORHOST:dhost})
 DHCLIENT_HANGUP Hangup; restarting(.)?
-DHCLIENT_INTERFACE_DOWN (fatal in dhclient: )?%{WORD:interface} down(; exiting)?
+DHCLIENT_INTERFACE_DOWN fatal in %{WORD:interface}: down(; exiting)?
 DHCLIENT_NO_ACCEPTABLE_DHCPOFFERS No acceptable DHCPOFFERS received.
 DHCLIENT_NO_WORKING_LEASES No working leases in persistent database - sleeping.
 DHCLIENT_SEND_PACKET send_packet: (Host is down|No route to host)
