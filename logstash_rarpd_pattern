@@ -1,3 +1,4 @@
 RARPD_ASKED %{IPORHOST:shost} asked; %{COMMONMAC:ourmac} replied
 RARPD_COULDNT_UPDATE_ARP_TABLE couldn't update arp table
 RARPD_ARPTAB_SET arptab_set: cannot intuit interface index and type for 0.0.0.0
+RARPD_NO_INTERFACES no interfaces

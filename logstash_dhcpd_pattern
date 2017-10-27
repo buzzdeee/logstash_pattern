@@ -12,9 +12,10 @@ DHCPD_LISTENING_ON Listening on %{WORD:interface} \(%{IPORHOST:shost}\).
 DHCPD_NAK DHCPNAK on %{IPORHOST:shost} to %{COMMONMAC:mac} via %{WORD:interface}
 DHCPD_NO_BUFFERSPACE send_packet: No buffer space available
 DHCPD_OFFER DHCPOFFER on %{IPORHOST:shost} to %{COMMONMAC:mac} via %{WORD:interface}
-DHCPD_RELEASE DHCPRELEASE of %{IPORHOST:shost} from %{COMMONMAC:mac} via %{WORD:interface} \(found\)
+DHCPD_RELEASE DHCPRELEASE of %{IPORHOST:shost} from %{COMMONMAC:mac} via %{WORD:interface} (\((not )?found\)|for nonexistent lease)
 DHCPD_RELEASED Released lease for IP address %{IPORHOST:shost}
 DHCPD_REQUEST DHCPREQUEST for %{IPORHOST:shost} from %{COMMONMAC:mac} via %{WORD:interface}
 DHCPD_UNEXPECTED_ICMP unexpected ICMP Echo Reply from %{IPORHOST:shost}
 DHCPD_EXITING exiting.
 DHCPD_NO_INTERFACE No interfaces to listen on.
+DHCPD_ICMP_ECHOREQUEST icmp_echorequest %{IPORHOST:shost}: Host is down

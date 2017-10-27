@@ -3,3 +3,4 @@ MOPD_LOAD_COMPLETED %{COMMONMAC:mac} Load completed
 MOPD_SEND_ME %{COMMONMAC:mac} Send me %{GREEDYDATA}
 MOPD_DO_YOU_HAVE %{COMMONMAC:mac} \(%{INT}\) Do you have %{GREEDYDATA}? \((Yes|No)\)
 MOPD_STARTED mopd %{GREEDYDATA:version} started.
+MOPD_NO_INTERFACES no interfaces
