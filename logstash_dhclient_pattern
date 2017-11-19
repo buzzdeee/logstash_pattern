@@ -12,4 +12,5 @@ DHCLIENT_NO_WORKING_LEASES No working leases in persistent database - sleeping.
 DHCLIENT_SEND_PACKET send_packet: (Host is down|No route to host)
 DHCLIENT_SENDMSG %{WORD:interface}: sendmsg\(DHCPREQUEST\): Host is down
 DHCLIENT_WARNING warning: %{GREEDYDATA:warningmessage}
+DHCLIENT_UNPRIV_IBUF unpriv_ibuf poll error
 DHCLIENT_TERMINATED Terminated; exiting
