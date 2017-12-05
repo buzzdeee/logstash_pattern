@@ -7,8 +7,8 @@ DHCLIENT_DHCPOFFER DHCPOFFER from %{IPORHOST:shost} \(%{COMMONMAC:mac}\)
 DHCLIENT_DHCPREQUEST (DHCPREQUEST on %{WORD:interface} to %{IPORHOST:dhost}|%{WORD:interface}: DHCPREQUEST to %{IPORHOST:dhost})
 DHCLIENT_HANGUP Hangup; restarting(.)?
 DHCLIENT_INTERFACE_DOWN fatal in %{WORD:interface}: down(; exiting)?
-DHCLIENT_NO_ACCEPTABLE_DHCPOFFERS No acceptable DHCPOFFERS received.
-DHCLIENT_NO_WORKING_LEASES No working leases in persistent database - sleeping.
+DHCLIENT_NO_ACCEPTABLE_DHCPOFFERS (%{WORD:interface}: )?No acceptable DHCPOFFERS received(.)?
+DHCLIENT_NO_WORKING_LEASES (%{WORD:interface}: )?No working leases in persistent database - sleeping(.)?
 DHCLIENT_SEND_PACKET send_packet: (Host is down|No route to host)
 DHCLIENT_SENDMSG %{WORD:interface}: sendmsg\(DHCPREQUEST\): Host is down
 DHCLIENT_WARNING warning: %{GREEDYDATA:warningmessage}
