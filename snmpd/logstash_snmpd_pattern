@@ -1,4 +1,4 @@
 SNMPD_BIND snmpe_bind: binding to address %{IPORHOST:shost}:%{POSINT:port:int}
-SNMPD_LISTENING listening on %{IPORHOST:shost}:%{INT:port}
+SNMPD_LISTENING listening on (%{IPORHOST:shost}|::):%{INT:port}
 SNMPD_EXITING (snmpe|traphandler) exiting, pid %{POSINT:pid}
 SNMPD_START_STOP (startup|terminating)

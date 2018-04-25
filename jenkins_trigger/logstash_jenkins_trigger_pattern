@@ -1,2 +1,3 @@
 JENKINS_TRIGGER_KNOWN jenkins triggered( command)?: %{GREEDYDATA}
 JENKINS_TRIGGER_BAD jenkins triggered (illegal|unknown) command: %{GREEDYDATA}
+JENKINS_TRIGGER_BACKUP_UNKNOWN jenkins triggered backup of unknown host: %{GREEDYDATA:hostname}

@@ -1,4 +1,8 @@
 REDIS_USER_SHUTDOWN User requested shutdown...
+REDIS_CONFIG_LOADED Configuration loaded
+REDIS_JUST_STARTED Redis version=%{GREEDYDATA:version}, bits=%{POSINT}, commit={NUMBER}, modified=%{INT}, pid=%{POSINT:pid}, just started
+REDIS_IS_STARTING oO0OoO0OoO0Oo Redis is starting oO0OoO0OoO0Oo
+REDIS_RUNNING_MODE Running mode=%{WORD}, port=%{INT}.
 REDIS_SERVER_STARTED Server started, Redis version %{GREEDYDATA:version}
 REDIS_READY_TO_START Redis %{GREEDYDATA:version} %{GREEDYDATA}
 REDIS_READY_TO_EXIT Redis is now ready to exit, bye bye...

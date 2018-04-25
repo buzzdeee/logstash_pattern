@@ -7,3 +7,4 @@ PHP_FPM_TERMINATING %{PHP_FPM_TIMESTAMP} NOTICE: Terminating ...
 PHP_FPM_EXITING %{PHP_FPM_TIMESTAMP} NOTICE: exiting, bye-bye!
 PHP_FPM_POOL_START %{PHP_FPM_TIMESTAMP} NOTICE: \[pool %{GREEDYDATA}\] child %{POSINT:pid} started
 PHP_FPM_POOL_STOPPED %{PHP_FPM_TIMESTAMP} WARNING: \[pool %{GREEDYDATA}\] child %{POSINT:pid} exited on signal %{INT:signum:int} \(%{GREEDYDATA:signal}\) after %{NUMBER:seconds:float} seconds from start
+PHP_FPM_DEBUG_MESSAGE %{PHP_FPM_TIMESTAMP} DEBUG: pid %{POSINT:pid}, %{GREEDYDATA:message}

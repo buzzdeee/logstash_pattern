@@ -2,3 +2,10 @@ VMD_START_STOP (startup|parent terminating)
 VMD_EXITING (control|priv|vmm) exiting, pid %{INT:pid:int}
 VMD_FAILED_TO_OPEN failed to open %{UNIXPATH:path}: %{GREEDYDATA:reason}
 VMD_GENERAL_MESSAGE %{GREEDYDATA:component}: %{GREEDYDATA}
+VMD_UNSUPPORTED_COMMAND %{GREEDYDATA:component}: unsupported command %{GREEDYDATA}
+VMD_GUEST_READING_COM %{GREEDYDATA:component}: guest reading %{GREEDYDATA} when not ready
+VMD_TIMEBASE_NOT_SUPPORTED %{GREEDYDATA:component}: %{GREEDYDATA} timebase not supported
+VMD_RUN_IOCTL_FAILED %{GREEDYDATA:component}: %{GREEDYDATA} run ioctl failed: %{GREEDYDATA:reason}
+VMD_CANT_OPEN_TAP %{GREEDYDATA:component}: can't open tap tap: %{GREEDYDATA:reason}
+VMD_FAILED_TO_START_VM %{GREEDYDATA:component}: failed to start vm %{GREEDYDATA:vmname}
+VMD_STARTED_VM %{GREEDYDATA:vmname}: started vm %{POSINT} successfully, %{GREEDYDATA}
