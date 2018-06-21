@@ -4,7 +4,6 @@ SSHD_BAD_PACKET_LENGTH Bad packet length %{NUMBER:packetlength}.( \[%{WORD:autht
 SSHD_BAD_PROTO_VERSION Bad protocol version identification '%{GREEDYDATA:protcolid}' from %{IPORHOST:shost} port %{POSINT:port:int}
 SSHD_CHANGE_USERNAME_NOT_ALLOWED Disconnecting: Change of username or service not allowed: \(%{WORD:fromuser},ssh-connection\) -> \(%{WORD:touser},ssh-connection\) \[%{WORD:authtype}\]
 SSHD_CONN_CLOSED Connection (closed|reset) by (authenticating user %{USERNAME:user} )?%{IPORHOST:shost} port %{POSINT:port:int} \[%{WORD:authtype}\]
-SSHD_CORRECT_KEY_BUT_WRONG_HOST Authentication tried for %{USERNAME:user} with correct key but not from a permitted host \(host=%{IPORHOST:shost}, ip=%{IPORHOST:sip}\).
 SSHD_DISCONNECTED Disconnected from (authenticating )?(user %{USERNAME:user} )?%{IPORHOST:shost} port %{POSINT:port:int}( \[%{WORD:authtype}\])?
 SSHD_DISCONNECTING_USER Disconnecting (authenticating|invalid) user(%{SPACE})?(%{GREEDYDATA:user})? %{IPORHOST:shost} port %{POSINT:port:int}: %{GREEDYDATA:reason} \[%{WORD:authtype}\]
 
@@ -33,3 +32,5 @@ SSHD_UNABLE_TO_NEGOTIATE Unable to negotiate with %{IPORHOST:shost} port %{INT:p
 SSHD_FATAL_MM_ANSWER_MODULI fatal: mm_answer_moduli: %{GREEDYDATA:errormessage}
 SSHD_PACKET_WRITE_POLL packet_write_poll: Connection from %{IPORHOST:shost} port %{INT:port:int}: %{GREEDYDATA}
 SSHD_DEPRECATED_OPTION %{GREEDYDATA} line %{INT:line:int}: Deprecated option %{GREEDYDATA:option}
+SSHD_KEY_OPTIONS_ERROR error: Refused by key options
+SSHD_CORRECT_KEY_BUT_WRONG_HOST (%{UNIXPATH}:%{INT}: )?Authentication tried for %{USERNAME:user} with correct key but not from a permitted host \(host=%{IPORHOST:shost}, ip=%{IPORHOST:sip}\).
