@@ -45,3 +45,4 @@ RECONSTRUCT_CONVERTED cyrusdb: converted %{UNIXPATH} from skiplist to twoskip
 RECONSTRUCT_UNABLE_DLOPEN unable to dlopen %{UNIXPATH}: Cannot load specified object
 RECONSTRUCT_LONGLOCK mailbox: longlock %{GREEDYDATA:mailbox} for %{NUMBER:seconds:float} seconds
 RECONSTRUCT_GUID_MISMATCH %{GREEDYDATA:mailbox} uid %{INT:uid:int} guid mismatch
+RECONSTRUCT_UID_FOUND %{GREEDYDATA:mailbox} uid %{INT:uid:int} found - adding
