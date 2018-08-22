@@ -3,6 +3,7 @@ ICINGA_TIMESTAMP \[%{ICINGA_DATESTAMP:timestamp:string}\]
 ICINGA_INVALID_SOCKET Invalid socket: Host is down
 ICINGA_CANNOT_CONNECT Cannot connect to host '%{IPORHOST:shost}' on port '%{POSINT:port:integer}'
 ICINGA_DB_EXCEPTION Exception during database operation: Verify that your database is operational!
+ICINGA_DB_CONNECTION_FAILED Connection to database '%{WORD}' with user '%{WORD}' on '%{IPORHOST}:%{INT:port:integer}' failed: %{GREEDYDATA}
 ICINGA_DB_ERROR Error "ERROR:  relation %{GREEDYDATA}
 ICINGA_CHECK_EXCEPTION Exception occured while checking '%{GREEDYDATA}': Error: %{GREEDYDATA}
 ICINGA_IGNORE_CONFIG_UPDATE Ignoring config update. 'api' does not accept config.
