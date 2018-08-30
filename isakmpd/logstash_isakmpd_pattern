@@ -1,0 +1,5 @@
+ISAKMPD_EXIT isakmpd: exit
+ISAKMPD_SHUTTING_DOWN isakmpd: shutting down...
+ISAKMPD_STARTING isakmpd: starting
+ISAKMPD_POLICY_INIT policy_init: %{GREEDYDATA}
+ISAKMPD_CHECK_FILE_SECRECY check_file_secrecy_fd: %{GREEDYDATA}
