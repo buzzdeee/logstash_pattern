@@ -18,3 +18,4 @@ BSD_SYNC_DISKS syncing disks...( done)?
 BSD_VERSION %{WORD:osfamily} %{NUMBER:version:string}(-%{WORD:relinfo})? \(%{GREEDYDATA:kernel}\) #%{POSINT:buildid}: %{DAY} %{SYSLOGTIMESTAMP}
 BSD_WX_VIOLATION %{GREEDYDATA}\(%{POSINT:pid:int}\): mprotect W^X violation
 BSD_MEMORY_MAP_CONFLICT memory map conflict %{GREEDYDATA}
+BSD_INIT_KERNEL_MODESETTING initializing kernel modesetting \(%{GREEDYDATA}\).

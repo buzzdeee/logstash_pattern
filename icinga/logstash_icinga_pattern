@@ -43,4 +43,4 @@ ICINGA_FUNCTION_FAILED %{WORD:function}() failed with error code %{INT}, "%{GREE
 ICINGA_NO_DATA_RECEIVED_ON_API_CONNECTION No data received on new API connection for identity '%{IPORHOST:shost}'. Ensure that the remote endpoints are properly configured in a cluster setup. Context: \(0\) Handling new API client connection
 ICINGA_CLIENT_TLS_HANDSHAKE_FAILED Client TLS handshake failed \(from (\[)?%{IPORHOST:shost}(\])?:%{POSINT:port:integer}\) Context:%{SPACE}\(0\) Handling new API client connection
 ICINGA_CANNOT_ACCEPT Cannot accept new connection.
-ICINGA_EXEPTION_THROWN_IN_EVENT_HANDLER Exception thrown in event handler: %{GREEDYDATA}
+ICINGA_EXCEPTION_THROWN Exception thrown in %{GREEDYDATA}: %{GREEDYDATA}

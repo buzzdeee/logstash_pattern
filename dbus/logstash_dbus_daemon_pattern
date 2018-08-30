@@ -1,0 +1,3 @@
+DBUS_DAEMON_SERVICE_ACTIVATED \[session uid=%{INT:uid:ingeter} pid=%{INT:pid:integer}\] Successfully activated service '%{GREEDYDATA:service}'
+DBUS_DAEMON_ACTIVATING_SERVICE \[session uid=%{INT:uid:ingeter} pid=%{INT:pid:integer}\] Activating service name='%{GREEDYDATA:service}' requested by '%{GREEDYDATA}' \(uid=%{INT} pid=%{INT} comm="%{WORD:program}"\)
+
