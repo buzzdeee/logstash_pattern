@@ -5,7 +5,7 @@ DHCLIENT_DHCPNACK DHCPNACK from %{IPORHOST:shost} \(%{COMMONMAC:mac}\)
 DHCLIENT_DHCPDISCOVER DHCPDISCOVER (on %{WORD:interface} )?- interval %{POSINT:interval}
 DHCLIENT_DHCPOFFER DHCPOFFER from %{IPORHOST:shost} \(%{COMMONMAC:mac}\)
 DHCLIENT_DHCPREQUEST (DHCPREQUEST on %{WORD:interface} to %{IPORHOST:dhost}|%{WORD:interface}: DHCPREQUEST to %{IPORHOST:dhost})
-DHCLIENT_HANGUP Hangup; restarting(.)?
+DHCLIENT_HANGUP (%{WORD:interface} \[priv\]: )?Hangup(;| -)? restarting(.)?
 DHCLIENT_INTERFACE_DOWN fatal in %{WORD:interface}: down(; exiting)?
 DHCLIENT_NO_ACCEPTABLE_DHCPOFFERS (%{WORD:interface}: )?No acceptable DHCPOFFERS received(.)?
 DHCLIENT_NO_WORKING_LEASES (%{WORD:interface}: )?No working leases in persistent database - sleeping(.)?
