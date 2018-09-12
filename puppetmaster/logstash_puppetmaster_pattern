@@ -27,8 +27,7 @@ PUPPETMASTER_REMOVE_CERTREQUEST Removing file Puppet::SSL::CertificateRequest %{
 PUPPETMASTER_SIGNED_CERT Signed certificate request for %{IPORHOST:shost}
 PUPPETMASTER_DUPLICATE_EXPORTED_RESOURCE A duplicate resource was found while collecting exported resources, with the type and title %{GREEDYDATA:resource} on node %{IPORHOST:shost}
 PUPPETMASTER_UNKNOWN_VARIABLE Unknown variable: '%{GREEDYDATA:variable}'. (at %{UNIXPATH:path}:%{POSINT:line:int}:%{POSINT:row:int}|%{PUPPETMASTER_FILE_LINE})
-DOESNT_WORK_PUPPETMASTER_STRING_COERCED The string '%{INT}' was automatically coerced to the numerical value %{INT} %{PUPPETMASTER_FILE_LINE}
-PUPPETMASTER_STRING_COERCED %{GREEDYDATA} was automatically coerced to the numerical value %{GREEDYDATA}
+PUPPETMASTER_STRING_COERCED The string '%{INT}' was automatically coerced to the numerical value %{INT} %{PUPPETMASTER_FILE_LINE}
 PUPPETMASTER_UNPARSEABLE_METADATA %{WORD:module} has an invalid and unparsable metadata.json file. The parse error: %{GREEDYDATA}
 PUPPETMASTER_NO_DEPENDENCIES_MODULE_PROVIDED No dependencies module metadata provided for %{WORD:module}
 PUPPETMASTER_UNRESOLVED_MODULE_DEPENDENCIES ModuleLoader: module '%{WORD:module}' has unresolved dependencies - it will only see those that are resolved. Use 'puppet module list --tree' to see information about modules
