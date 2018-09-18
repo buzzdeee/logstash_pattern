@@ -1,0 +1,3 @@
+PF_RULE rule %{POSINT:rulenumber:integer}/\(match\)
+PF_PASS_UDP %{GREEDYDATA} %{PF_RULE} pass in on %{WORD:interface}: %{IPORHOST:shost}.%{POSINT:sport:integer} > %{IPORHOST:dhost}.%{POSINT:dport:integer}: %{GREEDYDATA}
+PF_PASS_TCP %{GREEDYDATA} %{PF_RULE} pass in on %{WORD:interface}: %{IPORHOST:shost}.%{POSINT:sport:integer} > %{IPORHOST:dhost}.%{POSINT:dport:integer}: %{WORD:tcpflags} %{POSINT}:%{POSINT}\(0\) win %{POSINT:tcpwindowsize:integer} <mss %{POSINT:mss:integer}%{GREEDYDATA}
