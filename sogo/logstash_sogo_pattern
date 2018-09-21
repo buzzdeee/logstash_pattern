@@ -3,3 +3,4 @@ SOGO_TIME2 %{DATE} %{TIME}
 SOGO_TIME (%{SOGO_TIME1}|%{SOGO_TIME2})
 SOGO_SYSLOG %{SOGO_TIME:timestamp:string} (%{WORD:program})(%{SPACE})?\[%{POSINT:pid}(:%{NUMBER:threadid})?\](:)?
 SOGO_LOADING_TWO_VERSIONS Loading two versions of %{WORD:class}.  The class that will be used is undefined
+SOGO_LDAPDB_CANONUSER_PLUG_INIT ldapdb_canonuser_plug_init\(\) failed in %{WORD}\(\): %{GREEDYDATA}

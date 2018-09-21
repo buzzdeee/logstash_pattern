@@ -52,3 +52,6 @@ POSTFIX_STATISTICS_MAX_SIMULTAN_DOMAINS statistics: max simultaneous domains=%{I
 POSTFIX_STATISTICS_START_INTERVAL statistics: start interval %{GREEDYDATA}
 POSTFIX_MESSAGE_TOO_BIG fatal: %{USERNAME}\(%{INT:uid}\): message file too big
 POSTFIX_FILE_TOO_LARGE warning: uid=%{INT:uid}: File too large
+POSTFIX_FATAL_SCAN_DIR_PUSH fatal: scan_dir_push: open directory maildrop: %{GREEDYDATA}
+POSTFIX_MALFORMED_SHOWQ_RESPONSE fatal: malformed showq server response
+POSTFIX_FATAL_OPEN_FILE fatal: open %{UNIXPATH}: %{GREEDYDATA}
