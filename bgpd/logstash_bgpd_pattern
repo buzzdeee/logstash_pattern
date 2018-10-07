@@ -12,7 +12,7 @@ BGPD_DEPRECATION_WARNING %{UNIXPATH:file}:%{INT:line:integer}: warning: '%{GREED
 BGPD_RUNNING_SOFTRECONFIG running softreconfig in
 BGPD_RDE_SOFTRECONFIG_DONE RDE soft reconfiguration done
 BGPD_FATAL_IN_RDE fatal in RDE: %{GREEDYDATA}
-BGPD_SE_LOST_CONNECTION SE lost connection( to parent)?
+BGPD_SE_LOST_CONNECTION SE(:)? lost connection( to parent)?
 BGPD_PEER_CLOSED_CONNECTION peer closed imsg connection
 BGPD_SE_TERMINATED session engine terminated; %{GREEDYDATA}
 BGPD_GRACEFUL_RESTART neighbor %{IPORHOST:shost}: graceful restart of IPv4 unicast%{GREEDYDATA}
