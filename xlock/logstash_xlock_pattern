@@ -1,0 +1,3 @@
+XLOCK_START Start: %{WORD:user}, %{WORD:group}, %{GREEDYDATA}
+XLOCK_UNLOCKED xlock: %{WORD:user} unlocked screen
+XLOCK_STOP Stop: %{WORD:user}, %{WORD:group}, %{GREEDYDATA}

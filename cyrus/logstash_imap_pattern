@@ -35,6 +35,7 @@ IMAP_MASTER_SERVICE_TERMINATED service %{GREEDYDATA} pid %{POSINT} in READY stat
 IMAP_FATAL_ERROR Fatal error: %{GREEDYDATA:errormessage}
 IMAP_UNABLE_TO_TELL_MASTER unable to tell master %{INT}: %{GREEDYDATA:errormessage}
 IMAP_IS_TCP_SOCKET is_tcp_socket: getsockname\(%{INT}\): %{GREEDYDATA:errormessage}
+IMAP_IOERROR IOERROR: reading message: %{GREEDYDATA}
 RECONSTRUCT_RECONSTRUCTING reconstructing %{GREEDYDATA:mailbox}
 RECONSTRUCT_UPDATING %{GREEDYDATA:mailbox}: updating sync_crc %{INT} => %{INT}
 RECONSTRUCT_ERR run reconstruct with -R to fix or -U to remove
@@ -48,3 +49,4 @@ RECONSTRUCT_LONGLOCK mailbox: longlock %{GREEDYDATA:mailbox} for %{NUMBER:second
 RECONSTRUCT_GUID_MISMATCH %{GREEDYDATA:mailbox} uid %{INT:uid:int} guid mismatch
 RECONSTRUCT_UID_FOUND %{GREEDYDATA:mailbox} uid %{INT:uid:int} found - adding
 LMTPUNIX_SIEVE_RUNTIME_ERROR sieve runtime error for %{WORD:user} id <%{GREEDYDATA:messageid}>: Fileinto \(%{GREEDYDATA:mailbox}\): %{GREEDYDATA}
+
