@@ -20,3 +20,4 @@ BSD_WX_VIOLATION %{GREEDYDATA}\(%{POSINT:pid:integer}\): mprotect W^X violation
 BSD_MEMORY_MAP_CONFLICT memory map conflict %{GREEDYDATA}
 BSD_INIT_KERNEL_MODESETTING initializing kernel modesetting \(%{GREEDYDATA}\).
 BSD_PLEDGE_VIOLATION %{WORD:program}\[%{POSINT:pid:integer}\]: pledge "unveil", syscall %{POSINT:syscallnum:integer}
+BSD_GEM_IDLE_FAILED %{GREEDYDATA} *ERROR* GEM idle failed, resume might fail
