@@ -17,5 +17,5 @@ BGPD_PEER_CLOSED_CONNECTION peer closed imsg connection
 BGPD_SE_TERMINATED session engine terminated; %{GREEDYDATA}
 BGPD_GRACEFUL_RESTART neighbor %{IPORHOST:shost}: graceful restart of IPv4 unicast%{GREEDYDATA}
 BGPD_NON_PEER_CONNECTION_REFUSED connection from non-peer %{IPORHOST:shost} refused
-BGPD_CONFIG_ERRORS config file %{UNUXPATH} has errors, not reloading
+BGPD_CONFIG_ERRORS config file %{UNIXPATH} has errors, not reloading
 BGPD_PFTABLE_DOESNT_EXIST %{UNIXPATH}:%{INT}: pftable name does not exist
