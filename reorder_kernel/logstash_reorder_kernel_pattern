@@ -1,1 +1,2 @@
 REORDER_KERNEL_DONE kernel relinking done
+REORDER_KERNEL_FAILED kernel relinking failed; see %{UNIXPATH}
