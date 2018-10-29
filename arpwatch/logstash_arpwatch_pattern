@@ -1,0 +1,5 @@
+ARPWATCH_NEW_STATION new station %{IPORHOST:shost} %{COMMONMAC:mac}
+ARPWATCH_LISTENING listening on %{WORD:interface}
+ARPWATCH_RUNNING_AS Running as uid=%{INT} gid=%{INT}
+ARPWATCH_REPORT report: pausing \(cdepth %{INT}\)
+ARPWATCH_CREATE creat\(%{GREEDYDATA}\): %{GREEDYDATA}
