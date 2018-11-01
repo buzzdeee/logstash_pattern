@@ -3,3 +3,4 @@ ARPWATCH_LISTENING listening on %{WORD:interface}
 ARPWATCH_RUNNING_AS Running as uid=%{INT} gid=%{INT}
 ARPWATCH_REPORT report: pausing \(cdepth %{INT}\)
 ARPWATCH_CREATE creat\(%{GREEDYDATA}\): %{GREEDYDATA}
+ARPWATCH_BOGON bogon %{IPORHOST:shost} %{COMMONMAC:mac}
