@@ -15,7 +15,7 @@ IMAP_PURGED (duplicate_prune|tls_prune): purged %{INT:purged:int} out of %{INT:e
 IMAP_REMOVE_STALE_TOMBSTONE Removing stale tombstone for %{GREEDYDATA:mailbox}
 IMAP_SQL_ENGINE_NOT_SUPP SQL engine '%{WORD:engine}' not supported
 IMAP_USAGE USAGE %{USER:user} user: %{NUMBER:userusage:float} sys: %{NUMBER:sysusage:float}
-IMAP_USER_LOGIN login: (%{IPORHOST:shost} )?\[%{IPORHOST:sourceip}\] %{USER:user} %{GREEDYDATA:logontype} User logged in SESSIONID=<%{GREEDYDATA:sessionid}>
+IMAP_USER_LOGIN login: (%{IPORHOST:shost} )?\[%{IPORHOST:sourceip}\] %{USER:user} %{GREEDYDATA:logontype} User logged in( SESSIONID=<%{GREEDYDATA:sessionid}>)?
 IMAP_IDLE idle for too long, closing connection
 IMAP_INITTLS inittls: %{GREEDYDATA:tlsmessage}
 IMAP_RENAME Rename: %{GREEDYDATA} -> %{GREEDYDATA}
@@ -49,4 +49,6 @@ RECONSTRUCT_LONGLOCK mailbox: longlock %{GREEDYDATA:mailbox} for %{NUMBER:second
 RECONSTRUCT_GUID_MISMATCH %{GREEDYDATA:mailbox} uid %{INT:uid:int} guid mismatch
 RECONSTRUCT_UID_FOUND %{GREEDYDATA:mailbox} uid %{INT:uid:int} found - adding
 LMTPUNIX_SIEVE_RUNTIME_ERROR sieve runtime error for %{WORD:user} id <%{GREEDYDATA:messageid}>: Fileinto \(%{GREEDYDATA:mailbox}\): %{GREEDYDATA}
-
+IDLED_SHUTDOWN graceful shutdown
+SIEVE_LOST_CONNECTION Lost connection to client -- exiting
+SIEVE_LDAPDB_CANONUSER_PLUG_INIT ldapdb_canonuser_plug_init\(\) failed in %{WORD}\(\): %{GREEDYDATA}
