@@ -1,3 +1,4 @@
 SUDO_CMD_LOG %{USERNAME:user} : TTY=%{WORD:tty} ; PWD=%{UNIXPATH:pwd} ; USER=%{USERNAME:asuser} ;( ENV=%{GREEDYDATA:environment} ;)? COMMAND=%{GREEDYDATA:command}
 SUDO_CMD_NOT_ALLOWED %{USERNAME:user} : command not allowed ; TTY=%{WORD:tty} ; PWD=%{UNIXPATH:pwd} ; USER=%{USERNAME:asuser} ; COMMAND=%{GREEDYDATA:command}
 SUDO_USER_NOT_IN_SUDOERS %{USERNAME:user} : user NOT in sudoers ; TTY=%{WORD:tty} ; PWD=%{UNIXPATH:pwd} ; USER=%{USERNAME:asuser} ; COMMAND=%{GREEDYDATA:command}
+SUDO_COMMAND_CONTINUED %{USERNAME:user} : \(command continued\) %{GREEDYDATA:command}
