@@ -19,3 +19,4 @@ DHCPD_UNEXPECTED_ICMP unexpected ICMP Echo Reply from %{IPORHOST:shost}
 DHCPD_EXITING exiting.
 DHCPD_NO_INTERFACE No interfaces to listen on.
 DHCPD_ICMP_ECHOREQUEST icmp_echorequest %{IPORHOST:shost}: Host is down
+DHCPD_DUPLICATE_LEASE client %{COMMONMAC:mac} has duplicate leases on %{GREEDYDATA}
