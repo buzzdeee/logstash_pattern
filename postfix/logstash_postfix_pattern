@@ -56,3 +56,4 @@ POSTFIX_FATAL_SCAN_DIR_PUSH fatal: scan_dir_push: open directory maildrop: %{GRE
 POSTFIX_MALFORMED_SHOWQ_RESPONSE fatal: malformed showq server response
 POSTFIX_FATAL_OPEN_FILE fatal: open %{UNIXPATH}: %{GREEDYDATA}
 POSTFIX_IMPROPER_CMD_PIPE_AFTER_EHLO improper command pipelining after EHLO from %{IPORHOST:shost}\[%{IPORHOST:ipaddress}\]: %{GREEDYDATA}
+POSTFIX_WARNING_LOOK_UP warning: unable to look up %{UNIXPATH}: %{GREEDYDATA}

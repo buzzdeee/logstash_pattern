@@ -10,6 +10,7 @@ BGPD_NEIGHBOR_SEND_NOTIFICATION neighbor %{IPORHOST:shost}: (sending notificatio
 BGPD_NEIGHBOR_RECEIVED_NOTIFICATION neighbor %{IPORHOST:shost}: (received notification: %{GREEDYDATA:notification}|received IPv4 unicast EOR marker)
 BGPD_DEPRECATION_WARNING %{UNIXPATH:file}:%{INT:line:integer}: warning: '%{GREEDYDATA}' is deprecated, use '%{GREEDYDATA}' instead
 BGPD_RUNNING_SOFTRECONFIG running softreconfig in
+BGPD_SOFTRECONFIG_DONE softreconfig in done
 BGPD_RDE_SOFTRECONFIG_DONE RDE soft reconfiguration done
 BGPD_FATAL_IN_RDE fatal in RDE: %{GREEDYDATA}
 BGPD_SE_LOST_CONNECTION SE(:)? (L|l)ost connection( to parent)?

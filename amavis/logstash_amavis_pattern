@@ -20,3 +20,4 @@ AMAVIS_PASSED \(%{GREEDYDATA}\) Passed (CLEAN|SPAM) %{GREEDYDATA}, \[%{IPORHOST}
 AMAVIS_BLOCKED \(%{GREEDYDATA}\) Blocked INFECTED \(%{GREEDYDATA:virusname}\) %{GREEDYDATA}, \[%{IPORHOST}\] \[%{IPORHOST:shost}\] <%{GREEDYDATA:sender}> -> <%{GREEDYDATA:recipient}>, quarantine: %{GREEDYDATA}, Message-ID: %{GREEDYDATA}, %{INT:miliseconds} ms
 AMAVIS_CONSIDERING_BACKUP_SCANNERS \(!\)WARN: all primary virus scanners failed, considering backups
 AMAVIS_GENERIC \(%{GREEDYDATA}\) %{GREEDYDATA}
+AMAVIS_PERL perl=%{NUMBER}, user=, EUID: %{INT} \(%{INT}\); group=, EGID: %{INT} %{INT} \(%{INT} %{INT}\)
