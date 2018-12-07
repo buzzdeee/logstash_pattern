@@ -44,6 +44,7 @@ POSTFIX_TLS_LIBRARY_PROBLEM warning: TLS library problem: error:%{GREEDYDATA:err
 POSTFIX_SUGGESTION warning: you may need %{GREEDYDATA}
 POSTFIX_REASONING warning: so that Postfix %{GREEDYDATA}
 POSTFIX_QUEUE_FILE_SIZE_LIMIT warning: %{GREEDYDATA:messageid}: queue file size limit exceeded
+POSTFIX_QUEUE_WRITE_PROBLEM warning: %{GREEDYDATA:messageid}: write queue file: %{GREEDYDATA:errormessage}
 POSTFIX_STATISTICS_CONN_COUNT statistics: max connection count %{INT:count:int} for \(%{WORD:subcomponent}:%{IPORHOST:shost}\) at %{GREEDYDATA}
 POSTFIX_STATISTICS_CONN_RATE statistics: max connection rate %{INT:count:int}/%{INT:seconds:float}s for \(%{WORD:subcomponent}:%{IPORHOST:shost}\) at %{GREEDYDATA}
 POSTFIX_STATISTICS_MAX_CACHE statistics: max cache size %{INT:size:int} at %{GREEDYDATA}
