@@ -7,5 +7,6 @@ VMD_GUEST_READING_COM %{GREEDYDATA:component}: guest reading %{GREEDYDATA} when 
 VMD_TIMEBASE_NOT_SUPPORTED %{GREEDYDATA:component}: %{GREEDYDATA} timebase not supported
 VMD_RUN_IOCTL_FAILED %{GREEDYDATA:component}: %{GREEDYDATA} run ioctl failed: %{GREEDYDATA:reason}
 VMD_CANT_OPEN_TAP %{GREEDYDATA:component}: can't open tap tap: %{GREEDYDATA:reason}
-VMD_FAILED_TO_START_VM %{GREEDYDATA:component}: failed to start vm %{GREEDYDATA:vmname}
+VMD_FAILED_TO_START_VM (%{GREEDYDATA:component}: )?failed to start vm %{GREEDYDATA:vmname}
 VMD_STARTED_VM %{GREEDYDATA:vmname}: started vm %{POSINT} successfully, %{GREEDYDATA}
+VMD_CONFIG_FAILED parent: configuration failed
