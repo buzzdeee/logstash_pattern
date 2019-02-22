@@ -39,7 +39,7 @@ POSTFIX_SSL_ACCEPT_ERROR SSL_accept error from %{GREEDYDATA}\[%{IPORHOST:shost}\
 POSTFIX_STILL_DELIVERED %{GREEDYDATA:messageid}: skipped, still being delivered
 POSTFIX_TABLE_CHANGED table %{WORD}:%{UNIXPATH}\(%{GREEDYDATA}\) has changed -- restarting
 POSTFIX_TIMED_OUT %{GREEDYDATA:messageid}: conversation with %{IPORHOST:shost}\[%{IPORHOST}\] timed out while receiving the initial server greeting
-POSTFIX_TIMEOUT_AFTER timeout after (END-OF-MESSAGE|STARTTLS) from %{IPORHOST:shost}\[%{IPORHOST}\]
+POSTFIX_TIMEOUT_AFTER timeout after %{DATA} from %{IPORHOST:shost}\[%{IPORHOST}\]
 POSTFIX_TLS_LIBRARY_PROBLEM warning: TLS library problem: error:%{GREEDYDATA:errorid}:SSL routines:%{GREEDYDATA:routine}:%{GREEDYDATA:reason}:%{UNIXPATH}:%{POSINT:line:int}:
 POSTFIX_SUGGESTION warning: you may need %{GREEDYDATA}
 POSTFIX_REASONING warning: so that Postfix %{GREEDYDATA}
@@ -58,3 +58,4 @@ POSTFIX_MALFORMED_SHOWQ_RESPONSE fatal: malformed showq server response
 POSTFIX_FATAL_OPEN_FILE fatal: open %{UNIXPATH}: %{GREEDYDATA}
 POSTFIX_IMPROPER_CMD_PIPE_AFTER_EHLO improper command pipelining after EHLO from %{IPORHOST:shost}\[%{IPORHOST:ipaddress}\]: %{GREEDYDATA}
 POSTFIX_WARNING_LOOK_UP warning: unable to look up %{UNIXPATH}: %{GREEDYDATA}
+POSTFIX_WARNING_FILES_DIFFER %{UNIXPATH} and %{UNIXPATH} differ

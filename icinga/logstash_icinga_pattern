@@ -41,7 +41,7 @@ ICINGA_UNAUTHORIZED_REQUEST Unauthorized request: %{WORD:request} %{GREEDYDATA:p
 ICINGA_NOTIFICATION_COMMAND_TERMINATED Notification command for object '%{GREEDYDATA}' \(PID: %{INT:pid:integer}, arguments: '%{GREEDYDATA}'\) terminated with exit code %{INT}, output: %{GREEDYDATA}
 ICINGA_FUNCTION_FAILED %{WORD:function}() failed with error code %{INT}, "%{GREEDYDATA:errormessage}"
 ICINGA_NO_DATA_RECEIVED_ON_API_CONNECTION No data received on new API connection for identity '%{IPORHOST:shost}'. Ensure that the remote endpoints are properly configured in a cluster setup. Context:%{SPACE}\(0\) Handling new API client connection
-ICINGA_CLIENT_TLS_HANDSHAKE_FAILED Client TLS handshake failed \((from (\[)?%{IPORHOST:shost}(\])?|to (\[)?%{IPORHOST:dhost}(\])?):%{POSINT:port:integer}\) Context:%{SPACE}\(0\) Handling new API client connection
+ICINGA_CLIENT_TLS_HANDSHAKE_FAILED Client TLS handshake failed \((from (\[)?%{IPORHOST:shost}(\])?|to (\[)?%{IPORHOST:dhost}(\])?):%{POSINT:port:integer}\)%{DATA}
 ICINGA_CANNOT_ACCEPT Cannot accept new connection.
 ICINGA_EXCEPTION_THROWN Exception thrown in %{GREEDYDATA}: %{GREEDYDATA}
 ICINGA_EVENT_COMMAND_TERMINATED Event command for object '%{IPORHOST:shost}' \(PID: %{POSINT:pid:integer}, arguments: %{GREEDYDATA}\) terminated with exit code %{POSINT}, output: %{GREEDYDATA}

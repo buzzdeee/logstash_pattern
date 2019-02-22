@@ -4,3 +4,4 @@ ARPWATCH_RUNNING_AS Running as uid=%{INT} gid=%{INT}
 ARPWATCH_REPORT report: pausing \(cdepth %{INT}\)
 ARPWATCH_CREATE creat\(%{GREEDYDATA}\): %{GREEDYDATA}
 ARPWATCH_BOGON bogon %{IPORHOST:shost} %{COMMONMAC:mac}
+ARPWATCH_CHANGED_ADDR changed ethernet address %{IP} %{COMMONMAC:mac} \(%{COMMONMAC}\)

@@ -30,7 +30,8 @@ SSHD_TOO_MANY_AUTH_FAILURES Disconnecting: Too many authentication failures \[%{
 SSHD_UNABLE_TO_NEGOTIATE_NOT_WORKING??? (fatal: )?Unable to negotiate with %{IPORHOST:shost} port %{POSINT:port:int}: %{GREEDYDATA}
 SSHD_UNABLE_TO_NEGOTIATE Unable to negotiate with %{IPORHOST:shost} port %{INT:port:int}: %{GREEDYDATA}
 SSHD_FATAL_MM_ANSWER_MODULI fatal: mm_answer_moduli: %{GREEDYDATA:errormessage}
-SSHD_PACKET_WRITE_POLL packet_write_poll: Connection from %{IPORHOST:shost} port %{INT:port:int}: %{GREEDYDATA}
+SSHD_PACKET_WRITE_POLL packet_write_poll: Connection from (user %{USERNAME:user} )?%{IPORHOST:shost} port %{INT:port:int}: %{GREEDYDATA}
 SSHD_DEPRECATED_OPTION %{GREEDYDATA} line %{INT:line:int}: Deprecated option %{GREEDYDATA:option}
 SSHD_KEY_OPTIONS_ERROR error: Refused by key options
 SSHD_CORRECT_KEY_BUT_WRONG_HOST (%{UNIXPATH}:%{INT}: )?Authentication tried for %{USERNAME:user} with correct key but not from a permitted host \(host=%{IPORHOST:shost}, ip=%{IPORHOST:sip}\).
+SSHD_COULD_NOT_WRITE_IDENT_STRING Could not write ident string to %{IP:shost} port %{INT:port:int}
