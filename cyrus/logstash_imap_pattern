@@ -25,7 +25,7 @@ IMAP_RENAME Rename: %{GREEDYDATA} -> %{GREEDYDATA}
 IMAP_DELETED Deleted mailbox %{GREEDYDATA}
 IMAP_TLS_NEGOTIATION_FAILED imaps TLS negotiation failed: (%{IPORHOST:shost} )?\[(%{IPORHOST:ipaddress}|unix socket)\]
 IMAP_STARTTLS starttls: %{GREEDYDATA:tlsversion} with cipher %{GREEDYDATA:cipher} \(%{INT}/%{INT} bits (new|reused)\) no authentication
-IMAP_BADLOGIN badlogin: (%{IPORHOST:shost} )?\[%{IPORHOST:sourceip}\] %{GREEDYDATA} (\[)?SASL\(%{INT}\): (authentication|generic) failure: %{GREEDYDATA}(\])?
+IMAP_BADLOGIN badlogin: badlogin: (%{IPORHOST:shost} )?\[%{IPORHOST:sourceip}\] %{WORD} %{USERNAME:user}( SASL\(%{INT}\)?: (authentication|generic) failure: %{GREEDYDATA})?
 IMAP_PASSWORD_VERIFICATION_FAILED SASL Password verification failed
 IMAP_UNABLE_TO_CANONIFY SASL unable to canonify user and get auxprops
 IMAP_UNDEFINED_ERROR Undefined error: %{INT:errornr:int}, closing connection
