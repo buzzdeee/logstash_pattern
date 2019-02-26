@@ -5,7 +5,7 @@ POSTFIX_PATH_OR_IPORHOST (%{UNIXPATH}|%{IPORHOST:sourceip})
 POSTFIX_AUTH_FAILURE warning: %{IPORHOST:shost}\[%{IPORHOST:ipaddress}\]: SASL %{WORD} authentication failed: %{GREEDYDATA:errormessage}
 POSTFIX_SASL_AUTH_FAILURE warning: SASL authentication failure: %{GREEDYDATA:errormessage}
 POSTFIX_BACKWARD_TIME_JUMP warning: backward time jump (detected|recovered) -- (slewing clock|back to normality)
-POSTFIX_CLEANUP %{GREEDYDATA:messageid}: (resent-)?message-id=(<)?%{GREEDYDATA}(>)?
+POSTFIX_CLEANUP %{GREEDYDATA:messageid}: (resent-)?message-id=(<)?%{NOTSPACE}(>)?
 POSTFIX_CONVERSATION_TIMEOUT %{GREEDYDATA:messageid}: conversation with %{IPORHOST:relay}\[%{IPORHOST}\] timed out %{GREEDYDATA}
 POSTFIX_CONNECTION_REFUSED connect to %{IPORHOST:relay}\[%{POSTFIX_PATH_OR_IPORHOST}\]%{POSTFIX_MAYBE_PORT}: (Connection refused|Operation timed out)
 POSTFIX_DB_OLDER_THAN_SOURCE warning: database %{UNIXPATH} is older than source file %{UNIXPATH}
