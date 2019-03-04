@@ -26,7 +26,7 @@ POSTFIX_LOST_CONNECTION_AFTER lost connection after %{WORD} from %{IPORHOST:shos
 POSTFIX_NON_SMTP warning: non-SMTP command from %{IPORHOST:shost}\[%{IPORHOST:ipaddress}\]: %{GREEDYDATA:command}
 POSTFIX_MAIL_SYSTEM_DOWN warning: Mail system is down -- accessing queue directly
 POSTFIX_BOGUS_REVERSE_DNS warning: hostname %{IPORHOST:shost} does not resolve to address %{IPORHOST:ipaddress}
-POSTFIX_NOQUEUE NOQUEUE: (%{GREEDYDATA:messageid}: )?reject: RCPT from %{IPORHOST:shost}\[%{IPORHOST:ipaddress}\]: %{GREEDYDATA:errormessage}
+POSTFIX_NOQUEUE (NOQUEUE: )?(%{GREEDYDATA:messageid}: )?reject: RCPT from %{IPORHOST:shost}\[%{IPORHOST:ipaddress}\]:%{GREEDYDATA:errormessage}
 POSTFIX_PICKUP %{GREEDYDATA:messageid}: uid=%{INT:uid:int} from=<%{GREEDYDATA}>
 POSTFIX_REMOVED %{GREEDYDATA:messageid}: removed
 POSTFIX_REMOVE_FROM_ACTIVE warning: qmgr_active_done_3_generic: remove %{GREEDYDATA:messageid} from active: %{GREEDYDATA:errormessage}
