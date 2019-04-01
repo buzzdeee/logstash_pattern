@@ -4,7 +4,7 @@ SSHD_BAD_PACKET_LENGTH Bad packet length %{NUMBER:packetlength}.( \[%{WORD:autht
 SSHD_BAD_PROTO_VERSION Bad protocol version identification '%{GREEDYDATA:protcolid}' from %{IPORHOST:shost} port %{POSINT:port:int}
 SSHD_CHANGE_USERNAME_NOT_ALLOWED Disconnecting: Change of username or service not allowed: \(%{WORD:fromuser},ssh-connection\) -> \(%{WORD:touser},ssh-connection\) \[%{WORD:authtype}\]
 SSHD_CONN_CLOSED Connection (closed|reset) by (authenticating user %{USERNAME:user} )?%{IPORHOST:shost} port %{POSINT:port:int} \[%{WORD:authtype}\]
-SSHD_DISCONNECTED Disconnected from (authenticating )?(user %{USERNAME:user} )?%{IPORHOST:shost} port %{POSINT:port:int}( \[%{WORD:authtype}\])?
+SSHD_DISCONNECTED Disconnected from (invalid|authenticating )?(user %{USERNAME:user} )?%{IPORHOST:shost} port %{POSINT:port:int}( \[%{WORD:authtype}\])?
 SSHD_DISCONNECTING_USER Disconnecting (authenticating|invalid) user(%{SPACE})?(%{GREEDYDATA:user})? %{IPORHOST:shost} port %{POSINT:port:int}: %{GREEDYDATA:reason} \[%{WORD:authtype}\]
 
 SSHD_DISPATCH_PROTOCOL_ERROR dispatch_protocol_error: type %{INT} seq %{INT} \[preauth\]
