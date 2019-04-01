@@ -1,5 +1,5 @@
-PF_RULE rule %{POSINT:rulenumber:integer}/\(match\)
-PF_PASS_UDP %{GREEDYDATA} %{PF_RULE} pass in on %{WORD:interface}: %{IPORHOST:shost}.%{POSINT:sport:integer} > %{IPORHOST:dhost}.%{POSINT:dport:integer}: %{GREEDYDATA}
-PF_PASS_TCP %{GREEDYDATA} %{PF_RULE} pass in on %{WORD:interface}: %{IPORHOST:shost}.%{POSINT:sport:integer} > %{IPORHOST:dhost}.%{POSINT:dport:integer}: %{WORD:tcpflags} %{POSINT}:%{POSINT}\(0\) win %{POSINT:tcpwindowsize:integer} <mss %{POSINT:mss:integer}%{GREEDYDATA}
-PF_BLOCK_UDP %{GREEDYDATA} %{PF_RULE} block in on %{WORD:interface}: %{IPORHOST:shost}.%{POSINT:sport:integer} > %{IPORHOST:dhost}.%{POSINT:dport:integer}: udp%{GREEDYDATA}
-PF_BLOCK_TCP %{GREEDYDATA} %{PF_RULE} block in on %{WORD:interface}: %{IPORHOST:shost}.%{POSINT:sport:integer} > %{IPORHOST:dhost}.%{POSINT:dport:integer}: %{WORD:tcpflags} %{POSINT}:%{POSINT}\(0\) win %{POSINT:tcpwindowsize:integer}%{GREEDYDATA}
+PF_RULE rule %{POSINT:rulenumber:int}/\(match\)
+PF_PASS_UDP %{GREEDYDATA} %{PF_RULE} pass in on %{WORD:interface}: %{IPORHOST:shost}.%{POSINT:sport:int} > %{IPORHOST:dhost}.%{POSINT:dport:int}: %{GREEDYDATA}
+PF_PASS_TCP %{GREEDYDATA} %{PF_RULE} pass in on %{WORD:interface}: %{IPORHOST:shost}.%{POSINT:sport:int} > %{IPORHOST:dhost}.%{POSINT:dport:int}: %{WORD:tcpflags} %{POSINT}:%{POSINT}\(0\) win %{POSINT:tcpwindowsize:int} <mss %{POSINT:mss:int}%{GREEDYDATA}
+PF_BLOCK_UDP %{GREEDYDATA} %{PF_RULE} block in on %{WORD:interface}: %{IPORHOST:shost}.%{POSINT:sport:int} > %{IPORHOST:dhost}.%{POSINT:dport:int}: udp%{GREEDYDATA}
+PF_BLOCK_TCP %{GREEDYDATA} %{PF_RULE} block in on %{WORD:interface}: %{IPORHOST:shost}.%{POSINT:sport:int} > %{IPORHOST:dhost}.%{POSINT:dport:int}: %{WORD:tcpflags} %{POSINT}:%{POSINT}\(0\) win %{POSINT:tcpwindowsize:int}%{GREEDYDATA}

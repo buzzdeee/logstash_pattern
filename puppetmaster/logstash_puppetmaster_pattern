@@ -1,4 +1,4 @@
-PUPPETMASTER_FILE_LINE %{SPACE}\(file: %{UNIXPATH:path}(,)? line: %{POSINT:line:integer}, column: %{POSINT:row:integer}\)
+PUPPETMASTER_FILE_LINE %{SPACE}\(file: %{UNIXPATH:path}(,)? line: %{POSINT:line:int}, column: %{POSINT:row:int}\)
 PUPPETMASTER_FILE_FUNCTION %{UNIXPATH:path} `%{GREEDYDATA}'
 PUPPETMASTER_COMPILED_CATALOG Compiled catalog for %{IPORHOST:shost} in environment %{WORD:environment} in %{NUMBER:seconds:float} seconds
 PUPPETMASTER_CONCAT_FRAGMENT_WARNING \(Scope\(Concat::Fragment%{GREEDYDATA}
