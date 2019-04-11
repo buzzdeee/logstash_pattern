@@ -1,24 +1,25 @@
 POSTFIX_MAYBE_PORT (:%{INT:port:int})?
 POSTFIX_MAYBE_STATUSNUM (%{INT:statusnum})?
 POSTFIX_PATH_OR_IPORHOST (%{UNIXPATH}|%{IPORHOST:sourceip})
+POSTFIX_QUEUEID ([0-9A-F]{6,}|[0-9a-zA-Z]{12,})
 
 POSTFIX_AUTH_FAILURE warning: %{IPORHOST:shost}\[%{IPORHOST:ipaddress}\]: SASL %{WORD} authentication failed: %{GREEDYDATA:errormessage}
 POSTFIX_SASL_AUTH_FAILURE warning: SASL authentication failure: %{GREEDYDATA:errormessage}
 POSTFIX_BACKWARD_TIME_JUMP warning: backward time jump (detected|recovered) -- (slewing clock|back to normality)
-POSTFIX_CLEANUP %{GREEDYDATA:messageid}: (resent-)?message-id=(<)?%{NOTSPACE}(>)?
-POSTFIX_CONVERSATION_TIMEOUT %{GREEDYDATA:messageid}: conversation with %{IPORHOST:relay}\[%{IPORHOST}\] timed out %{GREEDYDATA}
+POSTFIX_CLEANUP %{POSTFIX_QUEUEID:messageid}: %{GREEDYDATA}
+POSTFIX_CONVERSATION_TIMEOUT %{POSTFIX_QUEUEID:messageid}: conversation with %{IPORHOST:relay}\[%{IPORHOST}\] timed out %{GREEDYDATA}
 POSTFIX_CONNECTION_REFUSED connect to %{IPORHOST:relay}\[%{POSTFIX_PATH_OR_IPORHOST}\]%{POSTFIX_MAYBE_PORT}: (Connection refused|Operation timed out)
 POSTFIX_DB_OLDER_THAN_SOURCE warning: database %{UNIXPATH} is older than source file %{UNIXPATH}
-POSTFIX_EXPIRED %{GREEDYDATA:messageid}: from=<%{GREEDYDATA:sender}>, status=expired, returned to sender
+POSTFIX_EXPIRED %{POSTFIX_QUEUEID:messageid}: from=<%{GREEDYDATA:sender}>, status=expired, returned to sender
 POSTFIX_INCREASE_CONCURRENCY_LIMIT warning: you may need to increase the main.cf smtp_destination_concurrency_limit from %{INT}
 POSTFIX_AVOID_FLUSHING warning: (please avoid flushing the whole queue when you have|lots of deferred mail, that is bad for performance|to turn off these warnings specify: qmgr_clog_warn_time = %{INT})
-POSTFIX_MESSAGE_RELAY %{GREEDYDATA:messageid}: to=<%{GREEDYDATA:recipient}>, (orig_to=<%{GREEDYDATA:orig_to}>, )?relay=(local|none|%{IPORHOST:relay}\[%{POSTFIX_PATH_OR_IPORHOST}\]%{POSTFIX_MAYBE_PORT}), (conn_use=%{INT}, )?delay=%{NUMBER:delay:float}, delays=%{NUMBER}/%{NUMBER}/%{NUMBER}/%{NUMBER}, dsn=%{GREEDYDATA}, status=%{WORD:status} \(%{POSTFIX_MAYBE_STATUSNUM}%{GREEDYDATA}\)
+POSTFIX_MESSAGE_RELAY %{POSTFIX_QUEUEID:messageid}: to=<%{GREEDYDATA:recipient}>, (orig_to=<%{GREEDYDATA:orig_to}>, )?relay=(local|none|%{IPORHOST:relay}\[%{POSTFIX_PATH_OR_IPORHOST}\]%{POSTFIX_MAYBE_PORT}), (conn_use=%{INT}, )?delay=%{NUMBER:delay:float}, delays=%{NUMBER}/%{NUMBER}/%{NUMBER}/%{NUMBER}, dsn=%{GREEDYDATA}, status=%{WORD:status} \(%{POSTFIX_MAYBE_STATUSNUM}%{GREEDYDATA}\)
 POSTFIX_STARTSTOP (starting|stopping) the Postfix mail system
 POSTFIX_ACTIVE_QUEUE_ENTRIES warning: mail for %{GREEDYDATA} is using up %{INT} of %{INT} active queue entries
-POSTFIX_QUEUE_ACTIVE %{GREEDYDATA:messageid}: from=<%{GREEDYDATA:sender}>, size=%{INT:size:int}, nrcpt=%{INT:nrcpt:int} \(queue active\)
+POSTFIX_QUEUE_ACTIVE %{POSTFIX_QUEUEID:messageid}: from=<%{GREEDYDATA:sender}>, size=%{INT:size:int}, nrcpt=%{INT:nrcpt:int} \(queue active\)
 POSTFIX_TERMINATING terminating on signal %{INT:signum:int}
 POSTFIX_MASTER_STARTED daemon started -- version %{GREEDYDATA:version}, configuration %{UNIXPATH}
-POSTFIX_CLOSING_CHANNEL %{GREEDYDATA:messageid}: host %{IPORHOST:shost}\[%{IPORHOST:ipaddress}\] said: %{INT:statusnum} %{GREEDYDATA}
+POSTFIX_CLOSING_CHANNEL %{POSTFIX_QUEUEID:messageid}: host %{IPORHOST:shost}\[%{IPORHOST:ipaddress}\] said: %{INT:statusnum} %{GREEDYDATA}
 POSTFIX_CONNECT_FROM connect from %{IPORHOST:shost}\[%{IPORHOST:ipaddress}\]
 POSTFIX_DISCONNECT_FROM disconnect from %{IPORHOST}\[%{IPORHOST}\] unknown=%{INT}/%{INT} commands=%{INT}/%{INT}
 POSTFIX_LOST_CONNECTION_WITH lost connection with %{IPORHOST:relay}\[%{IPORHOST:ipaddress}\] %{GREEDYDATA}
@@ -26,25 +27,25 @@ POSTFIX_LOST_CONNECTION_AFTER lost connection after %{WORD} from %{IPORHOST:shos
 POSTFIX_NON_SMTP warning: non-SMTP command from %{IPORHOST:shost}\[%{IPORHOST:ipaddress}\]: %{GREEDYDATA:command}
 POSTFIX_MAIL_SYSTEM_DOWN warning: Mail system is down -- accessing queue directly
 POSTFIX_BOGUS_REVERSE_DNS warning: hostname %{IPORHOST:shost} does not resolve to address %{IPORHOST:ipaddress}
-POSTFIX_NOQUEUE (NOQUEUE: )?(%{GREEDYDATA:messageid}: )?reject: RCPT from %{IPORHOST:shost}\[%{IPORHOST:ipaddress}\]:%{GREEDYDATA:errormessage}
-POSTFIX_PICKUP %{GREEDYDATA:messageid}: uid=%{INT:uid:int} from=<%{GREEDYDATA}>
-POSTFIX_REMOVED %{GREEDYDATA:messageid}: removed
-POSTFIX_REMOVE_FROM_ACTIVE warning: qmgr_active_done_3_generic: remove %{GREEDYDATA:messageid} from active: %{GREEDYDATA:errormessage}
-POSTFIX_OPEN_ACTIVE warning: open active %{GREEDYDATA:messageid}: %{GREEDYDATA:errormessage}
+POSTFIX_NOQUEUE (NOQUEUE: )?(%{POSTFIX_QUEUEID:messageid}: )?reject: RCPT from %{IPORHOST:shost}\[%{IPORHOST:ipaddress}\]:%{GREEDYDATA:errormessage}
+POSTFIX_PICKUP %{POSTFIX_QUEUEID:messageid}: uid=%{INT:uid:int} from=<%{GREEDYDATA}>
+POSTFIX_REMOVED %{POSTFIX_QUEUEID:messageid}: removed
+POSTFIX_REMOVE_FROM_ACTIVE warning: qmgr_active_done_3_generic: remove %{POSTFIX_QUEUEID:messageid} from active: %{GREEDYDATA:errormessage}
+POSTFIX_OPEN_ACTIVE warning: open active %{POSTFIX_QUEUEID:messageid}: %{GREEDYDATA:errormessage}
 POSTFIX_POSTSUPER Deleted: %{INT:count:int} message
-POSTFIX_SMTPD_CLIENT %{GREEDYDATA:messageid}: client=%{IPORHOST:shost}\[%{IPORHOST}\]
+POSTFIX_SMTPD_CLIENT %{POSTFIX_QUEUEID:messageid}: client=%{IPORHOST:shost}\[%{IPORHOST}\]
 POSTFIX_SMTPD_TOO_MANY_ERRORS too many errors after %{GREEDYDATA} from %{IPORHOST}\[%{IPORHOST}\]
-POSTFIX_SENDER_DELIVERY_NOTIFICATION %{GREEDYDATA:messageid}: sender (non-)?delivery (status )?notification: %{GREEDYDATA}
+POSTFIX_SENDER_DELIVERY_NOTIFICATION %{POSTFIX_QUEUEID:messageid}: sender (non-)?delivery (status )?notification: %{GREEDYDATA}
 POSTFIX_SSL_ACCEPT_ERROR SSL_accept error from %{GREEDYDATA}\[%{IPORHOST:shost}\]: %{GREEDYDATA}
-POSTFIX_STILL_DELIVERED %{GREEDYDATA:messageid}: skipped, still being delivered
+POSTFIX_STILL_DELIVERED %{POSTFIX_QUEUEID:messageid}: skipped, still being delivered
 POSTFIX_TABLE_CHANGED table %{WORD}:%{UNIXPATH}\(%{GREEDYDATA}\) has changed -- restarting
-POSTFIX_TIMED_OUT %{GREEDYDATA:messageid}: conversation with %{IPORHOST:shost}\[%{IPORHOST}\] timed out while receiving the initial server greeting
+POSTFIX_TIMED_OUT %{POSTFIX_QUEUEID:messageid}: conversation with %{IPORHOST:shost}\[%{IPORHOST}\] timed out while receiving the initial server greeting
 POSTFIX_TIMEOUT_AFTER timeout after %{DATA} from %{IPORHOST:shost}\[%{IPORHOST}\]
 POSTFIX_TLS_LIBRARY_PROBLEM warning: TLS library problem: error:%{GREEDYDATA:errorid}:SSL routines:%{GREEDYDATA:routine}:%{GREEDYDATA:reason}:%{UNIXPATH}:%{POSINT:line:int}:
 POSTFIX_SUGGESTION warning: you may need %{GREEDYDATA}
 POSTFIX_REASONING warning: so that Postfix %{GREEDYDATA}
-POSTFIX_QUEUE_FILE_SIZE_LIMIT warning: %{GREEDYDATA:messageid}: queue file size limit exceeded
-POSTFIX_QUEUE_WRITE_PROBLEM warning: %{GREEDYDATA:messageid}: write queue file: %{GREEDYDATA:errormessage}
+POSTFIX_QUEUE_FILE_SIZE_LIMIT warning: %{POSTFIX_QUEUEID:messageid}: queue file size limit exceeded
+POSTFIX_QUEUE_WRITE_PROBLEM warning: %{POSTFIX_QUEUEID:messageid}: write queue file: %{GREEDYDATA:errormessage}
 POSTFIX_STATISTICS_CONN_COUNT statistics: max connection count %{INT:count:int} for \(%{WORD:subcomponent}:%{IPORHOST:shost}\) at %{GREEDYDATA}
 POSTFIX_STATISTICS_CONN_RATE statistics: max connection rate %{INT:count:int}/%{INT:seconds:float}s for \(%{WORD:subcomponent}:%{IPORHOST:shost}\) at %{GREEDYDATA}
 POSTFIX_STATISTICS_MAX_CACHE statistics: max cache size %{INT:size:int} at %{GREEDYDATA}
