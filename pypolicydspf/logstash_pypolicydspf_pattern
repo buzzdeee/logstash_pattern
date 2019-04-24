@@ -1,0 +1,1 @@
+PYPOLICYDSPF_GENERAL %{WORD:status}; identity=(helo|mailfrom); client-ip=%{IP:srcip}; helo=%{GREEDYDATA:helo}; envelope-from=%{GREEDYDATA:sender}; receiver=%{GREEDYDATA:recipient}
