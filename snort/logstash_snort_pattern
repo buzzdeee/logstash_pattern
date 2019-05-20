@@ -1,0 +1,1 @@
+SNORT_ALERT \[%{INT:generator_id}:%{INT:signature_id}:%{INT:signature_revision_id}] Snort Alert \[%{DATA}] \[Classification: %{GREEDYDATA:classification}\] \[Priority: %{POSINT:priority}\]: <%{WORD:interface}> {TCP} %{IP:shost}:%{POSINT:sport} -> %{IP:dhost}:%{POSINT:dport}
