@@ -1,3 +1,4 @@
 SYSLOGD_EXITING exiting on signal %{POSINT:signum:int}
 SYSLOGD_RESTART (re)?start
 SYSLOGD_DROPPED_MESSAGE dropped %{POSINT:count:int} message during initialization
+SYSLOGD_DROPPED_MESSAGE_TO_FILE dropped %{POSINT:count:int} messages to file "%{UNIXPATH:logfile}"
