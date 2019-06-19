@@ -45,3 +45,4 @@ PUPPETMASTER_AUTOSIGN signing certificate for %{IPORHOST}
 PUPPETMASTER_CONVERT_TO_STRING Resource '%{GREEDYDATA}' contains a %{WORD} value. It will be converted to the String '%{GREEDYDATA}'
 PUPPETMASTER_ERROR_CONNECTING_TO_PUPPETDB Error connecting to %{IPORHOST} on %{POSINT:port:int} at route %{GREEDYDATA}, error message received was '%{GREEDYDATA:errormessage}'. Failing over to the next PuppetDB server_url in the 'server_urls' list
 PUPPETMASTER_GETTEXTSETUP_UNAVAILABLE GettextSetup is not available, skipping GettextSetup initialization for %{WORD:module}.
+PUPPETMASTER_YAML_FILE_DOES_NOT_CONTAIN_VALID_YAML_HASH %{UNIXPATH} file does not contain a valid yaml hash
